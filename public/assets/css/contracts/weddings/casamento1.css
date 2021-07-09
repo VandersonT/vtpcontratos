@@ -1,0 +1,53 @@
+.contractSingle{
+    padding: 60px;
+    margin-bottom: 50px;
+}
+
+.box-mainTitle{
+    text-align: center;
+}
+
+.box-mainTitle{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.introduction{
+    margin-top: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.info_contractor{
+    margin-top: 20px;
+    text-align: left;
+    font-size: 17px;
+}
+
+.line{
+    margin-top: 10px;
+}
+
+.box-signature{
+    display: flex;
+}
+
+.signature_hired{
+    width: 50%;
+    text-align: center;
+}
+
+.signature_contractor{
+    width: 50%;
+    text-align: center;
+}
+
+.date{
+    margin: 60px 0;
+    text-align: right;
+    font-size: 23px;
+}

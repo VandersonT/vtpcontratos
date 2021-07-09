@@ -1,0 +1,164 @@
+/*Default*/
+body{
+   color:rgb(27, 27, 27);/*change to dark*/;
+   background-color: rgb(199, 199, 199);/*change to dark*/
+   overflow-x: hidden;
+}
+.close{
+    background-color: rgb(78, 0, 0) !important;
+    color: white;
+}
+
+.menu .selected{
+    background-color: rgb(42, 27, 128) !important;
+    color: white;
+}
+
+/*Barra Mobile Bellow*/
+.bar-mobile{
+    display: none;
+    outline: 0;
+    width: 100vw;
+    height: 68px;
+    background-color: rgb(167, 167, 167);/*change to dark*/
+    border-bottom: 1px solid rgb(37, 37, 37);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+}
+
+.bar-mobile .logo-mobile{
+    width: 80px;
+    height: 90%;
+    background-image: url('../images/staffs.png');
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.bar-mobile i{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.bar-mobile .menu-mobile-close{
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 50%;
+    left: 325px;
+    color: red;
+}
+
+/*Menu Bellow*/
+.box-menu{
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgb(170, 170, 170);/*change to dark*/
+    border-right: 1px solid rgb(37, 37, 37);
+}
+
+.logo{
+    width: 100%;
+    height: 68px;
+    background-image: url('../images/mainImg.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.info{
+    width: 100%;
+    height: 81px;
+    border-bottom: 1px solid rgb(37, 37, 37);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.info img{
+    width: 25%;
+    height: 80%;
+}
+
+.info div{
+    margin-left: 10px;
+}
+
+.info p{
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.menu{
+    width: 100%;
+}
+
+.menu a{
+    color:rgb(37, 37, 37);/*change to dark*/
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.menu li{
+    background-color: rgb(184, 184, 184);/*change to dark*/
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(88, 88, 88);
+    padding-left: 20px;
+}
+
+.menu li i{
+    margin-right: 10px;
+}
+
+/*All content Bellow*/
+.box-content{
+    margin-left: 20vw;
+    width: 80vw;
+}
+
+
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1100px){
+    .bar-mobile{
+        display: flex;
+        outline: 1;
+    }
+    .box-content{
+        margin-left: 0;
+        margin-top: 68px;
+        width: 100vw;
+    }
+    .box-menu{
+        display: none;
+        width: 325px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .box-menu{
+        width: 85vw;
+    }
+    .bar-mobile .menu-mobile-close{
+        left: 85vw;
+    }
+}
+
+@media screen and (max-height: 517px){
+    .info{
+        height: 12vh;
+    }
+    .menu li{
+        height: 10vh;
+    }
+}
