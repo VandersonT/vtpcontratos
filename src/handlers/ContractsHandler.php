@@ -176,4 +176,22 @@ class ContractsHandler {
         return false;
     }
 
+    public static function deleteSaveContract($type, $id){
+
+        if($id == 1){
+            return false; //id 1 is always the template for each contract
+        }
+
+        switch($type){
+            case 'casamento1':
+                Wedding1::delete()->where('id', $id)->execute();
+                return true;
+            break;
+            default:
+                return false;
+                break;
+        }
+
+    }
+
 }

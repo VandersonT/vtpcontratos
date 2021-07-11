@@ -41,7 +41,7 @@
                         <img src="<?=$base;?>/assets/images/img-contract.jpg">
                         <p><?=$saveWedding['contract_name'];?></p>
                         <button>Editar</button>
-                        <button class="deleteSaves"><i class="fas fa-trash"></i></button>
+                        <a onClick="return confirm('Você quer realmente apagar este contrato?');" href="<?=$base;?>/deletar/casamento1/<?=$saveWedding['id'];?>" class="deleteSaves"><i class="fas fa-trash"></i></a>
                     </form>
                 <?php endforeach; ?>   
             <?php else: ?> 

@@ -10,6 +10,7 @@ $router->get('/salvos', 'HomeController@saves');
 $router->get('/contratos/packages/{type}', 'HomeController@contractType');
 $router->get('/criação/{type}/{id}', 'HomeController@criation');
 $router->post('/salvar/{type}', 'HomeController@saveContract');
+$router->get('/deletar/{type}/{id}', 'HomeController@deleteContract');
 
 $router->get('/login', 'LoginController@signin');
 $router->get('/cadastro', 'LoginController@signup');

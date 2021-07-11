@@ -134,4 +134,17 @@ class HomeController extends Controller {
 
     }
 
+    public function deleteContract($args){
+        $answer = ContractsHandler::deleteSaveContract($args['type'], $args['id']);
+        
+        if($answer){
+            $_SESSION['flash'] = 'Contrato deletado com sucesso.';
+        }else{
+            $_SESSION['flash'] = 'Ocorreu algum erro no processo.';
+        }
+        
+        $this->redirect('/salvos');
+        exit;
+    }
+
 }
