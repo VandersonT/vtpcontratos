@@ -40,7 +40,6 @@
                     <i class="fas fa-lock"></i>
                     <input type="password" name="password" placeholder="Senha" />
                     <button>Enviar</button>
-                    <a href="#">Recuperar senha</a>
                 </form>
                 <a href="<?=$base;?>/cadastro">Cadastrar-se</a>
             </article>

@@ -32,6 +32,11 @@
     margin-top: 10px;
 }
 
+.inputInfoHired{
+    height: 100px !important;
+    font-size: 14px !important;
+}
+
 .box-signature{
     display: flex;
 }

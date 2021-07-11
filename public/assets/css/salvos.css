@@ -49,7 +49,8 @@
 .contractSingle button{
     width: 70%;
     height: 30px;
-    background-color: rgb(141, 108, 0);
+    background-color: rgb(0, 45, 141);
+    color: white;
     cursor: pointer;
     border: 0;
     outline: 0;
@@ -60,7 +61,8 @@
 }
 
 .contractSingle button:hover{
-    background-color: rgb(122, 94, 0);
+    background-color: rgb(0, 38, 119);
+    color: rgb(214, 214, 214);
 }
 
 .sucess{

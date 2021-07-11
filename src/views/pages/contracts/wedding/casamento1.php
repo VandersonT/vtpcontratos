@@ -24,26 +24,26 @@
         <div class="fillMenuOpen"><i class="fas fa-caret-square-down"></i></div>
         
         <form class="fillMenu animate__animated">
-            <input class="inputService" type="text" placeholder="Serviços (ex: Fotografi|Filmagem etc)" />
-            <input class="inputInfoHired" type="text" placeholder="Informações do contratado" />
-            <input class="inputContractorName" type="text" placeholder="Nome do contratante" />
-            <input class="inputContractorCpf" type="text" placeholder="Cpf do contratante" />
-            <input class="inputContractorRg" type="text" placeholder="Rg do contratante" />
-            <input class="inputContractorEmail" type="text" placeholder="E-mail do contratante" />
-            <input class="inputContractorCell" type="text" placeholder="Celular do contratante" />
-            <input class="inputContractorAddress" type="text" placeholder="Endereço do contratante" />
-            <input class="inputContractorCity" type="text" placeholder="Cidade do contratante" />
-            <input class="inputBride" type="text" placeholder="Nome da noiva" />
-            <input class="inputEngaged" type="text" placeholder="Nome do noivo" />
-            <input class="inputDate" type="text" placeholder="Data do casamento" />
-            <input class="inputTime" type="text" placeholder="Horario do casamento" />
-            <input class="inputPlace" type="text" placeholder="Local do contrato" />
-            <textarea class="inputGoals" placeholder="Objetivos do contrato"></textarea>
-            <input class="inputPrice" type="text" placeholder="Preço" />
-            <input class="inputDeadline" type="text" placeholder="Prazo" />
-            <input class="inputWarranty" type="text" placeholder="Garantia" />
-            <input class="inputDateToday" type="text" placeholder="Data de hoje" />
-            <input class="inputNameHired" type="text" placeholder="Nome do contratado" />
+            <input class="inputService" type="text" placeholder="Serviços (ex: Fotografi|Filmagem etc)" value="<?= $idContract > 1 ? $contract->service : '';?>" />
+            <textarea class="inputInfoHired" placeholder="Informações do contratado ex: nome da empresa ou pessoal, se pessoa jurídica ou juridica, nome da cidade, nome do estado, CNPJ se tiver e telefone."><?= $idContract > 1 ? $contract->hired_info : '';?></textarea>
+            <input class="inputContractorName" type="text" placeholder="Nome do contratante" value="<?= $idContract > 1 ? $contract->name : '';?>"/>
+            <input class="inputContractorCpf" type="text" placeholder="Cpf do contratante" value="<?= $idContract > 1 ? $contract->cpf : '';?>"/>
+            <input class="inputContractorRg" type="text" placeholder="Rg do contratante" value="<?= $idContract > 1 ? $contract->rg : '';?>"/>
+            <input class="inputContractorEmail" type="text" placeholder="E-mail do contratante" value="<?= $idContract > 1 ? $contract->email : '';?>"/>
+            <input class="inputContractorCell" type="text" placeholder="Celular do contratante" value="<?= $idContract > 1 ? $contract->cell : '';?>"/>
+            <input class="inputContractorAddress" type="text" placeholder="Endereço do contratante" value="<?= $idContract > 1 ? $contract->address : '';?>"/>
+            <input class="inputContractorCity" type="text" placeholder="Cidade do contratante" value="<?= $idContract > 1 ? $contract->city : '';?>"/>
+            <input class="inputBride" type="text" placeholder="Nome da noiva" value="<?= $idContract > 1 ? $contract->bride : '';?>"/>
+            <input class="inputEngaged" type="text" placeholder="Nome do noivo" value="<?= $idContract > 1 ? $contract->engaged : '';?>"/>
+            <input class="inputDate" type="text" placeholder="Data do casamento" value="<?= $idContract > 1 ? $contract->date : '';?>"/>
+            <input class="inputTime" type="text" placeholder="Horario do casamento" value="<?= $idContract > 1 ? $contract->time : '';?>"/>
+            <input class="inputPlace" type="text" placeholder="Local do casamento" value="<?= $idContract > 1 ? $contract->place : '';?>"/>
+            <textarea class="inputGoals" placeholder="Objetivos do contrato"><?= $idContract > 1 ? $contract->goals : '';?></textarea>
+            <input class="inputPrice" type="text" placeholder="Preço" value="<?= $idContract > 1 ? $contract->price : '';?>"/>
+            <input class="inputDeadline" type="text" placeholder="Prazo" value="<?= $idContract > 1 ? $contract->deadline : '';?>"/>
+            <input class="inputWarranty" type="text" placeholder="Garantia" value="<?= $idContract > 1 ? $contract->warranty : '';?>"/>
+            <input class="inputDateToday" type="text" placeholder="Data de hoje" value="<?= $idContract > 1 ? $contract->date_today : '';?>"/>
+            <input class="inputNameHired" type="text" placeholder="Nome do contratado" value="<?= $idContract > 1 ? $contract->name_hired : '';?>"/>
             <button class="generateBtn">Gerar</button>
         </form>
         <div class="box-contractSingle">

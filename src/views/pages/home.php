@@ -19,19 +19,19 @@
     <script src="https://kit.fontawesome.com/90bf9437da.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+
     <?= $render('menu', ['user' => $user, 'selected' => 'contracts']);?> //this partial requires the 5 <scripts> below
 
     <section class="box-content">
         <article class="box-favorites">
-            <h1>Favoritos:</h1>
+            <h1>Adicionados Recentemente:</h1>
             <div class="showcase">
                 <div class="favoriteStorage">
 
-                    <form class="favoriteSigle">
-                        <img src="<?=$base;?>/assets/images/img-contract.jpg">
+                    <form class="favoriteSigle"  method="GET" action="<?=$base;?>/criação/casamento1/1" >
+                        <img src="<?=$base;?>/assets/images/weddingImg1.jpg">
                         <p>Casamento</p>
-                        <span>favoritado: 99/99/9999</span>
+                        <span>Modelo 1</span>
                         <button>Abrir</button>
                     </form>
                 </div>
@@ -42,9 +42,9 @@
             <h1>Packages:</h1>
             <div class="packageStorage" >
                 <form class="packageSingle" method="GET" action="<?=$base;?>/contratos/packages/casamento">
-                    <img src="<?=$base;?>/assets/images/weddingImg1.jpg">
+                    <img src="<?=$base;?>/assets/images/WeddingCover.jpg">
                     <p>Contratos para casamento</p>
-                    <span>1 Disponiveis</span>
+                    <span>1 Disponivel</span>
                     <button>Abrir</button>
                 </form>
                 <form class="packageSingle" method="GET" action="<?=$base;?>/contratos/packages/aniversario">
@@ -54,7 +54,7 @@
                     <button>Abrir</button>
                 </form>
                 <form class="packageSingle" method="GET" action="<?=$base;?>/contratos/packages/desenvolvimentoWeb">
-                    <img src="<?=$base;?>/assets/images/devWebImg1.jpg">
+                    <img src="<?=$base;?>/assets/images/developerCover.jpg">
                     <p>Contratos para desenvovilmento web</p>
                     <span>0 Disponivel</span>
                     <button>Abrir</button>

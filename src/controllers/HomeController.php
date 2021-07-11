@@ -53,11 +53,11 @@ class HomeController extends Controller {
     }
 
     public function criation($args){
-        //crie em handler algo para checar se o contrato é um modelo, se for um editor veja se é um salvo pelo user;
+        //$this->loggedUser->access
 
         if($args['type'] == 'casamento1'){
 
-            $this->contract = ContractsHandler::getContractWedding($args['id']);
+            $this->contract = ContractsHandler::getContractWedding($args['id'], $this->loggedUser->id);
             
             if($this->contract){
                 $this->render('contracts/wedding/casamento1',[

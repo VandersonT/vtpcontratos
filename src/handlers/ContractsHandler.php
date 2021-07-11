@@ -5,7 +5,7 @@ use \src\models\Wedding1;
 
 class ContractsHandler {
 
-    public static function getContractWedding($id){
+    public static function getContractWedding($id, $user_id){
 
         $verificationData = Wedding1::select()->where('id', $id)->execute();
         if(count($verificationData) > 0){
@@ -13,6 +13,7 @@ class ContractsHandler {
             
             $contractChoosen = new Wedding1();
             $contractChoosen->id = $data['id'];
+            $contractChoosen->user_id = $data['user_id'];
             $contractChoosen->contract_name = $data['contract_name'];
             $contractChoosen->cmp1 = $data['cmp1'];
             $contractChoosen->service = $data['service'];
@@ -56,9 +57,20 @@ class ContractsHandler {
             $contractChoosen->name_hired = $data['name_hired'];
             $contractChoosen->date_today = $data['date_today'];
 
+            //check if you are the owner of the contract
+            if($id != 1){
+                if($user_id != $contractChoosen->user_id){
+                    return false;
+                    exit;
+                }
+            }
+
             return $contractChoosen;
+            exit;
         }
+
         return false;
+        exit;
     }
 
     public static function saveContractWedding($contractName,$cmp1,$service,$cmp2,$cmp3,$hired_info,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$name_hired,$date_today,$id,$action,$idContract){
