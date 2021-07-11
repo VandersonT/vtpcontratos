@@ -22,7 +22,7 @@ class LoginController extends Controller {
         $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
         $password = filter_input(INPUT_POST, 'password');
 
-        if($email && password){
+        if($email && $password){
 
             $token = LoginHandler::verifyLogin($email, $password);
 

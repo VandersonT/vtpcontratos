@@ -112,6 +112,7 @@ class ContractsHandler {
                 'name_hired' => $name_hired,
                 'date_today' => $date_today
             ])->execute();
+            return 'Seu contrato foi salvo com sucesso!';
         }else{
             Wedding1::update()
                 ->set('user_id', $id)
@@ -159,9 +160,10 @@ class ContractsHandler {
                 ->set('date_today', $date_today)
             ->where('id', $idContract)
             ->execute();
+            return 'Seu contrato foi editado com sucesso!';
         }
         
-        return true;
+        return 'Deu algum erro, reporte ao suporte!';
     }
 
     public static function getSavesWedding1($id){

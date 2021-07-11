@@ -1,0 +1,46 @@
+
+
+.screen{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(8, 8, 8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background-color: rgb(5, 5, 5);
+    border: 1px solid rgb(44, 44, 44);
+    text-align: center;
+    padding: 20px 50px 20px 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.box h1{
+    color: rgb(88, 88, 88);
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.box p{
+    color: rgb(104, 104, 104);
+    font-size: 17px;
+}
+
+.img{
+    width: 100%;
+    height: 200px;
+    background-image: url('../images/ban.png');
+    background-position: center;
+    background-size: 100% 100%;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 400px){
+    .img{
+        height: 100px;
+    }
+}

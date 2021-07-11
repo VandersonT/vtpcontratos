@@ -15,6 +15,11 @@ class HomeController extends Controller {
         if($this->loggedUser === false){
             $this->redirect('/login');
         }
+        if($this->loggedUser->access == 0){
+            $_SESSION['token'] = '';
+            $this->render('banned');
+            exit;
+        }
     }
 
     public function index() {
@@ -116,9 +121,9 @@ class HomeController extends Controller {
                 $action = filter_input(INPUT_POST, 'action');
                 $idContract = filter_input(INPUT_POST, 'idContract');
 
-                ContractsHandler::saveContractWedding($contractName,$cmp1,$service,$cmp2,$cmp3,$hired_info,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$name_hired,$date_today, $this->loggedUser->id,$action,$idContract);
+                $flash = ContractsHandler::saveContractWedding($contractName,$cmp1,$service,$cmp2,$cmp3,$hired_info,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$name_hired,$date_today, $this->loggedUser->id,$action,$idContract);
 
-                $_SESSION['flash'] = "Seu contrato foi salvo com sucesso!";
+                $_SESSION['flash'] =  $flash;
 
                 $this->redirect('/salvos');
                 break;

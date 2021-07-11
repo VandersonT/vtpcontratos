@@ -13,6 +13,6 @@ $router->post('/salvar/{type}', 'HomeController@saveContract');
 
 $router->get('/login', 'LoginController@signin');
 $router->get('/cadastro', 'LoginController@signup');
-$router->get('/sair', 'LoginController@logout');
 $router->post('/login', 'LoginController@signinAction');
 $router->post('/cadastro', 'LoginController@signupAction');
+$router->get('/sair', 'LoginController@logout');

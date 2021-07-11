@@ -9,6 +9,7 @@
                 <p><?= $user->name;?></p>
                 <span>
                     Acesso:
+                    <?= $user->access == 0 ? 'Banido' : '';?>
                     <?= $user->access == 1 ? 'Usuario' : '';?>
                     <?= $user->access == 2 ? 'Ajudante' : '';?>
                     <?= $user->access == 3 ? 'Administrador' : '';?>
