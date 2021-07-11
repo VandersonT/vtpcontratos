@@ -13,6 +13,7 @@ class ContractsHandler {
             
             $contractChoosen = new Wedding1();
             $contractChoosen->id = $data['id'];
+            $contractChoosen->contract_name = $data['contract_name'];
             $contractChoosen->cmp1 = $data['cmp1'];
             $contractChoosen->service = $data['service'];
             $contractChoosen->cmp2 = $data['cmp2'];
@@ -60,7 +61,7 @@ class ContractsHandler {
         return false;
     }
 
-    public static function saveContractWedding($cmp1,$service,$cmp2,$cmp3,$hired_info,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$name_hired,$date_today,$id,$action,$idContract){
+    public static function saveContractWedding($contractName,$cmp1,$service,$cmp2,$cmp3,$hired_info,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$name_hired,$date_today,$id,$action,$idContract){
         $hash = password_hash($password, PASSWORD_DEFAULT);
         $token = md5(time().rand(0,9999).time());
 
@@ -68,6 +69,7 @@ class ContractsHandler {
         if($action == 'save'){
             Wedding1::insert([
                 'user_id' => $id,
+                'contract_name' => $contractName,
                 'cmp1' => $cmp1,
                 'service' => $service,
                 'cmp2' => $cmp2,
@@ -113,6 +115,7 @@ class ContractsHandler {
         }else{
             Wedding1::update()
                 ->set('user_id', $id)
+                ->set('contract_name', $contractName)
                 ->set('cmp1', $cmp1)
                 ->set('service', $service)
                 ->set('cmp2', $cmp2)

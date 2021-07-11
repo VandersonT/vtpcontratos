@@ -44,7 +44,7 @@
             <input class="inputWarranty" type="text" placeholder="Garantia" />
             <input class="inputDateToday" type="text" placeholder="Data de hoje" />
             <input class="inputNameHired" type="text" placeholder="Nome do contratado" />
-            <button onClick="print();">Gerar</button>
+            <button class="generateBtn">Gerar</button>
         </form>
         <div class="box-contractSingle">
             <div class="barMenu">
@@ -329,6 +329,7 @@
 
     <form class="formSaveContract" method="POST" action="<?=$base;?>/salvar/casamento1">
         <input type="hidden" name="idContract" value="<?=$idContract;?>"/>
+        <input class="contractName" type="hidden" name="contractName"/>
         <input class="action" type="hidden" name="action" />
         <input class="cmp1" type="hidden" name="cmp1" />
         <input class="service" type="hidden" name="service" />

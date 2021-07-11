@@ -1,3 +1,11 @@
+/*------------------------------------------GENERATE-CONTRACT-----------------------------------------------------*/
+let generateBtn = document.querySelector('.generateBtn');
+generateBtn.addEventListener('click',function(e){
+    e.preventDefault();
+    print();
+})
+/*---------------------------------------------------------------------------------------------------------------*/
+
 /*---------------------------------------------SAVE-CONTRACT-----------------------------------------------------*/
 /*Form*/
 let btnSubmit = document.querySelector('.saveContract');
@@ -6,7 +14,20 @@ let contractForm = document.querySelector('.formSaveContract');
 
 btnSubmit.addEventListener("click", function(){
 
-    let confirm = window.confirm('Você quer salvar esse contrato?');
+    let contractName = '';
+    while(contractName == ''){
+        contractName = window.prompt("Digite o nome do contrato!");
+        
+        if(contractName == ''){
+            alert("É obrigatorio colocar um nome para o contrato.");
+        }
+        if(contractName.length > 30){
+            alert("O nome é muito grande, digite um menor.");
+            contractName = '';
+        }
+    }
+
+    let confirm = window.confirm('Quer realmente salvar o contrato:'+contractName);
     
     if(!confirm){
         return false;
@@ -56,6 +77,7 @@ btnSubmit.addEventListener("click", function(){
     let date_today = document.querySelector('.date_today').innerText;
 
     /*writing the values in inputs*/
+    contractForm.querySelector('input[name=contractName]').value = contractName;
     contractForm.querySelector('input[name=cmp1]').value = cmp1;
     contractForm.querySelector('input[name=service]').value = service;
     contractForm.querySelector('input[name=cmp2]').value = cmp2;
@@ -109,9 +131,10 @@ btnSubmit.addEventListener("click", function(){
     /*Send to save in DB*/
     contractForm.submit();
 })
+
 /*---------------------------------------------------------------------------------------------------------------*/
 
-/*-------------------------------------------FROM-INPUT-TO-CONTRACT-MODEL--------------------------------------------------*/
+/*-------------------------------------------FROM-INPUT-TO-CONTRACT-MODEL\real time--------------------------------------------------*/
     let inputService = document.querySelector('.inputService');
     let service = document.querySelectorAll('.service');
     inputService.addEventListener("keyup", function(){

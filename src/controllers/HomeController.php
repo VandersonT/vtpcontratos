@@ -71,6 +71,7 @@ class HomeController extends Controller {
 
         switch($args['type']){
             case 'casamento1':
+                $contractName = filter_input(INPUT_POST, 'contractName');
                 $cmp1 = filter_input(INPUT_POST, 'cmp1');
                 $service = filter_input(INPUT_POST, 'service');
                 $cmp2 = filter_input(INPUT_POST, 'cmp2');
@@ -115,7 +116,7 @@ class HomeController extends Controller {
                 $action = filter_input(INPUT_POST, 'action');
                 $idContract = filter_input(INPUT_POST, 'idContract');
 
-                ContractsHandler::saveContractWedding($cmp1,$service,$cmp2,$cmp3,$hired_info,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$name_hired,$date_today, $this->loggedUser->id,$action,$idContract);
+                ContractsHandler::saveContractWedding($contractName,$cmp1,$service,$cmp2,$cmp3,$hired_info,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$name_hired,$date_today, $this->loggedUser->id,$action,$idContract);
 
                 $_SESSION['flash'] = "Seu contrato foi salvo com sucesso!";
 

@@ -39,10 +39,10 @@
                 <?php foreach($savesWedding as $saveWedding): ?>
                     <form class="contractSingle" method="GET" action="<?=$base;?>/criação/casamento1/<?=$saveWedding['id'];?>">
                         <img src="<?=$base;?>/assets/images/img-contract.jpg">
-                        <p><?=$saveWedding['name'];?></p>
+                        <p><?=$saveWedding['contract_name'];?></p>
                         <button>Editar</button>
                         <button class="deleteSaves"><i class="fas fa-trash"></i></button>
-                    </form>.
+                    </form>
                 <?php endforeach; ?>   
             <?php else: ?> 
                 <p style="display:none;" class="contractSingle">Modelo para contrato</p>
