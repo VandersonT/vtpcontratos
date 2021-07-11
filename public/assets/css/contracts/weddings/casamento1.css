@@ -51,3 +51,42 @@
     text-align: right;
     font-size: 23px;
 }
+
+@media screen and (max-width: 950px){
+    .contractSingle *{
+        font-size: 12px;
+    }
+    .toPrint *{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .contractSingle *{
+        font-size: 10px;
+    }
+    .toPrint *{
+        font-size: 10px;
+    }
+    .contractSingle{
+        padding: 5%;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .contractSingle *{
+        font-size: 7px;
+    }
+    .toPrint *{
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .contractSingle *{
+        font-size: 5px;
+    }
+    .toPrint *{
+        font-size: 5px;
+    }
+}

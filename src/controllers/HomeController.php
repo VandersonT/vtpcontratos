@@ -59,9 +59,12 @@ class HomeController extends Controller {
                     'contract' => $this->contract,
                     'idContract' => $args['id']
                 ]);
+            }else{
+                $this->render('404');
             }
+        }else{
+            $this->render('404');
         }
-        $this->render('404');
     }
 
     public function saveContract($args){

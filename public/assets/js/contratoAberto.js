@@ -20,7 +20,7 @@ btnOpen.addEventListener("click", function(){
 
 window.onresize = function(){
     let windowWidth = window.innerWidth;
-    if(windowWidth >= 1100){
+    if(windowWidth >= 1300){
         menu.style.display = "block";
         btnClose.style.display = "none";
         btnOpen.style.display = "none";
