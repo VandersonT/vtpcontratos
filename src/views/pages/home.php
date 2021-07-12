@@ -63,7 +63,6 @@
         </article>
     </section>
 
-    <script>var themeMode =  "<?= $user->theme;?>";</script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     <script src="<?=$base;?>/assets/js/toggleMenuMobile.js"></script>
     <script src="<?=$base;?>/assets/js/SelectedAndHover.js"></script>

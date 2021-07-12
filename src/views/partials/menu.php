@@ -30,7 +30,7 @@
                     <i class="fas fa-user"></i>
                     Perfil
                 </li></a>
-                <a href="#suporte"><li class="<?= $selected=='suport' ? 'selected' : '';?>">
+                <a href="<?=$base;?>/suporte"><li class="<?= $selected=='support' ? 'selected' : '';?>">
                     <i class="fas fa-comments"></i>
                     Suporte
                 </li></a>

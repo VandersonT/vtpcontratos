@@ -6,6 +6,7 @@ $router = new Router();
 $router->get('/', 'HomeController@index');
 $router->get('/contratos', 'HomeController@index');
 $router->get('/salvos', 'HomeController@saves');
+$router->get('/suporte', 'HomeController@support');
 
 $router->get('/contratos/packages/{type}', 'HomeController@contractType');
 $router->get('/criação/{type}/{id}', 'HomeController@criation');

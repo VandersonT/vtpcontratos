@@ -147,4 +147,11 @@ class HomeController extends Controller {
         exit;
     }
 
+    public function support(){
+        $this->render('support', [
+            'user' => $this->loggedUser
+        ]);
+        exit;
+    }
+
 }
