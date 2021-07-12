@@ -6,6 +6,13 @@ use \src\handlers\LoginHandler;
 
 class LoginController extends Controller {
 
+    public function __construct(){
+        if(!empty($_SESSION['token'])){
+            $this->redirect('/');
+            exit;
+        }
+    }
+
     public function signin() {
         $flash = '';
         if(!empty($_SESSION['flash'])){
@@ -16,11 +23,12 @@ class LoginController extends Controller {
         $this->render('signin',[
             'flash' => $flash
         ]);
+        exit;
     }
 
     public function signinAction(){
         $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-        $password = filter_input(INPUT_POST, 'password');
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
 
         if($email && $password){
 
@@ -38,6 +46,7 @@ class LoginController extends Controller {
             $_SESSION['flash'] = 'Não envie campos vazios.';
             $this->redirect('/login');
         }
+        exit;
 
     }
 
@@ -51,13 +60,14 @@ class LoginController extends Controller {
         $this->render('signup',[
             'flash' => $flash
         ]);
+        exit;
     }
 
     public function signupAction(){
-        $name = filter_input(INPUT_POST, 'name');
+        $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-        $password = filter_input(INPUT_POST, 'password');
-        $passwordConfirm = filter_input(INPUT_POST, 'passwordConfirm');
+        $password = filter_input(INPUT_POST, 'password',FILTER_SANITIZE_SPECIAL_CHARS);
+        $passwordConfirm = filter_input(INPUT_POST, 'passwordConfirm',FILTER_SANITIZE_SPECIAL_CHARS);
 
         if($name && $email && $password && $passwordConfirm){
             
@@ -81,12 +91,7 @@ class LoginController extends Controller {
             $_SESSION['flash'] = 'Não envie campos vazios.';
             $this->redirect('/cadastro');
         }
-
-    }
-
-    public function logout(){
-        $_SESSION['token'] = '';
-        $this->redirect("/login");
+        exit;
     }
 
 }

@@ -18,4 +18,4 @@ $router->get('/login', 'LoginController@signin');
 $router->get('/cadastro', 'LoginController@signup');
 $router->post('/login', 'LoginController@signinAction');
 $router->post('/cadastro', 'LoginController@signupAction');
-$router->get('/sair', 'LoginController@logout');
+$router->get('/sair', 'HomeController@logout');

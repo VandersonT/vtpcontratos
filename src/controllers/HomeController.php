@@ -14,6 +14,7 @@ class HomeController extends Controller {
         $this->loggedUser = LoginHandler::checkLogin();
         if($this->loggedUser === false){
             $this->redirect('/login');
+            exit;
         }
         if($this->loggedUser->access == 0){
             $_SESSION['token'] = '';
@@ -26,6 +27,13 @@ class HomeController extends Controller {
         $this->render('home', [
             'user' => $this->loggedUser
         ]);
+        exit;
+    }
+
+    public function logout(){
+        $_SESSION['token'] = '';
+        $this->redirect("/login");
+        exit;
     }
 
     public function saves(){
@@ -43,6 +51,7 @@ class HomeController extends Controller {
             'flash' => $flash,
             'savesWedding' => $savesWedding
         ]);
+        exit;
     }
 
     public function contractType($args) {
@@ -50,6 +59,7 @@ class HomeController extends Controller {
             'user' => $this->loggedUser,
             'type' => $args['type']
         ]);
+        exit;
     }
 
     public function criation($args){
@@ -70,6 +80,7 @@ class HomeController extends Controller {
         }else{
             $this->render('404');
         }
+        exit;
     }
 
     public function saveContract($args){
@@ -131,7 +142,7 @@ class HomeController extends Controller {
                 $this->redirect('/404');
                 break;
         }
-
+        exit;
     }
 
     public function deleteContract($args){
@@ -166,7 +177,7 @@ class HomeController extends Controller {
     }
 
     public function sendMsg(){
-        $msgToSuport = filter_input(INPUT_POST, 'msgToSuport');
+        $msgToSuport = filter_input(INPUT_POST, 'msgToSuport', FILTER_SANITIZE_SPECIAL_CHARS);
         
 
         if($msgToSuport){

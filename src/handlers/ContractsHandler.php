@@ -204,7 +204,6 @@ class ContractsHandler {
                 return false;
                 break;
         }
-
     }
 
     public static function getChatUser($id){
