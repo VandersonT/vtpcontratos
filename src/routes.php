@@ -7,6 +7,7 @@ $router->get('/', 'HomeController@index');
 $router->get('/contratos', 'HomeController@index');
 $router->get('/salvos', 'HomeController@saves');
 $router->get('/suporte', 'HomeController@support');
+$router->post('/enviarMsg', 'HomeController@sendMsg');
 
 $router->get('/contratos/packages/{type}', 'HomeController@contractType');
 $router->get('/criação/{type}/{id}', 'HomeController@criation');

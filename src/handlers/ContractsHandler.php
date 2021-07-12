@@ -2,6 +2,7 @@
 namespace src\handlers;
 
 use \src\models\Wedding1;
+use \src\models\Support;
 
 class ContractsHandler {
 
@@ -204,6 +205,21 @@ class ContractsHandler {
                 break;
         }
 
+    }
+
+    public static function getChatUser($id){
+        $conversation = Support::select()->where('from_user', $id)->orWhere('to_user', $id)->get();
+
+        return $conversation;
+    }
+
+    public static function sendMsg($msgToSuport, $id){
+        Support::insert([
+            'from_user' => $id,
+            'to_user' => 0,
+            'msg' => $msgToSuport,
+            'dateT' => date('d/m/Y')
+        ])->execute();
     }
 
 }

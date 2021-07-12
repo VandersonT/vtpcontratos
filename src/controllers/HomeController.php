@@ -148,9 +148,33 @@ class HomeController extends Controller {
     }
 
     public function support(){
+
+        $flash = '';
+        if(!empty($_SESSION['flash'])){
+            $flash = $_SESSION['flash'];
+            $_SESSION['flash'] = '';
+        }
+
+        $chatSingle = ContractsHandler::getChatUser($this->loggedUser->id);
+
         $this->render('support', [
-            'user' => $this->loggedUser
+            'user' => $this->loggedUser,
+            'chatSingle' => $chatSingle,
+            'flash' => $flash
         ]);
+        exit;
+    }
+
+    public function sendMsg(){
+        $msgToSuport = filter_input(INPUT_POST, 'msgToSuport');
+        
+
+        if($msgToSuport){
+            ContractsHandler::sendMsg($msgToSuport, $this->loggedUser->id);
+            $_SESSION['flash'] = 'Mensagem enviada com sucesso, em breve responderemos!';
+        }
+
+        $this->redirect('/suporte');
         exit;
     }
 

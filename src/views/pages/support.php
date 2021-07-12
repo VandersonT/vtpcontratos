@@ -14,73 +14,71 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="<?=$base;?>/assets/css/style.css" />
     <link rel="stylesheet" href="<?=$base;?>/assets/css/struct.css" />
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/structSimulação.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/support.css" />
 
     <script src="https://kit.fontawesome.com/90bf9437da.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <?= $render('menu', ['user' => $user, 'selected' => 'support']);?> //this partial requires the 5 <scripts> below
+    <?= $render('menu', ['user' => $user, 'selected' => 'support']);?> <!--this partial requires the 5 <scripts> below-->
 
     <section class="box-content">
         
-        <section class="chat-screen">
-                
+        <section id="chat" class="chat-screen">  
+
+            <?php if(!empty($flash)): ?>
+                <div class="success">
+                    <i class="fas fa-check-circle"></i>
+                    <?=$flash;?>
+                </div>
+            <?php endif; ?>
+
             <div class="box-chatLeft">
-                <img src="<?=$base;?>/media/avatars/<?= $user->photo;?>" />
+                <img src="<?=$base;?>/media/avatars/supportImg.png" />
                 <div class="balaoLeft">
-                    <p>Eu tenho um pedido para os administradores, porque não adicionam contratos personalizados, vocês tipo pedem aos usuarios e acrescentam e os demais tbem pode usar? eu amaria :D</p>
+                    <p>Se você estiver precisando de alguma ajuda, ou encontrou alguma falha no sistema ou até mesmo quer dar alguma sugestão, mande uma mensagem para nós por este canal!</p>
                 </div>
             </div>
 
-            <div class="box-chatRight">
-                <div class="balaoRight">
-                    <p>Seria muito complicado para os desenvolvedores, mas você pode sim mandar algum, iremos analizar e verificar e possivelmente acrescentar</p>
-                </div>
-                <img src="<?=$base;?>/media/avatars/<?= $user->photo;?>" />
-            </div>
+            <?php if(count($chatSingle) > 0): ?>
 
-            <div class="box-chatRight">
-                <div class="balaoRight">
-                    <p>Seria muito complicado para os desenvolvedores, mas você pode sim mandar algum, iremos analizar e verificar e possivelmente acrescentar</p>
-                </div>
-                <img src="<?=$base;?>/media/avatars/<?= $user->photo;?>" />
-            </div>
+                <?php foreach($chatSingle as $chat): ?>
+                    <?php if($chat['from_user'] == $user->id): ?>
+                        
+                        <div class="box-chatRight">
+                            <div class="balaoRight">
+                                <p><?= $chat['msg']; ?></p>
+                            </div>
+                            <img src="<?=$base;?>/media/avatars/<?= $user->photo;?>" />
+                        </div>
+                        
+                    <?php endif; ?>
 
-            <div class="box-chatRight">
-                <div class="balaoRight">
-                    <p>Seria muito complicado para os desenvolvedores, mas você pode sim mandar algum, iremos analizar e verificar e possivelmente acrescentar</p>
-                </div>
-                <img src="<?=$base;?>/media/avatars/<?= $user->photo;?>" />
-            </div>
+                    <?php if($chat['to_user'] == $user->id): ?>
+                        
+                        <div class="box-chatLeft">
+                            <img src="<?=$base;?>/media/avatars/supportImg.png" />
+                            <div class="balaoLeft">
+                                <p><?= $chat['msg']; ?></p>
+                            </div>
+                        </div>
 
-            <div class="box-chatRight">
-                <div class="balaoRight">
-                    <p>Seria muito complicado para os desenvolvedores, mas você pode sim mandar algum, iremos analizar e verificar e possivelmente acrescentar</p>
-                </div>
-                <img src="<?=$base;?>/media/avatars/<?= $user->photo;?>" />
-            </div>
+                    <?php endif; ?>
 
-            <div class="box-chatRight">
-                <div class="balaoRight">
-                    <p>Seria muito complicado para os desenvolvedores, mas você pode sim mandar algum, iremos analizar e verificar e possivelmente acrescentar</p>
-                </div>
-                <img src="<?=$base;?>/media/avatars/<?= $user->photo;?>" />
-            </div>
+                <?php endforeach; ?>
 
-            <div class="box-chatRight">
-                <div class="balaoRight">
-                    <p>Seria muito complicado para os desenvolvedores, mas você pode sim mandar algum, iremos analizar e verificar e possivelmente acrescentar</p>
-                </div>
-                <img src="<?=$base;?>/media/avatars/<?= $user->photo;?>" />
-            </div>
-
+            <?php endif; ?>
+            
         </section>
 
         <section class="chat-write">
             <img src="<?=$base;?>/media/avatars/<?= $user->photo;?>" />
-            <textarea></textarea>
-            <a class="sendQuestion" href="#">Enviar</a>
+            
+            <form class="formSupport" method="POST" action="<?=$base;?>/enviarMsg">
+                <textarea placeholder="Digite aqui a sua mensagem para o nosso suporte" name="msgToSuport" class="newMsg"></textarea>
+                <input type="submit" value="Enviar"/>
+            </form>
+
         </section>
 
     </section>
