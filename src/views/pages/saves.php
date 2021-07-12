@@ -20,7 +20,7 @@
 </head>
 <body>
     
-    <?= $render('menu', ['user' => $user, 'selected' => 'saves']);?> //this partial requires the 5 <scripts> below
+    <?= $render('menu', ['user' => $user, 'selected' => 'saves']);?> <!--this partial requires the 5 <scripts> below-->
     
     <section class="box-content">
         <?php if(!empty($flash)): ?>

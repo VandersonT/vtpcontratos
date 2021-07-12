@@ -20,7 +20,7 @@
 </head>
 <body>
 
-    <?= $render('menu', ['user' => $user, 'selected' => 'contracts']);?> //this partial requires the 5 <scripts> below
+    <?= $render('menu', ['user' => $user, 'selected' => 'contracts']);?> <!--this partial requires the 5 <scripts> below-->
 
     <section class="box-content">
         <article class="box-favorites">

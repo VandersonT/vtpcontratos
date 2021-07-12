@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Gerador de Contrato - Salvos</title>
+    <title>Gerador de Contrato - perfil</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,37 +14,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="<?=$base;?>/assets/css/style.css" />
     <link rel="stylesheet" href="<?=$base;?>/assets/css/struct.css" />
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/contratoTipo.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/profile.css" />
 
     <script src="https://kit.fontawesome.com/90bf9437da.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<?= $render('menu', ['user' => $user, 'selected' => 'contracts']);?> <!--this partial requires the 5 <scripts> below-->
+    <?= $render('menu', ['user' => $user, 'selected' => 'profile']);?> <!--this partial requires the 5 <scripts> below-->
 
     <section class="box-content">
-        <article class="box-contract">
-            <h1>Contratos para <?=$type;?>:</h1>
-            <div class="contractStorage" >
-                
-                <?php if($type == 'casamento'):?>
-                    <form class="contractSingle" method="GET" action="<?=$base;?>/criação/casamento1/1" >
-                        <img src="<?=$base;?>/assets/images/weddingImg1.jpg">
-                        <p>Casamento</p>
-                        <span>Modelo 1</span>
-                        <button>Abrir</button>
-                    </form>
-                <?php endif;?>
-                
-                <?php if($type == 'aniversario'):?>
-                    <!--Não existe ainda aniversario-->
-                <?php endif;?>
+        <article class="box1">
+            <img src="<?=$base;?>/media/avatars/<?= $user->photo;?>" />
+        </article>
+        <article class="box2">
 
-                <?php if($type == 'desenvolvimentoWeb'):?>
-                    <!--Não existe ainda desenvolvimento-->
-                <?php endif;?>
+            <div class="imgProfile"></div>
 
-            </div>
+            <form class="infoProfile">
+                <h1 class="title">
+                    <i class="fas fa-tools"></i>
+                    Suas informações
+                    <i class="fas fa-tools"></i>
+                </h1>
+                <input type="text" value="<?=$user->name;?>" />
+                <input type="email" value="<?=$user->email;?>" />
+                <h1 class="inputTitle">Foto de perfil:</h1>
+                <input type="file"/>
+                <input class="saveProfile" type="submit" value="Salvar"/>
+            </form>
+
         </article>
     </section>
 

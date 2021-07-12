@@ -63,7 +63,6 @@ class HomeController extends Controller {
     }
 
     public function criation($args){
-        //$this->loggedUser->access
 
         if($args['type'] == 'casamento1'){
 
@@ -187,6 +186,12 @@ class HomeController extends Controller {
 
         $this->redirect('/suporte');
         exit;
+    }
+
+    public function profile(){
+        $this->render('profile',[
+            'user' => $this->loggedUser,
+        ]);
     }
 
 }

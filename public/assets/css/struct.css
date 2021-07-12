@@ -102,6 +102,7 @@ body{
     color:rgb(37, 37, 37);/*change to dark*/
     font-size: 16px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .menu li{

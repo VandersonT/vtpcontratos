@@ -1,0 +1,116 @@
+.box1{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(49, 49, 49);
+}
+
+.box1 img{
+    width: 230px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.box2{
+    width: 100%;
+    display: flex;
+}
+
+.imgProfile{
+    width: 45%;
+    height: calc(100vh - 250px);
+    min-height: 300px;
+    background-image: url('../images/imgProfile.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.infoProfile{
+    width: 55%;
+    height: calc(100vh - 250px);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.title{
+    color: rgb(126, 86, 0);
+    margin-bottom: 40px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.infoProfile input:not(input[type=submit]){
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+    font-size: 21px;
+    text-align: center;
+    color: rgb(70, 70, 70);
+    margin-bottom: 40px;
+}
+
+.inputTitle{
+    text-transform: uppercase;
+}
+
+.saveProfile{
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px;
+    cursor: pointer;
+    background-color: rgb(9, 0, 130);
+    color: rgb(209, 207, 207);
+}
+
+.saveProfile:hover{
+    background-color: rgb(8, 0, 119);
+    color: rgb(190, 190, 190);
+}
+
+@media screen and (max-width: 850px){
+    .box1{
+        height: 170px;
+    }
+
+    .box1 img{
+        width: 200px;
+        height: 150px;
+    }
+    
+    .imgProfile{
+        display: none;
+    }
+    
+    .infoProfile{
+        width: 100%;
+        height: auto;
+        min-height:unset;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .inputTitle,
+    .title{
+        font-size: 17px;
+    }
+    .infoProfile input:not(input[type=submit]){
+        width: 95%;
+        font-size: 15px;
+    }
+    .saveProfile{
+        width: 50%;
+    }
+}

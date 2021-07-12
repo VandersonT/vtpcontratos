@@ -26,7 +26,7 @@
                     <i class="fas fa-share-alt-square"></i>
                     Salvos
                 </li></a>
-                <a href="#perfil"><li class="<?= $selected=='profile' ? 'selected' : '';?>">
+                <a href="<?=$base;?>/perfil"><li class="<?= $selected=='profile' ? 'selected' : '';?>">
                     <i class="fas fa-user"></i>
                     Perfil
                 </li></a>
@@ -34,11 +34,11 @@
                     <i class="fas fa-comments"></i>
                     Suporte
                 </li></a>
-                <a href="#"><li class="darkMode">
+                <a><li class="darkMode">
                     <i class="fas fa-cloud-moon"></i>
                     Dark Mode
                 </li></a>
-                <a href="<?=$base;?>/sair" onClick="return window.confirm('certeza?');"><li class="close">
+                <a href="<?=$base;?>/sair" onClick="return window.confirm('Quer realmente sair?');"><li class="close">
                     <i class="fas fa-door-open"></i>
                     Sair
                 </li></a>
