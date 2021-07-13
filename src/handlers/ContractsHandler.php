@@ -3,6 +3,7 @@ namespace src\handlers;
 
 use \src\models\Wedding1;
 use \src\models\Support;
+use \src\models\User;
 
 class ContractsHandler {
 
@@ -216,6 +217,15 @@ class ContractsHandler {
             'msg' => $msgToSuport,
             'dateT' => date('d/m/Y')
         ])->execute();
+    }
+
+    public static function saveInfo($id, $userName, $userEmail, $namePhoto){
+        User::update()
+            ->set('name',$userName)
+            ->set('email',$userEmail)
+            ->set('photo',$namePhoto)
+            ->where('id', $id)
+        ->execute();
     }
 
 }

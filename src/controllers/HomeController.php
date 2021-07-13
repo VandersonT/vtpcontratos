@@ -189,9 +189,56 @@ class HomeController extends Controller {
     }
 
     public function profile(){
+
+        $success = '';
+        $error = '';
+        if(!empty($_SESSION['success'])){
+            $success = $_SESSION['success'];
+            $_SESSION['success'] = '';
+        }
+
+        if(!empty($_SESSION['error'])){
+            $error = $_SESSION['error'];
+            $_SESSION['error'] = '';
+        }
+
+
         $this->render('profile',[
             'user' => $this->loggedUser,
+            'success'=>$success,
+            'error'=>$error
         ]);
+    }
+
+    public function saveInfoProfile(){
+
+        $allowed = ['image/jpeg', 'image/jpg', 'image/png'];
+        
+        if($_FILES['photoProfile']['size'] > 2000000){
+            $_SESSION['error'] = 'A foto enviada é muito grande. (maximo 2MB)';
+            $this->redirect('/perfil');
+            exit;
+        }
+
+        if(!in_array($_FILES['photoProfile']['type'], $allowed)){
+            $_SESSION['error'] = 'O tipo de foto enviada não é permitido. (somente: jpeg, jpg e png)';
+            $this->redirect('/perfil');
+            exit;
+        }
+
+        $namePhoto = md5(time().rand(0,9999)).'.jpg';
+        move_uploaded_file($_FILES['photoProfile']['tmp_name'], 'media/avatars/'.$namePhoto);
+
+        $userName = filter_input(INPUT_POST, 'userName', FILTER_SANITIZE_SPECIAL_CHARS);
+        $userEmail = filter_input(INPUT_POST, 'userEmail', FILTER_VALIDATE_EMAIL);
+        
+        
+        ContractsHandler::saveInfo($this->loggedUser->id, $userName, $userEmail, $namePhoto);
+
+
+        $_SESSION['success'] = 'Seu perfil foi atualizado com sucesso.';
+        $this->redirect('/perfil');
+        exit;
     }
 
 }

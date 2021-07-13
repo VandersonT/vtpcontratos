@@ -23,6 +23,7 @@
     <?= $render('menu', ['user' => $user, 'selected' => 'profile']);?> <!--this partial requires the 5 <scripts> below-->
 
     <section class="box-content">
+        
         <article class="box1">
             <img src="<?=$base;?>/media/avatars/<?= $user->photo;?>" />
         </article>
@@ -30,16 +31,31 @@
 
             <div class="imgProfile"></div>
 
-            <form class="infoProfile">
+            <form class="infoProfile" method="POST" action="<?=$base;?>/salvarPerfil" enctype="multipart/form-data">
+                
+                <?php if(!empty($success)): ?>
+                    <div class="success">
+                        <i class="fas fa-check-circle"></i>
+                        <?= $success; ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if(!empty($error)): ?>
+                    <div class="error">
+                        <i class="fas fa-times"></i>
+                        <?= $error; ?>
+                    </div>
+                <?php endif; ?>
+
                 <h1 class="title">
                     <i class="fas fa-tools"></i>
                     Suas informações
                     <i class="fas fa-tools"></i>
                 </h1>
-                <input type="text" value="<?=$user->name;?>" />
-                <input type="email" value="<?=$user->email;?>" />
+                <input name="userName" type="text" value="<?=$user->name;?>" />
+                <input name="userEmail" type="email" value="<?=$user->email;?>" />
                 <h1 class="inputTitle">Foto de perfil:</h1>
-                <input type="file"/>
+                <input name="photoProfile" type="file"/>
                 <input class="saveProfile" type="submit" value="Salvar"/>
             </form>
 
