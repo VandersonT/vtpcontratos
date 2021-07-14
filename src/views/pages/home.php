@@ -63,7 +63,7 @@
         </article>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script>var themeMode = '<?=$user->themeMode;?>';</script>
     <script src="<?=$base;?>/assets/js/toggleMenuMobile.js"></script>
     <script src="<?=$base;?>/assets/js/SelectedAndHover.js"></script>
     <script src="<?=$base;?>/assets/js/darkMode.js"></script>

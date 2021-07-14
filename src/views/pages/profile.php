@@ -58,13 +58,24 @@
                 <input name="photoProfile" type="file"/>
                 <h1 class="inputTitle">Logo para contrato:</h1>
                 <input name="logoContract" type="file"/>
+                <h1 class="inputTitle">Tema:</h1>
+                <label class="themeMode">
+                    <div class="boxDarkTheme">
+                        <input <?=($user->themeMode == 'dark') ? 'checked' : '';?> name="themeMode" type="radio" value="dark"/>
+                        DarkMode
+                    </div>
+                    <div>
+                        <input <?=($user->themeMode == 'light') ? 'checked' : '';?> name="themeMode" type="radio" value="light"/>
+                        LightMode
+                    </div>
+                </label>
                 <input class="saveProfile" type="submit" value="Salvar"/>
             </form>
 
         </article>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script>var themeMode = '<?=$user->themeMode;?>';</script>
     <script src="<?=$base;?>/assets/js/toggleMenuMobile.js"></script>
     <script src="<?=$base;?>/assets/js/SelectedAndHover.js"></script>
     <script src="<?=$base;?>/assets/js/darkMode.js"></script>

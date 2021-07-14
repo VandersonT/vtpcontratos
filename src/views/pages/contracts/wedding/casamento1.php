@@ -388,6 +388,7 @@
         <input class="date_today" type="hidden" name="date_today" />
     </form>
 
+    
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     <script src="<?=$base;?>/assets/js/contracts/weddings/casamento1.js"></script>
     <script src="<?=$base;?>/assets/js/darkModeContrato.js"></script>

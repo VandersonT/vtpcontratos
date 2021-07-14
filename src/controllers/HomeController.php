@@ -219,6 +219,7 @@ class HomeController extends Controller {
         $namePhoto = '';
         $namePhoto = '';
         $allowed = ['image/jpeg', 'image/jpg', 'image/png'];
+        $themeMode = filter_input(INPUT_POST, 'themeMode', FILTER_SANITIZE_SPECIAL_CHARS);
 
         if(!empty($_FILES['photoProfile']['size'])){
             $profilePictureChanged = true;
@@ -268,7 +269,7 @@ class HomeController extends Controller {
         }
         /*---------------------------------------------------------------------------------*/
         
-        ContractsHandler::saveInfo($this->loggedUser->id, $userName, $userEmail, $namePhoto, $nameLogo, $profilePictureChanged, $contractLogoChanged);
+        ContractsHandler::saveInfo($this->loggedUser->id, $userName, $userEmail, $themeMode, $namePhoto, $nameLogo, $profilePictureChanged, $contractLogoChanged);
 
 
         $_SESSION['success'] = 'Seu perfil foi atualizado com sucesso.';

@@ -5,37 +5,15 @@ let itens = menuItens.getElementsByTagName('li');
 let transition = "1s";
 /*---------------------------------------------------*/
 
-/*
-if(themeMode == "light"){
-    alert("light");
+if(themeMode != 'light' && themeMode != 'dark'){
+    themeMode = 'light';
 }else{
-    alert("dark");
-}
-*/
-
-if(!Cookies.get("isLight", "false")){
-    Cookies.set("isLight", 'true');
-}else{
-    if(Cookies.get("isLight") == "false"){
+    if(themeMode == 'dark'){
         changeThemeToDark();
     }else{
         changeThemeToLight();
     }
 }
-
-btnTheme.addEventListener("click", function(){
-    if(Cookies.get("isLight") == "true"){
-        activeFadein()
-        changeThemeToDark();
-        desactiveFadein()
-        Cookies.set("isLight", "false");
-    }else{
-        activeFadein()
-        changeThemeToLight();
-        desactiveFadein();
-        Cookies.set("isLight", "true");
-    }
-})
 
 function changeThemeToDark(){
     for(let i = 0; i < itens.length; i++){

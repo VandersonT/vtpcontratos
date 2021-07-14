@@ -18,6 +18,7 @@ class LoginHandler {
                 $loggedUser->name = $data['name'];
                 $loggedUser->email = $data['email'];
                 $loggedUser->access = $data['access'];
+                $loggedUser->themeMode = $data['themeMode'];
                 $loggedUser->photo = $data['photo'];
                 $loggedUser->contractLogo = $data['contractLogo'];
 

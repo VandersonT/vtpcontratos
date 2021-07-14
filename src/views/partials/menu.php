@@ -34,10 +34,10 @@
                     <i class="fas fa-comments"></i>
                     Suporte
                 </li></a>
-                <a><li class="darkMode">
+                <!--<a><li class="darkMode">
                     <i class="fas fa-cloud-moon"></i>
                     Dark Mode
-                </li></a>
+                </li></a>-->
                 <a href="<?=$base;?>/sair" onClick="return window.confirm('Quer realmente sair?');"><li class="close">
                     <i class="fas fa-door-open"></i>
                     Sair
