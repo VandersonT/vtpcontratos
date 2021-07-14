@@ -19,6 +19,7 @@ class LoginHandler {
                 $loggedUser->email = $data['email'];
                 $loggedUser->access = $data['access'];
                 $loggedUser->photo = $data['photo'];
+                $loggedUser->contractLogo = $data['contractLogo'];
 
                 return $loggedUser;
             }
@@ -59,8 +60,7 @@ class LoginHandler {
             'password' => $hash,
             'token' => $token,
             'access' => 1,
-            'photo' => 'no-picture.png',
-            'theme' => 'light'
+            'photo' => 'no-picture.png'
         ])->execute();
         
         return $token;

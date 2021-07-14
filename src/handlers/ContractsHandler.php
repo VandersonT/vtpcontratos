@@ -219,13 +219,27 @@ class ContractsHandler {
         ])->execute();
     }
 
-    public static function saveInfo($id, $userName, $userEmail, $namePhoto){
+    public static function saveInfo($id, $userName, $userEmail, $namePhoto, $nameLogo, $profilePictureChanged, $contractLogoChanged){
         User::update()
             ->set('name',$userName)
             ->set('email',$userEmail)
-            ->set('photo',$namePhoto)
             ->where('id', $id)
         ->execute();
+
+        if($profilePictureChanged){
+            User::update()
+                ->set('photo',$namePhoto)
+                ->where('id', $id)
+            ->execute();
+        }
+
+        if($contractLogoChanged){
+            User::update()
+                ->set('contractLogo',$nameLogo)
+                ->where('id', $id)
+            ->execute();
+        }
+
     }
 
 }

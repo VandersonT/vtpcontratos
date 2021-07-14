@@ -211,29 +211,63 @@ class HomeController extends Controller {
     }
 
     public function saveInfoProfile(){
-
-        $allowed = ['image/jpeg', 'image/jpg', 'image/png'];
-        
-        if($_FILES['photoProfile']['size'] > 2000000){
-            $_SESSION['error'] = 'A foto enviada é muito grande. (maximo 2MB)';
-            $this->redirect('/perfil');
-            exit;
-        }
-
-        if(!in_array($_FILES['photoProfile']['type'], $allowed)){
-            $_SESSION['error'] = 'O tipo de foto enviada não é permitido. (somente: jpeg, jpg e png)';
-            $this->redirect('/perfil');
-            exit;
-        }
-
-        $namePhoto = md5(time().rand(0,9999)).'.jpg';
-        move_uploaded_file($_FILES['photoProfile']['tmp_name'], 'media/avatars/'.$namePhoto);
-
         $userName = filter_input(INPUT_POST, 'userName', FILTER_SANITIZE_SPECIAL_CHARS);
         $userEmail = filter_input(INPUT_POST, 'userEmail', FILTER_VALIDATE_EMAIL);
+        $profilePictureChanged = false;
+        $contractLogoChanged = false;
+        $namePhoto = '';
+        $namePhoto = '';
+        $allowed = ['image/jpeg', 'image/jpg', 'image/png'];
+
+        if(!empty($_FILES['photoProfile']['size'])){
+            $profilePictureChanged = true;
+        }
+
+        if(!empty($_FILES['logoContract']['size'])){
+            $contractLogoChanged = true;
+        }
         
+        /*------------------------------IMAGE VERIFY---------------------------------------*/
+        if($profilePictureChanged){
+            if($_FILES['photoProfile']['size'] > 2000000){
+                $_SESSION['error'] = 'A foto de perfil enviada é muito grande. (maximo 2MB)';
+                $this->redirect('/perfil');
+                exit;
+            }
+    
+            //if type is not allowed
+            if(!in_array($_FILES['photoProfile']['type'], $allowed)){
+                $_SESSION['error'] = 'O tipo de foto enviada não é permitido. (somente: jpeg, jpg e png)';
+                $this->redirect('/perfil');
+                exit;
+            } 
+
+            //if that's ok
+            $namePhoto = md5(time().rand(0,9999)).'.jpg';
+            move_uploaded_file($_FILES['photoProfile']['tmp_name'], 'media/avatars/'.$namePhoto);
+        }
+
+        if($contractLogoChanged){
+            if($_FILES['logoContract']['size'] > 2000000){
+                $_SESSION['error'] = 'A foto de logo enviada é muito grande. (maximo 2MB)';
+                $this->redirect('/perfil');
+                exit;
+            }
+    
+            //if type is not allowed
+            if(!in_array($_FILES['logoContract']['type'], $allowed)){
+                $_SESSION['error'] = 'O tipo de foto enviada não é permitido. (somente: jpeg, jpg e png)';
+                $this->redirect('/perfil');
+                exit;
+            } 
+
+            //if that's ok
+            $nameLogo = md5(time().rand(0,9999)).'.jpg';
+            move_uploaded_file($_FILES['logoContract']['tmp_name'], 'media/logo/'.$nameLogo);
+        }
+        /*---------------------------------------------------------------------------------*/
         
-        ContractsHandler::saveInfo($this->loggedUser->id, $userName, $userEmail, $namePhoto);
+        ContractsHandler::saveInfo($this->loggedUser->id, $userName, $userEmail, $namePhoto, $nameLogo, $profilePictureChanged, $contractLogoChanged);
 
 
         $_SESSION['success'] = 'Seu perfil foi atualizado com sucesso.';

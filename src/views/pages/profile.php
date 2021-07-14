@@ -56,6 +56,8 @@
                 <input name="userEmail" type="email" value="<?=$user->email;?>" />
                 <h1 class="inputTitle">Foto de perfil:</h1>
                 <input name="photoProfile" type="file"/>
+                <h1 class="inputTitle">Logo para contrato:</h1>
+                <input name="logoContract" type="file"/>
                 <input class="saveProfile" type="submit" value="Salvar"/>
             </form>
 

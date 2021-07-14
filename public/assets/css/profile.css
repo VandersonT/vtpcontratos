@@ -40,7 +40,7 @@
 
 .title{
     color: rgb(126, 86, 0);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-weight: lighter;
     text-transform: uppercase;
     font-size: 24px;
@@ -48,18 +48,24 @@
 
 .infoProfile input:not(input[type=submit]){
     width: 400px;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
     outline: 0;
     border: 0;
     font-size: 21px;
     text-align: center;
     color: rgb(70, 70, 70);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.infoProfile input[type=file]{
+    margin-bottom: 10px!important;
+    font-size: 15px !important;
 }
 
 .inputTitle{
     text-transform: uppercase;
+    font-size: 17px;
 }
 
 .saveProfile{
@@ -70,7 +76,7 @@
     border: 0;
     font-size: 18px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-top: 10px;
     cursor: pointer;
     background-color: rgb(9, 0, 130);
     color: rgb(209, 207, 207);
@@ -105,6 +111,15 @@
 .error i{
     color: rgb(19, 19, 19);
     margin-right: 5px;
+}
+
+@media screen and (max-height: 620px){
+    .infoProfile{
+        height: auto;
+    }
+    .imgProfile{
+        height: 300px;
+    }
 }
 
 @media screen and (max-width: 850px){
