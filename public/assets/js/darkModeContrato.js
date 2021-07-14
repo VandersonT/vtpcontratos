@@ -1,13 +1,5 @@
-/*---------------------VARIABLES---------------------*/
-let transition = "1s";
-/*---------------------------------------------------*/
-
-if(!Cookies.get("isLight")){
-    Cookies.set("isLight", 'true');
-}else{
-    if(Cookies.get("isLight") == "false"){
-        contractThemeDark();
-    }
+if(themeMode == 'dark'){
+    contractThemeDark();
 }
 
 function contractThemeDark(){
@@ -17,4 +9,5 @@ function contractThemeDark(){
     document.querySelector('.fillMenu').style.background = "rgb(20, 20, 20)";
     document.querySelector('.fillMenu').style.border = "1px solid rgb(10, 10, 10)";
     document.documentElement.style.setProperty('--backgroundInput', 'rgb(70, 70, 70)');
-    document.querySelector('.setFavorite').style.color = "gray";}
+    document.querySelector('.setFavorite').style.color = "gray";
+}

@@ -58,8 +58,14 @@
                     Voltar
                 </a>
                 <a href="#" class="setFavorite">
-                    <i style="color: red;" class="fas fa-star"></i>
-                    Favorito
+                    <i class="fas fa-file-signature"></i>
+                    <?php
+                        if($idContract > 1){
+                            echo $contract->contract_name;
+                        }else{
+                            echo 'Novo Contrato';
+                        }
+                    ?>
                 </a>
                 <a class="btnContract saveContract">
                     <?= $idContract > 1 ? 'Editar' : 'Salvar'?>
@@ -389,7 +395,7 @@
     </form>
 
     
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script>var themeMode = '<?=$user->themeMode;?>';</script>
     <script src="<?=$base;?>/assets/js/contracts/weddings/casamento1.js"></script>
     <script src="<?=$base;?>/assets/js/darkModeContrato.js"></script>
     <script src="<?=$base;?>/assets/js/contratoAberto.js"></script>
