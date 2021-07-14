@@ -24,6 +24,12 @@
         <div class="fillMenuOpen"><i class="fas fa-caret-square-down"></i></div>
         
         <form class="fillMenu animate__animated">
+            
+            <label class="box-activeLogo">
+                <input class="activeLogo" type="checkbox" />
+                <p>Usar logo</p>
+            </label>
+        
             <input class="inputService" type="text" placeholder="Serviços (ex: Fotografi|Filmagem etc)" value="<?= $idContract > 1 ? $contract->service : '';?>" />
             <textarea class="inputInfoHired" placeholder="Informações do contratado ex: nome da empresa ou pessoal, se pessoa jurídica ou juridica, nome da cidade, nome do estado, CNPJ se tiver e telefone."><?= $idContract > 1 ? $contract->hired_info : '';?></textarea>
             <input class="inputContractorName" type="text" placeholder="Nome do contratante" value="<?= $idContract > 1 ? $contract->name : '';?>"/>
@@ -39,7 +45,7 @@
             <input class="inputTime" type="text" placeholder="Horario do casamento" value="<?= $idContract > 1 ? $contract->time : '';?>"/>
             <input class="inputPlace" type="text" placeholder="Local do casamento" value="<?= $idContract > 1 ? $contract->place : '';?>"/>
             <textarea class="inputGoals" placeholder="Objetivos do contrato"><?= $idContract > 1 ? $contract->goals : '';?></textarea>
-            <input class="inputPrice" type="text" placeholder="Preço" value="<?= $idContract > 1 ? $contract->price : '';?>"/>
+            <textarea class="inputPrice" placeholder="Preço"><?= $idContract > 1 ? $contract->price : '';?></textarea>
             <input class="inputDeadline" type="text" placeholder="Prazo" value="<?= $idContract > 1 ? $contract->deadline : '';?>"/>
             <input class="inputWarranty" type="text" placeholder="Garantia" value="<?= $idContract > 1 ? $contract->warranty : '';?>"/>
             <input class="inputDateToday" type="text" placeholder="Data de hoje" value="<?= $idContract > 1 ? $contract->date_today : '';?>"/>
@@ -66,6 +72,10 @@
             </p>
             
             <div class="contractSingle">
+
+                <div class="logoContract">
+                    <img alt="logo" src="<?=$base;?>/media/logo/<?= $user->contractLogo;?>" />
+                </div>
                 
                 <div contentEditable="true" class="box-mainTitle">
                     <span class="cmp1"><?=$contract->cmp1;?></span>
@@ -199,6 +209,10 @@
     
     <div id="toPrint">
         
+        <div class="logoContract">
+            <img alt="logo" src="<?=$base;?>/media/logo/<?= $user->contractLogo;?>" />
+        </div>
+
         <div class="box-mainTitle">
             <span class="cmp1"><?=$contract->cmp1;?></span>
             <span class="service"><?=$contract->service;?></span>

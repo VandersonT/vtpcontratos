@@ -71,7 +71,8 @@ class HomeController extends Controller {
             if($this->contract){
                 $this->render('contracts/wedding/casamento1',[
                     'contract' => $this->contract,
-                    'idContract' => $args['id']
+                    'idContract' => $args['id'],
+                    'user' => $this->loggedUser
                 ]);
             }else{
                 $this->render('404');

@@ -6,6 +6,22 @@ generateBtn.addEventListener('click',function(e){
 })
 /*---------------------------------------------------------------------------------------------------------------*/
 
+let btn = document.querySelector('.activeLogo');
+let isLogoActive = false;
+var logo = document.querySelectorAll('.logoContract');
+
+btn.addEventListener('click', function(){
+    if(isLogoActive){
+        logo[0].style.display = 'none';
+        logo[1].style.display = 'none';
+        isLogoActive = false;
+    }else{
+        logo[0].style.display = 'block';
+        logo[1].style.display = 'block';
+        isLogoActive = true;
+    }
+})
+
 /*---------------------------------------------SAVE-CONTRACT-----------------------------------------------------*/
 /*Form*/
 let btnSubmit = document.querySelector('.saveContract');

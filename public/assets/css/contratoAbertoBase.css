@@ -19,9 +19,9 @@
         visibility: visible;
     }
     #toPrint {
-        display: block;
+        display:block;
         width: 100%;
-        position: fixed;
+        position: absolute;
         left: 0;
         top: 0;
     }
@@ -53,7 +53,7 @@ body{
     padding-bottom: 40px;
 }
 
-.fillMenu input{
+.fillMenu input:not(input[type=checkbox]){
     width: 90%;
     padding: 10px;
     border-radius: 10px;
