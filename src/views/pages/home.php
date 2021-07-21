@@ -28,7 +28,7 @@
             <div class="showcase">
                 <div class="favoriteStorage">
 
-                    <form class="favoriteSigle"  method="GET" action="<?=$base;?>/criação/casamento1" >
+                    <form class="favoriteSingle"  method="GET" action="<?=$base;?>/criação/casamento1" >
                         <img src="<?=$base;?>/assets/images/weddingImg1.jpg">
                         <p>Casamento</p>
                         <span>Modelo 1</span>
