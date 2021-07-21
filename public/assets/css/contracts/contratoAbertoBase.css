@@ -1,8 +1,10 @@
 /*-------------------------------------------PRINT---------------------------------------------------*/
 @media print {
-    .fillMenu{display: none;}
-    .barMenu{display: none;}
-    .contractSingle{padding: 0;}
+    .fillMenu{display: none !important;}
+    .barMenu{display: none !important;}
+    .contractSingle{padding: 0 !important;}
+    .toggleMenu{display:none !important;}
+    .mark{color: black !important;font-weight: normal!important;}
 }
 /*---------------------------------------------------------------------------------------------------*/
 
@@ -13,10 +15,11 @@
 /*-------------------------------------------DEFAULT-------------------------------------------------*/
 body{background-color: rgb(128, 128, 128);color: rgb(22, 22, 22);}
 :root{--backgroundInput: white;--color: rgb(26,26,26);}
-.mark{color: red;font-weight: bold;}
 .bold{font-weight: bold;}
 .toggleMenu{display: none;position: fixed;margin-left: 420px;top: 50%;font-size: 40px;cursor: pointer;}
 .middleTextArea{height: 130px !important;}
+.bold{font-weight: bold;}
+.mark{color: red;font-weight: bold;}
 /*---------------------------------------------------------------------------------------------------*/
 
 
@@ -42,18 +45,16 @@ body{background-color: rgb(128, 128, 128);color: rgb(22, 22, 22);}
     border: 0;
     font-size: 16px;
     margin-left: 5%;
-    margin-top: 20px;
+    margin-top: 15px;
     background-color: var(--backgroundInput);
 }
 .fillMenu .checkBox{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
     font-size: 20px;
-    border-top: 1px solid var(--color);
     border-bottom: 1px solid var(--color);
-    padding: 20px;
+    padding: 15px 0;
 }
 .fillMenu .checkBox p{
     margin-left: 10px;
@@ -155,9 +156,11 @@ body{background-color: rgb(128, 128, 128);color: rgb(22, 22, 22);}
 
 @media screen and (max-width: 1250px){
     .contractSingle{
-        width: 100%;
+        width: 90vw;
         margin-left: 0;
         padding: 20px;
+        margin: 0 auto;
+        margin-bottom: 60px;
     }
     .warning{
         margin-left: 0;

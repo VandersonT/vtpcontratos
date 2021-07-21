@@ -64,12 +64,15 @@
     <!--
     <form class="formSaveContract" method="POST" action="<?=$base;?>/salvar/casamento1">
         Dê um submit nesse contrato com o js 
+        <input name="contractId" type="hidden" value="<?=$contractInfo['id']?>" />    
+        <input name="contractType" type="hidden" value="<?=$contractInfo['type']?>" />
+        <input name="user_id" type="hidden" value="<?=$user->id?>" />
     </form>
     -->
 
     
     <script>var themeMode = '<?=$user->themeMode;?>';</script>
     <script src="<?=$base;?>/assets/js/darkModeContrato.js"></script>
-    <script src="<?=$base;?>/assets/js/contratoAberto.js"></script>
+    <script src="<?=$base;?>/assets/js/contracts/contratoAberto.js"></script>
 </body>
 </html>

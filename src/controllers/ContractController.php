@@ -57,7 +57,8 @@ class ContractController extends Controller {
 
         $this->render('contracts/'.$args['type'], [
             'user' => $this->loggedUser,
-            'contract' => $contract
+            'contract' => $contract,
+            'contractInfo' => $args
         ]);
         exit;
 

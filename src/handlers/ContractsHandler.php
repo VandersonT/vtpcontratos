@@ -57,7 +57,7 @@ class ContractsHandler {
                     $getContract->user_id = $data['user_id'];
                     $getContract->contract_name = $data['contract_name'];
                     $getContract->cmp1 = $data['cmp1'];
-                    $getContract->service1 = $data['user_id'];
+                    $getContract->service = $data['service'];
                     $getContract->cmp2 = $data['cmp2'];
                     $getContract->cmp3 = $data['cmp3'];
                     $getContract->hired_info = $data['hired_info'];
@@ -110,13 +110,18 @@ class ContractsHandler {
         switch($contract['type']){
             case 'wedding1':
                 $data = Wedding1::select()->where('id', $contract['id'])->one();
+
+                if(!$data){
+                    return false;
+                }
+
                 if(count($data) > 0){
                     $getContract = new Wedding1();
                     $getContract->id = $data['id'];
                     $getContract->user_id = $data['user_id'];
                     $getContract->contract_name = $data['contract_name'];
                     $getContract->cmp1 = $data['cmp1'];
-                    $getContract->service1 = $data['user_id'];
+                    $getContract->service = $data['service'];
                     $getContract->cmp2 = $data['cmp2'];
                     $getContract->cmp3 = $data['cmp3'];
                     $getContract->hired_info = $data['hired_info'];
@@ -156,6 +161,7 @@ class ContractsHandler {
                     $getContract->cmp21 = $data['cmp21'];
                     $getContract->name_hired = $data['name_hired'];
                     $getContract->date_today = $data['date_today'];
+
                     return $getContract;
                 }
                 break;
