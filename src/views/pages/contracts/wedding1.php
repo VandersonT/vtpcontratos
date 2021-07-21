@@ -13,6 +13,7 @@
     <link rel="shortcut icon" type="image-x/png" href="<?=$base;?>/icon.ico">
     <link rel="stylesheet" href="<?=$base;?>/assets/css/style.css" />
     <link rel="stylesheet" href="<?=$base;?>/assets/css/contracts/contratoAbertoBase.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/contracts/wedding1.css" />
 
     <script src="https://kit.fontawesome.com/90bf9437da.js" crossorigin="anonymous"></script>
 </head>
@@ -27,7 +28,7 @@
         
         <textarea class="inputInfoHired" placeholder="Exemplo de textArea"></textarea>
 
-        <textarea class="inputInfoHired middleTextArea" placeholder="Exemplo de textArea"></textarea>
+        <textarea class="inputInfoHired middleTextArea" placeholder="Exemplo de textArea medio"></textarea>
         
         <label class="checkBox">
             <input type="checkbox" />

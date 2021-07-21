@@ -28,7 +28,7 @@
             <div class="contractStorage" >
                 
                 <?php if($type == 'casamento'):?>
-                    <form class="contractSingle" method="GET" action="<?=$base;?>/criação/casamento1" >
+                    <form class="contractSingle" method="GET" action="<?=$base;?>/criação/wedding1" >
                         <img src="<?=$base;?>/assets/images/weddingImg1.jpg">
                         <p>Casamento</p>
                         <span>Modelo 1</span>

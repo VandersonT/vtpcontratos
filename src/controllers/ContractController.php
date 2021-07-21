@@ -42,17 +42,23 @@ class ContractController extends Controller {
     }
 
     public function criation($args){
+        $contract = '';
         
-        switch($args['type']){
-            case 'casamento1':
-                $this->render('contracts/model', [
-                    'user' => $this->loggedUser
-                ]);
-                break;
-            default:
-                $this->render('404');
-                break;
+        if($args['id'] == 1){
+            $contract = ContractsHandler::getModelContract($args);
+        }else{
+            $contract = ContractsHandler::getContract($args);
         }
+
+        if(!$contract){
+            $this->render('404');
+            exit;
+        }
+
+        $this->render('contracts/'.$args['type'], [
+            'user' => $this->loggedUser,
+            'contract' => $contract
+        ]);
         exit;
 
     }
