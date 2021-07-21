@@ -32,43 +32,43 @@
     
         <input class="contractName" type="text" placeholder="Nome do contrato"/>
         
-        <input class="service" type="text" placeholder="Tipo de serviço [ex: Fotografia e filmagem]"/>
+        <input type="text" placeholder="Tipo de serviço [ex: Fotografia e filmagem]"/>
         
-        <textarea class="inputInfoHired" placeholder="Informações do contratado, ex: pessoa fisica ou juridica, cnpj, telefone, cidade e estado "></textarea>
+        <textarea placeholder="Informações do contratado, ex: pessoa fisica ou juridica, cnpj, telefone, cidade e estado "></textarea>
 
-        <input class="contractorName" type="text" placeholder="Nome do contratante"/>
+        <input type="text" placeholder="Nome do contratante"/>
 
-        <input class="contractorCpf" type="text" placeholder="Cpf do contratante"/>
+        <input type="text" placeholder="Cpf do contratante"/>
 
-        <input class="contractorRg" type="text" placeholder="Rg do contratante"/>
+        <input type="text" placeholder="Rg do contratante"/>
 
-        <input class="contractorEmail" type="text" placeholder="Email do contratante"/>
+        <input type="text" placeholder="Email do contratante"/>
 
-        <input class="contractorCell" type="text" placeholder="Celular do contratante"/>
+        <input type="text" placeholder="Celular do contratante"/>
 
-        <input class="contractorAddress" type="text" placeholder="Endereço do contratante"/>
+        <input type="text" placeholder="Endereço do contratante"/>
 
-        <input class="contractorCity" type="text" placeholder="Cidade do contratante"/>
+        <input type="text" placeholder="Cidade do contratante"/>
 
-        <input class="nameBride" type="text" placeholder="Nome da noiva"/>
+        <input type="text" placeholder="Nome da noiva"/>
         
-        <input class="nameEngaged" type="text" placeholder="Nome do noivo"/>
+        <input type="text" placeholder="Nome do noivo"/>
 
-        <input class="date" type="text" placeholder="data do casamento"/>
+        <input type="text" placeholder="data do casamento"/>
 
-        <input class="time" type="text" placeholder="Hora do casamento"/>
+        <input type="text" placeholder="Hora do casamento"/>
 
-        <input class="place" type="text" placeholder="local"/>
+        <input type="text" placeholder="local"/>
 
-        <textarea class="goals" placeholder="Objetivos"></textarea>
+        <textarea placeholder="Objetivos"></textarea>
 
-        <textarea class="price middleTextArea" placeholder="Preço"></textarea>
+        <textarea class="middleTextArea" placeholder="Preço"></textarea>
 
-        <textarea class="deadline middleTextArea" placeholder="Prazo"></textarea>
+        <textarea class="middleTextArea" placeholder="Prazo"></textarea>
 
-        <input class="Warranty" type="text" placeholder="Garantia"/>
+        <input type="text" placeholder="Garantia"/>
 
-        <input class="Date_today" type="text" placeholder="Data de hoje"/>
+        <input type="text" placeholder="Data de hoje"/>
 
         <button class="generateBtn">Gerar</button>
     </form>
@@ -93,11 +93,11 @@
 
     <div class="contractSingle">
 
-        <h1 class="mainTitle">
-            <?=$contract->cmp1;?>
-            <?=$contract->service;?>
-            <?=$contract->cmp2;?>
-        </h1>
+        <div class="mainTitle">
+            <span class="cmp1"><?=$contract->cmp1;?></span>
+            <span class="service"><?=$contract->service;?></span>
+            <span class="cmp2"><?=$contract->cmp2;?></span>
+        </div>
 
         <br/><br/>
 
@@ -202,14 +202,18 @@
 
 
 
-    <form class="formSaveContract" method="POST" action="<?=$base;?>/salvar/casamento1">
+    <form class="formSaveContract" method="POST" action="<?=$base;?>/salvar/wedding1">
         <input name="contractId" type="hidden" value="<?=$contractInfo['id']?>" />    
         <input name="contractType" type="hidden" value="<?=$contractInfo['type']?>" />
-        <input name="user_id" type="hidden" value="<?=$user->id?>" />
+        <input name="contractNameInput" type="hidden" />
+        <input name="cmp1Input" type="hidden"/>
+        <input name="serviceInput" type="hidden"/>
+        <input name="cmp2Input" type="hidden"/>
     </form>
 
     
     <script>var themeMode = '<?=$user->themeMode;?>';</script>
+    <script src="<?=$base;?>/assets/js/contracts/wedding1.js"></script>
     <script src="<?=$base;?>/assets/js/darkModeContrato.js"></script>
     <script src="<?=$base;?>/assets/js/contracts/contratoAberto.js"></script>
 </body>

@@ -67,8 +67,16 @@ class ContractController extends Controller {
     public function saveContract($args){
 
         switch($args['type']){
-            case 'casamento1':
-                echo "Aqui ficará o codigo para salvar o casamento1";
+            case 'wedding1':
+                $contractId = filter_input(INPUT_POST, 'contractId');
+                $contractType = filter_input(INPUT_POST, 'contractType');
+                $contractName = filter_input(INPUT_POST, 'contractNameInput');
+                $cmp1 = filter_input(INPUT_POST, 'cmp1Input');
+                $service = filter_input(INPUT_POST, 'serviceInput');
+                $cmp2 = filter_input(INPUT_POST, 'cmp2Input');
+
+                echo "RESPOSTA: ".$cmp2;
+                exit;
                 break;
             default:
                 $this->redirect('/404');
