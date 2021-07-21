@@ -1,38 +1,93 @@
-/*Toggle Menu To Mobile*/
-let menu = document.querySelector('.fillMenu');
-let btnClose = document.querySelector('.fillMenuClose');
-let btnOpen = document.querySelector('.fillMenuOpen');
+/*----------------------------------------BTN_GENERATE----------------------------------------------------*/
+let generateBtn = document.querySelector('.generateBtn');
+
+generateBtn.addEventListener('click', function(e){
+    e.preventDefault();
+
+    prepareToPrint();
+    
+    window.print();
+
+    returnToNormal();
+})
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/*----------------------------------------BTN_GENERATE----------------------------------------------------*/
+var menu = document.querySelector('.fillMenu');
+var btnToggle = document.querySelector('.toggleMenu');
 let isOpen = true;
 
-btnClose.addEventListener("click", function(){
+btnToggle.addEventListener('click', function(){
+    if(isOpen){
         menu.style.display = "none";
-        btnClose.style.display = "none";
-        btnOpen.style.display = "block";
+        btnToggle.style.marginLeft = "0";
         isOpen = false;
-})
-
-btnOpen.addEventListener("click", function(){
-        btnOpen.style.display = "none";
-        menu.style.display = "block";
-        btnClose.style.display = "block";
-        isOpen = true;
-})
-
-window.onresize = function(){
-    let windowWidth = window.innerWidth;
-    if(windowWidth >= 1300){
-        menu.style.display = "block";
-        btnClose.style.display = "none";
-        btnOpen.style.display = "none";
     }else{
+        menu.style.display = "block";
+        btnToggle.style.marginLeft = "420px";
+        isOpen = true;
+    }
+})
+
+let windowWidth = window.innerWidth;
+if(windowWidth <= 1250){
+    btnToggle.style.display = "block";
+}else{
+    btnToggle.style.display = "none";
+}
+window.onresize = function(){
+    verifyMenu();
+};
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------FUNCTIONS----------------------------------------------------*/
+function verifyMenu(){
+    let windowWidth = window.innerWidth;
+    if(windowWidth <= 1250){
+
+        btnToggle.style.display = "block";
         if(isOpen){
+            btnToggle.style.marginLeft = "420px";
             menu.style.display = "block";
-            btnClose.style.display = "block";
-            btnOpen.style.display = "none";
         }else{
+            btnToggle.style.marginLeft = "0";
             menu.style.display = "none";
-            btnClose.style.display = "none";
-            btnOpen.style.display = "block";
         }
+
+    }else{
+        btnToggle.style.display = "none";
+        menu.style.display = "block";
     }
 }
+
+function prepareToPrint(){
+    document.querySelector('.fillMenu').style.display = 'none';
+    document.querySelector('.barMenu').style.display = 'none';
+    document.querySelector('.warning').style.display = 'none';
+    document.querySelector('.warning').style.display = 'none';
+    
+    document.querySelector('.contractSingle').style.width = "100%";
+    document.querySelector('.contractSingle').style.marginLeft = "0";
+    document.querySelector('.contractSingle').style.marginBottom = "0";
+    document.querySelector('.contractSingle').style.position = "absolute";
+    document.querySelector('.contractSingle').style.padding = "0";
+}
+
+function returnToNormal(){
+    document.querySelector('.fillMenu').style.display = 'block';
+    document.querySelector('.barMenu').style.display = 'flex';
+    document.querySelector('.warning').style.display = 'block';
+    
+    document.querySelector('.contractSingle').style.width = "calc(100% - 480px)";
+    document.querySelector('.contractSingle').style.marginLeft = "450px";
+    document.querySelector('.contractSingle').style.marginBottom = "60px";
+    document.querySelector('.contractSingle').style.position = "initial";
+    document.querySelector('.contractSingle').style.padding = "30px";
+}
+/*--------------------------------------------------------------------------------------------------------*/

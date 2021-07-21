@@ -30,7 +30,6 @@
 
 .infoProfile{
     width: 55%;
-    height: calc(100vh - 250px);
     min-height: 300px;
     display: flex;
     flex-direction: column;
@@ -125,9 +124,6 @@
 }
 
 @media screen and (max-height: 620px){
-    .infoProfile{
-        height: auto;
-    }
     .imgProfile{
         height: 300px;
     }

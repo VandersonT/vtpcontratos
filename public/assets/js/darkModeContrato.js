@@ -3,11 +3,10 @@ if(themeMode == 'dark'){
 }
 
 function contractThemeDark(){
-    document.body.style.background = "rgb(36, 36, 36)";
-    document.body.style.color = "gray";
-    document.querySelector('.barMenu').style.background = "rgb(20, 20, 20)";
-    document.querySelector('.fillMenu').style.background = "rgb(20, 20, 20)";
-    document.querySelector('.fillMenu').style.border = "1px solid rgb(10, 10, 10)";
-    document.documentElement.style.setProperty('--backgroundInput', 'rgb(70, 70, 70)');
-    document.querySelector('.setFavorite').style.color = "gray";
+    document.querySelector('.fillMenu').style.background = "rgb(28, 28, 28)";
+    document.querySelector('.barMenu').style.background = "rgb(28, 28, 28)";
+    document.querySelector('.barMenu').style.color = "gray";
+    document.body.style.background = "rgb(46, 46, 46)";
+    document.documentElement.style.setProperty('--backgroundInput', 'rgb(64, 64, 64)');
+    document.documentElement.style.setProperty('--color', 'gray');
 }

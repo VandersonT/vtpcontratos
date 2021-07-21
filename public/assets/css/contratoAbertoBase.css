@@ -1,47 +1,29 @@
-
-/*----------------------PRINT------------------*/
-#toPrint{
-    width: 100vw;
-    height: 100vh;
-    display: none;
-}
-
+/*-------------------------------------------PRINT---------------------------------------------------*/
 @media print {
-    body * {
-        visibility: hidden;
-    }
-
-    .box-contract *{
-        display: none;
-    }
-    
-    #toPrint, #toPrint * {
-        visibility: visible;
-    }
-    #toPrint {
-        display:block;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
+    .fillMenu{display: none;}
+    .barMenu{display: none;}
+    .contractSingle{padding: 0;}
 }
-/*---------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
 
-:root{
-    --backgroundInput: white;
-}
 
-body{
-    background-color: rgb(128, 128, 128);
-    color: rgb(22, 22, 22);
-}
 
-.box-contract{
-    width: 100%;
-    display: flex;
-}
 
+
+/*-------------------------------------------DEFAULT-------------------------------------------------*/
+body{background-color: rgb(128, 128, 128);color: rgb(22, 22, 22);}
+:root{--backgroundInput: white;--color: rgb(26,26,26);}
+.mark{color: red;font-weight: bold;}
+.bold{font-weight: bold;}
+.toggleMenu{display: none;position: fixed;margin-left: 420px;top: 50%;font-size: 40px;cursor: pointer;}
+.middleTextArea{height: 130px !important;}
+/*---------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------------------MENU---------------------------------------------------*/
 .fillMenu{
     width: 420px;
     height: 100vh;
@@ -52,7 +34,6 @@ body{
     padding-top: 20px;
     padding-bottom: 40px;
 }
-
 .fillMenu input:not(input[type=checkbox]){
     width: 90%;
     padding: 10px;
@@ -64,7 +45,20 @@ body{
     margin-top: 20px;
     background-color: var(--backgroundInput);
 }
-
+.fillMenu .checkBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 20px;
+    border-top: 1px solid var(--color);
+    border-bottom: 1px solid var(--color);
+    padding: 20px;
+}
+.fillMenu .checkBox p{
+    margin-left: 10px;
+    color: var(--color);
+}
 .fillMenu textarea{
     width: 90%;
     height: 200px;
@@ -78,7 +72,6 @@ body{
     background-color: var(--backgroundInput);
     resize: none;
 }
-
 .fillMenu button{
     width: 70%;
     padding: 10px;
@@ -93,190 +86,124 @@ body{
     color: white;
     cursor: pointer;
 }
-
 .fillMenu button:hover{
-    background-color: rgb(0, 0, 206);
-    color: rgb(171, 171, 171);
+    background-color: rgb(0, 0, 228);
+    color: rgb(192, 192, 192);
 }
+/*---------------------------------------------------------------------------------------------------*/
 
-.box-contractSingle{
-    width: 80vw;
-    margin-left: 420px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black !important;
-}
 
-.fillMenuClose{
-    display: none;
-    position: fixed;
-    margin-left: 420px;
-    margin-top: 45vh;
-    font-size: 40px;
-    transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    cursor: pointer;
-    color: black !important;
-}
 
-.fillMenuOpen{
-    display: none;
-    position: fixed;
-    margin-top: 45vh;
-    font-size: 40px;
-    transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    cursor: pointer;
-    color: black !important;
-}
 
+
+/*--------------------------------------------HEAD---------------------------------------------------*/
 .barMenu{
-    width: 100%;
+    background-color: rgb(102, 102, 102);
+    width: calc(100% - 420px);
     height: 70px;
-    background-color: gray;
-    border-bottom: 1px solid rgb(88, 88, 88);
+    margin-left: 420px;
     display: flex;
     justify-content: space-between;
-    padding: 5px 10px;
-    text-transform: uppercase;
+    align-items: center;
+    margin-bottom: 100px;
+    border-bottom: 1px solid rgb(43, 43, 43);
 }
-
 .btnContract{
     width: 150px;
-    height: 100%;   
-    display: flex;
-    flex-direction: column;
+    height: 100%;
+    background-color: rgb(0, 58, 216);
+    color: white;
     text-align: center;
-    justify-content: center; 
+    line-height: 70px;
     cursor: pointer;
-    border-radius: 10px;
+}
+
+.nameContract{
+    text-align: center;
+    font-size: 20px;
+}
+
+.btnContract:hover{
+    background-color: rgb(0, 52, 196);
     color: white;
 }
-
-.return{
-    background-color: rgb(80, 2, 2);
-}
-
-.return:hover{
-    background-color: rgb(71, 0, 0);
-    color: rgb(172, 172, 172);
-}
-
-.setFavorite{
-    height: 100%;   
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center; 
-    color: rgb(4, 8, 58);
-}
-
-.setFavorite i{
-    cursor: pointer;
-    margin-bottom: 5px;
-    font-size: 23px;
-}
-
-.saveContract{
-    background-color: rgb(19, 61, 124);
-}
-
-.saveContract:hover{
-    background-color: rgb(14, 52, 109);
-    color: rgb(172, 172, 172);
-}
-
-.contractSingle{
-    width: 90%;
-    min-height: 100vh;
-    margin-top: 5px;
-    padding: 20px;
-    background-color: rgb(255, 255, 255);
-    font-size: 18px;
-}
-
 .warning{
-    color: rgb(199, 185, 62);
-    margin-top: 50px;
+    margin-left: 450px; 
+    color: rgb(218, 218, 0);
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .warning i{
-    color: yellow;
-    margin-right: 5px;
-}
+    color: rgb(53, 13, 13);
+} 
+/*---------------------------------------------------------------------------------------------------*/
 
-.mark{
-    color: red;
-    font-weight: bold;
-}
 
-.bold{
-    font-weight: bold;
-}
 
-@media screen and (max-width: 1300px){
-    .box-contractSingle{
-        width: 100vw;
+
+
+/*--------------------------------------------PAPER--------------------------------------------------*/
+.contractSingle{
+    width: calc(100% - 480px);
+    background-color: white;
+    margin-left: 450px;
+    margin-bottom: 60px;
+    padding: 30px;
+}
+/*---------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1250px){
+    .contractSingle{
+        width: 100%;
+        margin-left: 0;
+        padding: 20px;
+    }
+    .warning{
         margin-left: 0;
     }
-    .fillMenuClose{
-       display: block;
+    .barMenu{
+        background-color: rgb(102, 102, 102);
+        width: 100%;
+        margin-left: 0;
     }
 }
 
 @media screen and (max-width: 950px){
-    .contractOpened{
-        width: 90%;
-        font-size: 17px;
-    }
-
-    .warning{
-        font-size: 13px;
+    .warning,
+    .contractSingle{
+        font-size: 1.8vw;
     }
 }
 
-@media screen and (max-width: 750px){
-    .barMenu{
-        height: 60px;
-    }
+@media screen and (max-width: 650px){
     .btnContract{
-        width: 120px;
-        font-size: 15px;
+        width: 23%;
     }
-}
-
-@media screen and (max-width: 600px){
-    .fillMenu{
-        width: 70vw;
-    }
-    .fillMenuClose{
-        margin-left: 70vw;
-    }
-    .warning{
-        font-size: 10px;
+    
+    .nameContract{
+        font-size: 100%;
     }
 }
 
 @media screen and (max-width: 500px){
+    .warning,
+    .contractSingle{
+        font-size: 2.2vw;
+    }
     .fillMenu{
         width: 85vw;
     }
-    .fillMenuClose{
+    .toggleMenu{
         margin-left: 85vw;
-    }
-    .warning{
-        font-size: 8px;
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-height: 720px){
     .barMenu{
-        font-size: 11px;
+        height: 50px;
     }
     .btnContract{
-        width: 20%;
-        font-size: 11px;
-        padding: 5px;
+        line-height: 50px;
     }
 }
