@@ -30,53 +30,53 @@
             <p>Usar logo</p>
         </label>
     
-        <input class="contractName" type="text" placeholder="Nome do contrato" value="<?= ($contract->id > 1) ? $contract->contract_name : '' ?>"/>
+        <input class="contractName" type="text" placeholder="Nome do contrato" value="<?= ($contract->id > 1 && $contract->contract_name != 'Sem Nome') ? $contract->contract_name : '' ?>"/>
         
-        <input id="sendCmp1" type="text" placeholder="Tipo de serviço [ex: Fotografia e filmagem]" value="<?= ($contract->id > 1) ? $contract->service : '' ?>"/>
+        <input id="sendCmp1" type="text" placeholder="Tipo de serviço [ex: Fotografia e filmagem]" value="<?= ($contract->id > 1 && $contract->service != '(SERVIÇOS)') ? $contract->service : '' ?>"/>
         
-        <textarea id="sendInfoHired" placeholder="Informações do contratado, ex: pessoa fisica ou juridica, cnpj, telefone, cidade e estado "><?= ($contract->id > 1) ? $contract->hired_info : '' ?></textarea>
+        <textarea id="sendInfoHired" placeholder="Informações do contratado, ex: pessoa fisica ou juridica, cnpj, telefone, cidade e estado "><?= ($contract->id > 1 && $contract->hired_info != '(Informações da pessoa ou empresa contratada)') ? $contract->hired_info : '' ?></textarea>
 
-        <input id="sendName" type="text" placeholder="Nome do contratante" value="<?= ($contract->id > 1) ? $contract->name : '' ?>"/>
+        <input id="sendName" type="text" placeholder="Nome do contratante" value="<?= ($contract->id > 1 && $contract->name != '(Nome do Contratante)') ? $contract->name : '' ?>"/>
 
-        <input id="sendCpf" type="text" placeholder="Cpf do contratante" value="<?= ($contract->id > 1) ? $contract->cpf : '' ?>"/>
+        <input id="sendCpf" type="text" placeholder="Cpf do contratante" value="<?= ($contract->id > 1 && $contract->cpf != '(Cpf do contratante)') ? $contract->cpf : '' ?>"/>
 
-        <input id="sendRg" type="text" placeholder="Rg do contratante" value="<?= ($contract->id > 1) ? $contract->rg : '' ?>"/>
+        <input id="sendRg" type="text" placeholder="Rg do contratante" value="<?= ($contract->id > 1 && $contract->rg != '(Rg do contratante)') ? $contract->rg : '' ?>"/>
 
-        <input id="sendEmail" type="text" placeholder="Email do contratante" value="<?= ($contract->id > 1) ? $contract->email : '' ?>"/>
+        <input id="sendEmail" type="text" placeholder="Email do contratante" value="<?= ($contract->id > 1 && $contract->email != '(Email do contratante)') ? $contract->email : '' ?>"/>
 
-        <input id="sendCell" type="text" placeholder="Celular do contratante" value="<?= ($contract->id > 1) ? $contract->cell : '' ?>"/>
+        <input id="sendCell" type="text" placeholder="Celular do contratante" value="<?= ($contract->id > 1 && $contract->cell != '(Cell do contratante)') ? $contract->cell : '' ?>"/>
 
-        <input id="sendAddress" type="text" placeholder="Endereço do contratante" value="<?= ($contract->id > 1) ? $contract->address : '' ?>"/>
+        <input id="sendAddress" type="text" placeholder="Endereço do contratante" value="<?= ($contract->id > 1 && $contract->address != '(Endereço do contratante)') ? $contract->address : '' ?>"/>
 
-        <input id="sendCity" type="text" placeholder="Cidade do contratante" value="<?= ($contract->id > 1) ? $contract->city : '' ?>"/>
+        <input id="sendCity" type="text" placeholder="Cidade do contratante" value="<?= ($contract->id > 1 && $contract->city != '(Cidade do contratante)') ? $contract->city : '' ?>"/>
 
-        <input id="sendBride" type="text" placeholder="Nome da noiva" value="<?= ($contract->id > 1) ? $contract->bride : '' ?>"/>
+        <input id="sendBride" type="text" placeholder="Nome da noiva" value="<?= ($contract->id > 1 && $contract->bride != '(Nome da noiva)') ? $contract->bride : '' ?>"/>
         
-        <input id="sendEngaged" type="text" placeholder="Nome do noivo" value="<?= ($contract->id > 1) ? $contract->engaged : '' ?>"/>
+        <input id="sendEngaged" type="text" placeholder="Nome do noivo" value="<?= ($contract->id > 1 && $contract->engaged != '(Nome do noivo)') ? $contract->engaged : '' ?>"/>
 
-        <input id="sendDate" type="text" placeholder="data do casamento" value="<?= ($contract->id > 1) ? $contract->date : '' ?>"/>
+        <input id="sendDate" type="text" placeholder="data do casamento" value="<?= ($contract->id > 1 && $contract->date != '(Data)') ? $contract->date : '' ?>"/>
 
-        <input id="sendTime" type="text" placeholder="Hora do casamento" value="<?= ($contract->id > 1) ? $contract->time : '' ?>"/>
+        <input id="sendTime" type="text" placeholder="Hora do casamento" value="<?= ($contract->id > 1 && $contract->time != '(Horario)') ? $contract->time : '' ?>"/>
 
-        <input id="sendPlace" type="text" placeholder="local" value="<?= ($contract->id > 1) ? $contract->place : '' ?>"/>
+        <input id="sendPlace" type="text" placeholder="local" value="<?= ($contract->id > 1 && $contract->place != '(local)') ? $contract->place : '' ?>"/>
         
-        <textarea id="sendGoals" placeholder="Objetivos"><?= ($contract->id > 1) ? $contract->goals : '' ?></textarea>
+        <textarea id="sendGoals" placeholder="Objetivos"><?= ($contract->id > 1 && $contract->goals != '(Objetivos)') ? $contract->goals : '' ?></textarea>
 
-        <textarea id="sendPrice" class="middleTextArea" placeholder="Preço"><?= ($contract->id > 1) ? $contract->price : '' ?></textarea>
+        <textarea id="sendPrice" class="middleTextArea" placeholder="Preço"><?= ($contract->id > 1 && $contract->price != '(preço)') ? $contract->price : '' ?></textarea>
 
-        <textarea id="sendDeadline" class="middleTextArea" placeholder="Prazo"><?= ($contract->id > 1) ? $contract->deadline : '' ?></textarea>
+        <textarea id="sendDeadline" class="middleTextArea" placeholder="Prazo"><?= ($contract->id > 1 && $contract->deadline != '(prazo)') ? $contract->deadline : '' ?></textarea>
 
-        <input id="sendWarranty" type="text" placeholder="Garantia" value="<?= ($contract->id > 1) ? $contract->warranty : '' ?>"/>
+        <input id="sendWarranty" type="text" placeholder="Garantia" value="<?= ($contract->id > 1 && $contract->warranty != '(Garantia)') ? $contract->warranty : '' ?>"/>
         
-        <input id="sendDateToday" type="text" placeholder="Data de hoje" value="<?= ($contract->id > 1) ? $contract->date_today : '' ?>"/>
+        <input id="sendDateToday" type="text" placeholder="Data de hoje" value="<?= ($contract->id > 1 && $contract->date_today != '(Data de hoje)') ? $contract->date_today : '' ?>"/>
 
-        <input id="sendNameHired" type="text" placeholder="nome do contratado" value="<?= ($contract->id > 1) ? $contract->name_hired : '' ?>"/>
+        <input id="sendNameHired" type="text" placeholder="nome do contratado" value="<?= ($contract->id > 1 && $contract->name_hired != '(Nome do Contratado)') ? $contract->name_hired : '' ?>"/>
 
         <button class="generateBtn">Gerar</button>
     </form>
 
     <div class="barMenu">
-        <a href="javascript:history.go(-1)" class="btnContract return">
+        <a onClick="return window.confirm('Se você voltar perderá toda edição.');" href="javascript:history.go(-1)" class="btnContract return">
             Voltar
         </a>
         <div class="nameContract">
@@ -101,80 +101,80 @@
 
         <div class="mainTitle spaceBottom2x">
             <span contentEditable="true" class="cmp1"><?=$contract->cmp1;?></span>
-            <span contentEditable="true" class="service mark"><?=$contract->service;?></span>
+            <span contentEditable="true" class="service <?= ($contract->service == '(SERVIÇOS)') ? 'mark' : '' ?> "><?=$contract->service;?></span>
             <span contentEditable="true" class="cmp2"><?=$contract->cmp2;?></span>
         </div>
 
         <span contentEditable="true" class="cmp3"><?=$contract->cmp3;?></span>
-        <span contentEditable="true" class="hired_info mark"><?=$contract->hired_info;?></span>
+        <span contentEditable="true" class="hired_info <?= ($contract->hired_info == '(Informações da pessoa ou empresa contratada)') ? 'mark' : '' ?>"><?=$contract->hired_info;?></span>
         <span contentEditable="true" class="cmp4"><?=$contract->cmp4;?></span>
 
         <br/><br/>
 
         <div class="spaceBottom2x">
             <span class="bold">Nome:</span>
-            <span contentEditable="true" class="name mark marginRight1x"><?=$contract->name;?></span>
+            <span contentEditable="true" class="name <?= ($contract->name == '(Nome do Contratante)') ? 'mark' : '' ?> marginRight1x"><?=$contract->name;?></span>
             
             <span class="bold">Cpf:</span>
-            <span contentEditable="true" class="cpf mark marginRight1x"><?=$contract->cpf;?></span>
+            <span contentEditable="true" class="cpf <?= ($contract->cpf == '(Cpf do contratante)') ? 'mark' : '' ?> marginRight1x"><?=$contract->cpf;?></span>
 
             <span class="bold">Rg:</span>
-            <span contentEditable="true" class="rg mark marginRight1x"><?=$contract->rg;?></span>
+            <span contentEditable="true" class="rg <?= ($contract->rg == '(Rg do contratante)') ? 'mark' : '' ?> marginRight1x"><?=$contract->rg;?></span>
         </div>
 
         <div class="spaceBottom2x">
             <span class="bold">E-mail:</span>
-            <span contentEditable="true" class="email mark marginRight1x"><?=$contract->email;?></span>
+            <span contentEditable="true" class="email <?= ($contract->email == '(Email do contratante)') ? 'mark' : '' ?> marginRight1x"><?=$contract->email;?></span>
             
             <span class="bold">Celular:</span>
-            <span contentEditable="true" class="cell mark marginRight1x"><?=$contract->cell;?></span>
+            <span contentEditable="true" class="cell <?= ($contract->cell == '(Cell do contratante)') ? 'mark' : '' ?> marginRight1x"><?=$contract->cell;?></span>
         </div>
 
         <div class="spaceBottom2x">
             <span class="bold">Endereço:</span>
-            <span contentEditable="true" class="address mark marginRight1x"><?=$contract->address;?></span>
+            <span contentEditable="true" class="address <?= ($contract->address == '(Endereço do contratante)') ? 'mark' : '' ?> marginRight1x"><?=$contract->address;?></span>
             
             <span class="bold">Cidade:</span>
-            <span contentEditable="true" class="city mark marginRight1x"><?=$contract->city;?></span>
+            <span contentEditable="true" class="city <?= ($contract->city == '(Cidade do contratante)') ? 'mark' : '' ?> marginRight1x"><?=$contract->city;?></span>
         </div>
 
         <div class="spaceBottom2x">
             <span class="bold">Noiva:</span>
-            <span contentEditable="true" class="bride mark marginRight1x"><?=$contract->bride;?></span>
+            <span contentEditable="true" class="bride <?= ($contract->bride == '(Nome da noiva)') ? 'mark' : '' ?> marginRight1x"><?=$contract->bride;?></span>
             
             <span class="bold">Noivo:</span>
-            <span contentEditable="true" class="engaged mark marginRight1x"><?=$contract->engaged;?></span>
+            <span contentEditable="true" class="engaged <?= ($contract->engaged == '(Nome do noivo)') ? 'mark' : '' ?> marginRight1x"><?=$contract->engaged;?></span>
         </div>
 
         <h1 contentEditable="true" class="cmp5 title1"><?=$contract->cmp5;?></h1>
 
         <div class="spaceBottom2x">
             <span contentEditable="true" class="cmp6"><?=$contract->cmp6;?></span>
-            <span contentEditable="true" class="service mark lowercase"><?=$contract->service;?></span>
+            <span contentEditable="true" class="service <?= ($contract->service == '(SERVIÇOS)') ? 'mark' : '' ?> lowercase"><?=$contract->service;?></span>
             <span contentEditable="true" class="cmp7"><?=$contract->cmp7;?></span>
-            <span contentEditable="true" class="bride mark"><?=$contract->bride;?></span>
+            <span contentEditable="true" class="bride <?= ($contract->bride == '(Nome da noiva)') ? 'mark' : '' ?>"><?=$contract->bride;?></span>
             e
-            <span contentEditable="true" class="engaged mark"><?=$contract->engaged;?></span>
+            <span contentEditable="true" class="engaged <?= ($contract->engaged == '(Nome do noivo)') ? 'mark' : '' ?>"><?=$contract->engaged;?></span>
             <span contentEditable="true" class="cmp8"><?=$contract->cmp8;?></span>
-            <span contentEditable="true" class="date mark"><?=$contract->date;?></span>
+            <span contentEditable="true" class="date <?= ($contract->date == '(Data)') ? 'mark' : '' ?>"><?=$contract->date;?></span>
             às 
-            <span contentEditable="true" class="time mark"><?=$contract->time;?></span>
-            <span contentEditable="true" class="place mark"><?=$contract->place;?></span>
+            <span contentEditable="true" class="time <?= ($contract->time == '(Horario)') ? 'mark' : '' ?>"><?=$contract->time;?></span>
+            <span contentEditable="true" class="place <?= ($contract->place == '(local)') ? 'mark' : '' ?>"><?=$contract->place;?></span>
         </div>
 
         <p contentEditable="true" class="cmp9 spaceBottom1x"><?=$contract->cmp9;?></p>
 
-        <div contentEditable="true" id="goals" class="goals mark"><?=$contract->goals;?></div>
+        <div contentEditable="true" id="goals" class="goals <?= ($contract->goals == '(Objetivos)') ? 'mark' : '' ?>"><?=$contract->goals;?></div>
 
         <h1 contentEditable="true" class="cmp10 title2"><?=$contract->cmp10;?></h1>
 
         <span contentEditable="true" class="cmp11"><?=$contract->cmp11;?></span>
-        <span contentEditable="true" class="price mark"><?=$contract->price;?></span>
+        <span contentEditable="true" class="price <?= ($contract->price == '(preço)') ? 'mark' : '' ?>"><?=$contract->price;?></span>
 
         <h1 contentEditable="true" class="cmp12 title2"><?=$contract->cmp12;?></h1>
 
         <span contentEditable="true" class="cmp13"><?=$contract->cmp13;?></span>
-        <span contentEditable="true" class="deadline mark"><?=$contract->deadline;?></span>
+        <span contentEditable="true" class="deadline <?= ($contract->deadline == '(prazo)') ? 'mark' : '' ?>"><?=$contract->deadline;?></span>
         <span contentEditable="true" class="cmp14"><?=$contract->cmp14;?></span>
 
         <h1 contentEditable="true" class="cmp15 title2"><?=$contract->cmp15;?></h1>
@@ -182,20 +182,20 @@
 
         <h1 contentEditable="true" class="cmp17 title2"><?=$contract->cmp17;?></h1>
         <span contentEditable="true" class="cmp18"><?=$contract->cmp18;?></span>
-        <span contentEditable="true" class="warranty mark"><?=$contract->warranty;?></span>
+        <span contentEditable="true" class="warranty <?= ($contract->warranty == '(Garantia)') ? 'mark' : '' ?>"><?=$contract->warranty;?></span>
         <span contentEditable="true" class="cmp19"><?=$contract->cmp19;?></span>
 
         <h1 contentEditable="true" class="cmp20 title2"><?=$contract->cmp20;?></h1>
         <span contentEditable="true" class="cmp21"><?=$contract->cmp21;?></span>
 
         <div class="box-date">
-            <span contentEditable="true" class="date_today mark"><?=$contract->date_today;?></span>
+            <span contentEditable="true" class="date_today <?= ($contract->email == '(Data de hoje)') ? 'mark' : '' ?>"><?=$contract->date_today;?></span>
         </div>
 
         <div class="box-signature">
-            <span contentEditable="true" class="name mark"><?=$contract->name;?></span>
+            <span contentEditable="true" class="name <?= ($contract->name == '(Nome do Contratante)') ? 'mark' : '' ?>"><?=$contract->name;?></span>
 
-            <span contentEditable="true" class="name_hired mark"><?=$contract->name_hired;?></span>
+            <span contentEditable="true" class="name_hired <?= ($contract->name_hired == '(Nome do Contratado)') ? 'mark' : '' ?>"><?=$contract->name_hired;?></span>
         </div>
 
     </div><!--contractSingle-->
@@ -251,7 +251,11 @@
     
     <textarea id="cmp16AutoComplete"><?= ($contract->id > 1) ? $contract->cmp16 : '' ?></textarea>
     
-    <script>var themeMode = '<?=$user->themeMode;?>'; var mode = '<?=$contractInfo['id'];?>';</script>
+    <script>
+        var themeMode = '<?=$user->themeMode;?>';
+        var mode = '<?=$contractInfo['id'];?>';
+        var logo = '<?=$user->contractLogo;?>'
+    </script>
     <script src="<?=$base;?>/assets/js/contracts/wedding1.js"></script>
     <script src="<?=$base;?>/assets/js/darkModeContrato.js"></script>
     <script src="<?=$base;?>/assets/js/contracts/contratoAberto.js"></script>

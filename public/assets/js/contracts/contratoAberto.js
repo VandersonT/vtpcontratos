@@ -1,7 +1,14 @@
 /*---------------------------------------BTN_ACTIVE_LOGO--------------------------------------------------*/
 let toggleLogo = document.querySelector('.toggleLogo');
 let logoIsActive = false;
-toggleLogo.addEventListener('click', function(){
+toggleLogo.addEventListener('click', function(e){
+    
+    if(logo == ''){
+        e.preventDefault();
+        alert("Você precisa definir uma logo no seu perfil para poder usa-la aqui!");
+        return false;
+    }
+
     if(logoIsActive){
         document.querySelector('.box-logo').style.display = 'none';
         logoIsActive = false;
@@ -25,7 +32,6 @@ generateBtn.addEventListener('click', function(e){
     returnToNormal();
 })
 /*--------------------------------------------------------------------------------------------------------*/
-
 
 
 

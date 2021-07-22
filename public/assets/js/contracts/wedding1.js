@@ -2,6 +2,13 @@
 let saveContractBtn = document.querySelector('.saveContract');
 var form = document.querySelector('.formSaveContract');
 saveContractBtn.addEventListener('click', function(){
+
+    let confirmAction = window.confirm('Você confirma a ação?');
+
+    if(!confirmAction){
+        return false;
+    }
+
     //get the contractSingle class values
     let contractName = document.querySelector('.contractName').value;
     let cmp1 = document.querySelector('.cmp1').innerText;
@@ -365,8 +372,11 @@ sendNameHired.addEventListener('keyup', function(){
 /*------------------------------------------AUTO_COMPLETE_WITH_SPACE--------------------------------------*/
 if(mode > 1){
     let goals = document.querySelectorAll('.goals');
-    for(let i = 0; i < goals.length; i++){
-        goals[i].innerText = sendGoals.value;
+    
+    if(sendGoals.value != ''){
+        for(let i = 0; i < goals.length; i++){
+            goals[i].innerText = sendGoals.value;
+        }
     }
     
     let cmp16AutoComplete = document.getElementById('cmp16AutoComplete');
