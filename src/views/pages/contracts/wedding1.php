@@ -95,106 +95,106 @@
 
         <div class="mainTitle">
             <span class="cmp1"><?=$contract->cmp1;?></span>
-            <span class="service"><?=$contract->service;?></span>
+            <span class="service mark"><?=$contract->service;?></span>
             <span class="cmp2"><?=$contract->cmp2;?></span>
         </div>
 
         <br/><br/>
 
-        <span><?=$contract->cmp3;?></span>
-        <span class="mark"><?=$contract->hired_info;?></span>
-        <span><?=$contract->cmp4;?></span>
+        <span class="cmp3"><?=$contract->cmp3;?></span>
+        <span class="hired_info mark"><?=$contract->hired_info;?></span>
+        <span class="cmp4"><?=$contract->cmp4;?></span>
 
         <br/><br/>
 
         <div class="spaceBottom2x">
             <span class="bold">Nome:</span>
-            <span class="mark marginRight1x"><?=$contract->name;?></span>
+            <span class="name mark marginRight1x"><?=$contract->name;?></span>
             
             <span class="bold">Cpf:</span>
-            <span class="mark marginRight1x"><?=$contract->cpf;?></span>
+            <span class="cpf mark marginRight1x"><?=$contract->cpf;?></span>
 
             <span class="bold">Rg:</span>
-            <span class="mark marginRight1x"><?=$contract->rg;?></span>
+            <span class="rg mark marginRight1x"><?=$contract->rg;?></span>
         </div>
 
         <div class="spaceBottom2x">
             <span class="bold">E-mail:</span>
-            <span class="mark marginRight1x"><?=$contract->email;?></span>
+            <span class="email mark marginRight1x"><?=$contract->email;?></span>
             
             <span class="bold">Celular:</span>
-            <span class="mark marginRight1x"><?=$contract->cell;?></span>
+            <span class="cell mark marginRight1x"><?=$contract->cell;?></span>
         </div>
 
         <div class="spaceBottom2x">
             <span class="bold">Endereço:</span>
-            <span class="mark marginRight1x"><?=$contract->address;?></span>
+            <span class="address mark marginRight1x"><?=$contract->address;?></span>
             
             <span class="bold">Cidade:</span>
-            <span class="mark marginRight1x"><?=$contract->city;?></span>
+            <span class="city mark marginRight1x"><?=$contract->city;?></span>
         </div>
 
         <div class="spaceBottom2x">
             <span class="bold">Noiva:</span>
-            <span class="mark marginRight1x"><?=$contract->bride;?></span>
+            <span class="bride mark marginRight1x"><?=$contract->bride;?></span>
             
             <span class="bold">Noivo:</span>
-            <span class="mark marginRight1x"><?=$contract->engaged;?></span>
+            <span class="engaged mark marginRight1x"><?=$contract->engaged;?></span>
         </div>
 
-        <h1 class="title1"><?=$contract->cmp5;?></h1>
+        <h1 class="cmp5 title1"><?=$contract->cmp5;?></h1>
 
         <div class="spaceBottom2x">
-            <span><?=$contract->cmp6;?></span>
-            <span class="mark"><?=$contract->service;?></span>
-            para casamento de
-            <span class="mark"><?=$contract->bride;?></span>
+            <span class="cmp6"><?=$contract->cmp6;?></span>
+            <span class="service mark"><?=$contract->service;?></span>
+            <span class="cmp7"><?=$contract->cmp7;?></span>
+            <span class="bride mark"><?=$contract->bride;?></span>
             e
-            <span class="mark"><?=$contract->engaged;?></span>
-            <span><?=$contract->cmp8;?></span>
-            <span class="mark"><?=$contract->date;?></span>
+            <span class="engaged mark"><?=$contract->engaged;?></span>
+            <span class="cmp8"><?=$contract->cmp8;?></span>
+            <span class="date mark"><?=$contract->date;?></span>
             às 
-            <span class="mark"><?=$contract->time;?></span>
-            <span class="mark"><?=$contract->place;?></span>
+            <span class="time mark"><?=$contract->time;?></span>
+            <span class="place mark"><?=$contract->place;?></span>
         </div>
 
-        <p class="spaceBottom1x"><?=$contract->cmp9;?></p>
+        <p class="cmp9 spaceBottom1x"><?=$contract->cmp9;?></p>
 
         <div class="goals mark spaceBottom3x"><?=$contract->goals;?></div>
 
-        <h1 class="title2"><?=$contract->cmp10;?></h1>
+        <h1 class="cmp10 title2"><?=$contract->cmp10;?></h1>
 
-        <span><?=$contract->cmp11;?></span>
-        <span class="mark"><?=$contract->price;?></span>
+        <span class="cmp11"><?=$contract->cmp11;?></span>
+        <span class="price mark"><?=$contract->price;?></span>
 
-        <h1 class="title2"><?=$contract->cmp12;?></h1>
+        <h1 class="cmp12 title2"><?=$contract->cmp12;?></h1>
 
-        <span><?=$contract->cmp13;?></span>
-        <span class="mark"><?=$contract->deadline;?></span>
-        <span><?=$contract->cmp14;?></span>
+        <span class="cmp13"><?=$contract->cmp13;?></span>
+        <span class="deadline mark"><?=$contract->deadline;?></span>
+        <span class="cmp14"><?=$contract->cmp14;?></span>
 
-        <h1 class="title2"><?=$contract->cmp15;?></h1>
-        <span><?=$contract->cmp16;?></span>
+        <h1 class="cmp15 title2"><?=$contract->cmp15;?></h1>
+        <span class="cmp16"><?=$contract->cmp16;?></span>
 
-        <h1 class="title2"><?=$contract->cmp17;?></h1>
-        <span><?=$contract->cmp18;?></span>
-        <span class="mark"><?=$contract->warranty;?></span>
-        <span><?=$contract->cmp19;?></span>
+        <h1 class="cmp17 title2"><?=$contract->cmp17;?></h1>
+        <span class="cmp18"><?=$contract->cmp18;?></span>
+        <span class="warranty mark"><?=$contract->warranty;?></span>
+        <span class="cmp19"><?=$contract->cmp19;?></span>
 
-        <h1 class="title2"><?=$contract->cmp20;?></h1>
-        <span><?=$contract->cmp21;?></span>
+        <h1 class="cmp20 title2"><?=$contract->cmp20;?></h1>
+        <span class="cmp21"><?=$contract->cmp21;?></span>
 
         <div class="box-date mark">
-            <?=$contract->date_today;?>
+            <span class="date_today"><?=$contract->date_today;?></span>
         </div>
 
         <div class="box-signature">
             <span class="mark">
-                <?=$contract->name_hired;?>
+                <span class="name_hired"><?=$contract->name_hired;?></span>
             </span>
 
             <span class="mark">
-                <?=$contract->name;?>
+                <span class="name"><?=$contract->name;?></span>
             </span>
         </div>
 
@@ -209,6 +209,44 @@
         <input name="cmp1Input" type="hidden"/>
         <input name="serviceInput" type="hidden"/>
         <input name="cmp2Input" type="hidden"/>
+        <input name="cmp3Input" type="hidden"/>
+        <input name="hiredInfoInput" type="hidden"/>
+        <input name="cmp4Input" type="hidden"/>
+        <input name="nameInput" type="hidden"/>
+        <input name="cpfInput" type="hidden"/>
+        <input name="rgInput" type="hidden"/>
+        <input name="emailInput" type="hidden"/>
+        <input name="cellInput" type="hidden"/>
+        <input name="addressInput" type="hidden"/>
+        <input name="cityInput" type="hidden"/>
+        <input name="brideInput" type="hidden"/>
+        <input name="engagedInput" type="hidden"/>
+        <input name="cmp5Input" type="hidden"/>
+        <input name="cmp6Input" type="hidden"/>
+        <input name="cmp7Input" type="hidden"/>
+        <input name="cmp8Input" type="hidden"/>
+        <input name="dateInput" type="hidden"/>
+        <input name="timeInput" type="hidden"/>
+        <input name="placeInput" type="hidden"/>
+        <input name="cmp9Input" type="hidden"/>
+        <input name="goalsInput" type="hidden"/>
+        <input name="cmp10Input" type="hidden"/>
+        <input name="cmp11Input" type="hidden"/>
+        <input name="priceInput" type="hidden"/>
+        <input name="cmp12Input" type="hidden"/>
+        <input name="cmp13Input" type="hidden"/>
+        <input name="deadlineInput" type="hidden"/>
+        <input name="cmp14Input" type="hidden"/>
+        <input name="cmp15Input" type="hidden"/>
+        <input name="cmp16Input" type="hidden"/>
+        <input name="cmp17Input" type="hidden"/>
+        <input name="cmp18Input" type="hidden"/>
+        <input name="warrantyInput" type="hidden"/>
+        <input name="cmp19Input" type="hidden"/>
+        <input name="cmp20Input" type="hidden"/>
+        <input name="cmp21Input" type="hidden"/>
+        <input name="nameHiredInput" type="hidden"/>
+        <input name="dateTodayInput" type="hidden"/>
     </form>
 
     

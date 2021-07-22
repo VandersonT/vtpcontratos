@@ -170,4 +170,102 @@ class ContractsHandler {
         return false;
     }
 
+    public static function saveNewContract($user_id, $contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday){
+        Wedding1::insert([
+            'user_id' => $user_id,
+            'contract_name' => $contractName,
+            'cmp1' => $cmp1,
+            'service' => $service,
+            'cmp2' => $cmp2,
+            'cmp3' => $cmp3,
+            'hired_info' => $hiredInfo,
+            'cmp4' => $cmp4,
+            'name' => $name,
+            'cpf' => $cpf,
+            'rg' => $rg,
+            'email' => $email,
+            'cell' => $cell,
+            'address' => $address,
+            'city' => $city,
+            'bride' => $bride,
+            'engaged' => $engaged,
+            'cmp5' => $cmp5,
+            'cmp6' => $cmp6,
+            'cmp7' => $cmp7,
+            'cmp8' => $cmp8,
+            'date' => $date,
+            'place' => $place,
+            'cmp9' => $cmp9,
+            'goals' => $goals,
+            'cmp10' => $cmp10,
+            'cmp11' => $cmp11,
+            'price' => $price,
+            'cmp12' => $cmp12,
+            'cmp13' => $cmp13,
+            'deadline' => $deadline,
+            'cmp14' => $cmp14,
+            'cmp15' => $cmp15,
+            'cmp16' => $cmp16,
+            'cmp19' => $cmp17,
+            'cmp18' => $cmp18,
+            'warranty' => $warranty,
+            'cmp19' => $cmp19,
+            'cmp20' => $cmp20,
+            'cmp21' => $cmp21,
+            'nameHired' => $nameHired,
+            'dateToday' => $dateToday
+        ])->execute();
+        return 'Seu contrato foi salvo com sucesos!';
+    }
+
+    public static function updateNewContract($contractId, $user_id, $contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday){
+        User::update()
+            ->set('user_id', $user_id)
+            ->set('contractName', $constractName)
+            ->set('cmp1', $cmp1)
+            ->set('service', $service)
+            ->set('cmp2', $cmp2)
+            ->set('cmp3', $cmp3)
+            ->set('hired_info', $hiredInfo)
+            ->set('cmp4', $cmp4)
+            ->set('name', $name)
+            ->set('cpf', $cpf)
+            ->set('rg', $rg)
+            ->set('email', $email)
+            ->set('cell', $cell)
+            ->set('address', $address)
+            ->set('city', $city)
+            ->set('bride', $bride)
+            ->set('engaged', $engaged)
+            ->set('cmp5', $cmp5)
+            ->set('cmp6', $cmp6)
+            ->set('cmp7', $cmp7)
+            ->set('cmp8', $cmp8)
+            ->set('date', $date)
+            ->set('time', $time)
+            ->set('place', $place)
+            ->set('cmp9', $cmp9)
+            ->set('goals', $goals)
+            ->set('cmp10', $cmp10)
+            ->set('cmp11', $cmp11)
+            ->set('price', $price)
+            ->set('cmp12', $cmp12)
+            ->set('cmp13', $cmp13)
+            ->set('deadline', $deadline)
+            ->set('cmp14', $cmp14)
+            ->set('cmp15', $cmp15)
+            ->set('cmp16', $cmp16)
+            ->set('cmp17', $cmp17)
+            ->set('cmp18', $cmp18)
+            ->set('warranty', $warranty)
+            ->set('cmp19', $cmp19)
+            ->set('cmp20', $cmp20)
+            ->set('cmp21', $cmp21)
+            ->set('name_hired', $nameHired)
+            ->set('date_today', $dateToday)
+            ->where('id', $contractId)
+        ->execute();
+        return 'Seu contrato foi editado com sucesos!';
+    }
+
 }

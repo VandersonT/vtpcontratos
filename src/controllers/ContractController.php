@@ -69,14 +69,55 @@ class ContractController extends Controller {
         switch($args['type']){
             case 'wedding1':
                 $contractId = filter_input(INPUT_POST, 'contractId');
-                $contractType = filter_input(INPUT_POST, 'contractType');
                 $contractName = filter_input(INPUT_POST, 'contractNameInput');
                 $cmp1 = filter_input(INPUT_POST, 'cmp1Input');
                 $service = filter_input(INPUT_POST, 'serviceInput');
                 $cmp2 = filter_input(INPUT_POST, 'cmp2Input');
+                $cmp3 = filter_input(INPUT_POST, 'cmp3Input');
+                $hiredInfo = filter_input(INPUT_POST, 'hiredInfoInput');
+                $cmp4 = filter_input(INPUT_POST, 'cmp4Input');
+                $name = filter_input(INPUT_POST, 'nameInput');
+                $cpf = filter_input(INPUT_POST, 'cpfInput');
+                $rg = filter_input(INPUT_POST, 'rgInput');
+                $email = filter_input(INPUT_POST, 'emailInput');
+                $cell = filter_input(INPUT_POST, 'cellInput');
+                $address = filter_input(INPUT_POST, 'addressInput');
+                $city = filter_input(INPUT_POST, 'cityInput');
+                $bride = filter_input(INPUT_POST, 'brideInput');
+                $engaged = filter_input(INPUT_POST, 'engagedInput');
+                $cmp5 = filter_input(INPUT_POST, 'cmp5Input');
+                $cmp6 = filter_input(INPUT_POST, 'cmp6Input');
+                $cmp7 = filter_input(INPUT_POST, 'cmp7Input');
+                $cmp8 = filter_input(INPUT_POST, 'cmp8Input');
+                $date = filter_input(INPUT_POST, 'dateInput');
+                $time = filter_input(INPUT_POST, 'timeInput');
+                $place = filter_input(INPUT_POST, 'placeInput');
+                $cmp9 = filter_input(INPUT_POST, 'cmp9Input');
+                $goals = filter_input(INPUT_POST, 'cgoalsInput');
+                $cmp10 = filter_input(INPUT_POST, 'cmp10Input');
+                $cmp11 = filter_input(INPUT_POST, 'cmp11Input');
+                $price = filter_input(INPUT_POST, 'priceInput');
+                $cmp12 = filter_input(INPUT_POST, 'cmp12Input');
+                $cmp13 = filter_input(INPUT_POST, 'cmp13Input');
+                $deadline = filter_input(INPUT_POST, 'deadlineInput');
+                $cmp14 = filter_input(INPUT_POST, 'cmp14Input');
+                $cmp15 = filter_input(INPUT_POST, 'cmp15Input');
+                $cmp16 = filter_input(INPUT_POST, 'cmp16Input');
+                $cmp17 = filter_input(INPUT_POST, 'cmp17Input');
+                $cmp18 = filter_input(INPUT_POST, 'cmp18Input');
+                $warranty = filter_input(INPUT_POST, 'warrantyInput');
+                $cmp19 = filter_input(INPUT_POST, 'cmp19Input');
+                $cmp20 = filter_input(INPUT_POST, 'cmp20Input');
+                $cmp21 = filter_input(INPUT_POST, 'cmp21Input');
+                $nameHired = filter_input(INPUT_POST, 'nameHiredInput');
+                $dateToday = filter_input(INPUT_POST, 'dateTodayInput');
 
-                echo "RESPOSTA: ".$cmp2;
-                exit;
+                if($contractId == 1){
+                    $_SESSION['flash'] = ContractsHandler::saveNewContract($this->loggedUser->id,$contractId,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
+                }else{
+                    $_SESSION['flash'] = ContractsHandler::updateNewContract($contractId, $this->loggedUser->id,$contractId,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
+                }
+                $this->redirect('/salvos');
                 break;
             default:
                 $this->redirect('/404');
