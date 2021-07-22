@@ -173,4 +173,67 @@ sendEngaged.addEventListener('keyup', function(){
         engageds[i].innerText = sendEngaged.value;
     }
 })
+let sendDate = document.getElementById('sendDate');
+sendDate.addEventListener('keyup', function(){
+    let dates = document.querySelectorAll('.date');
+    for(let i = 0; i < dates.length; i++){
+        dates[i].innerText = sendDate.value;
+    }
+})
+let sendTime = document.getElementById('sendTime');
+sendTime.addEventListener('keyup', function(){
+    let times = document.querySelectorAll('.time');
+    for(let i = 0; i < times.length; i++){
+        times[i].innerText = sendTime.value;
+    }
+})
+let sendPlace = document.getElementById('sendPlace');
+sendPlace.addEventListener('keyup', function(){
+    let places = document.querySelectorAll('.place');
+    for(let i = 0; i < places.length; i++){
+        places[i].innerText = sendPlace.value;
+    }
+})
+let sendGoals = document.getElementById('sendGoals');
+sendGoals.addEventListener('keyup', function(){
+    let goals = document.querySelectorAll('.goals');
+    for(let i = 0; i < goals.length; i++){
+        goals[i].innerText = sendGoals.value;
+    }
+})
+let sendPrice = document.getElementById('sendPrice');
+sendPrice.addEventListener('keyup', function(){
+    let prices = document.querySelectorAll('.price');
+    for(let i = 0; i < prices.length; i++){
+        prices[i].innerText = sendPrice.value;
+    }
+})
+let sendDeadline = document.getElementById('sendDeadline');
+sendDeadline.addEventListener('keyup', function(){
+    let deadlines = document.querySelectorAll('.deadline');
+    for(let i = 0; i < deadlines.length; i++){
+        deadlines[i].innerText = sendDeadline.value;
+    }
+})
+let sendWarranty = document.getElementById('sendWarranty');
+sendWarranty.addEventListener('keyup', function(){
+    let warrantys = document.querySelectorAll('.warranty');
+    for(let i = 0; i < warrantys.length; i++){
+        warrantys[i].innerText = sendWarranty.value;
+    }
+})
+let sendDateToday = document.getElementById('sendDateToday');
+sendDateToday.addEventListener('keyup', function(){
+    let dateTodays = document.querySelectorAll('.date_today');
+    for(let i = 0; i < dateTodays.length; i++){
+        dateTodays[i].innerText = sendDateToday.value;
+    }
+})
+let sendNameHired = document.getElementById('sendNameHired');
+sendNameHired.addEventListener('keyup', function(){
+    let nameHireds = document.querySelectorAll('.name_hired');
+    for(let i = 0; i < nameHireds.length; i++){
+        nameHireds[i].innerText = sendNameHired.value;
+    }
+})
 /*--------------------------------------------------------------------------------------------------------*/

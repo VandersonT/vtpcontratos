@@ -1,3 +1,6 @@
+:root{
+    --backgroundContractSingle: rgb(231, 231, 231);
+}
 .box-contract{
     width: 100%;
     margin: 0 auto;

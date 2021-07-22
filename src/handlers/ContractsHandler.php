@@ -170,7 +170,12 @@ class ContractsHandler {
         return false;
     }
 
-    public static function saveNewContract($user_id, $contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday){
+    public static function saveNewContract($user_id,$contractId,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday){
+
+        if($contractName == ''){
+            $contractName = 'Contrato '.rand(0, 999).time();
+        }
+
         Wedding1::insert([
             'user_id' => $user_id,
             'contract_name' => $contractName,
@@ -212,16 +217,21 @@ class ContractsHandler {
             'cmp19' => $cmp19,
             'cmp20' => $cmp20,
             'cmp21' => $cmp21,
-            'nameHired' => $nameHired,
-            'dateToday' => $dateToday
+            'name_hired' => $nameHired,
+            'date_today' => $dateToday
         ])->execute();
         return 'Seu contrato foi salvo com sucesos!';
     }
 
-    public static function updateNewContract($contractId, $user_id, $contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday){
-        User::update()
+    public static function updateNewContract($contractId, $user_id,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday){
+
+        if($contractName == ''){
+            $contractName = '|Sem Nome| '.date('d/m/Y');
+        }
+
+        Wedding1::update()
             ->set('user_id', $user_id)
-            ->set('contractName', $constractName)
+            ->set('contract_name', $contractName)
             ->set('cmp1', $cmp1)
             ->set('service', $service)
             ->set('cmp2', $cmp2)
@@ -266,6 +276,12 @@ class ContractsHandler {
             ->where('id', $contractId)
         ->execute();
         return 'Seu contrato foi editado com sucesos!';
+    }
+
+    public static function getSavesContracts($user_id){
+        $data = Wedding1::select()->where('user_id', $user_id)->execute();
+        return $data;
+        exit;
     }
 
 }

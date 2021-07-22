@@ -30,24 +30,24 @@
             </div>
         <?php endif;?>
         <article class="box-contract">
-            <h1>Casamento:</h1>
+            <h1>Salvos:</h1>
 
             <div class="contractStorage" >
                 
-            <?php if(!empty($savesWedding)): ?>
-                
-                <?php foreach($savesWedding as $saveWedding): ?>
-                    <form class="contractSingle" method="GET" action="<?=$base;?>/criação/casamento1/<?=$saveWedding['id'];?>">
-                        <img src="<?=$base;?>/assets/images/img-contract.jpg">
-                        <p><?=$saveWedding['contract_name'];?></p>
-                        <button>Editar</button>
-                        <a onClick="return confirm('Você quer realmente apagar este contrato?');" href="<?=$base;?>/deletar/casamento1/<?=$saveWedding['id'];?>" class="deleteSaves"><i class="fas fa-trash"></i></a>
-                    </form>
-                <?php endforeach; ?>   
-            <?php else: ?> 
-                <p style="display:none;" class="contractSingle">Modelo para contrato</p>
-                Você não tem nenhum contrato salvo
-            <?php endif; ?>
+                <?php if(!empty($contracts)): ?>
+                    
+                    <?php foreach($contracts as $contract): ?>
+                        <form class="contractSingle" method="GET" action="<?=$base;?>/criação/wedding1/<?=$contract['id'];?>">
+                            <img src="<?=$base;?>/assets/images/img-contract.jpg">
+                            <p><?=$contract['contract_name'];?></p>
+                            <button>Editar</button>
+                            <a onClick="return confirm('Você quer realmente apagar este contrato?');" href="<?=$base;?>/deletar/casamento1/<?=$saveWedding['id'];?>" class="deleteSaves"><i class="fas fa-trash"></i></a>
+                        </form>
+                    <?php endforeach; ?>   
+                <?php else: ?> 
+                    <p style="display:none;" class="contractSingle">Modelo para contrato</p>
+                    Você não tem nenhum contrato salvo
+                <?php endif; ?>
 
             </div>
         </article>

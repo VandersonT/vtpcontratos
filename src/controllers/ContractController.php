@@ -93,7 +93,7 @@ class ContractController extends Controller {
                 $time = filter_input(INPUT_POST, 'timeInput');
                 $place = filter_input(INPUT_POST, 'placeInput');
                 $cmp9 = filter_input(INPUT_POST, 'cmp9Input');
-                $goals = filter_input(INPUT_POST, 'cgoalsInput');
+                $goals = filter_input(INPUT_POST, 'goalsInput');
                 $cmp10 = filter_input(INPUT_POST, 'cmp10Input');
                 $cmp11 = filter_input(INPUT_POST, 'cmp11Input');
                 $price = filter_input(INPUT_POST, 'priceInput');
@@ -112,10 +112,13 @@ class ContractController extends Controller {
                 $nameHired = filter_input(INPUT_POST, 'nameHiredInput');
                 $dateToday = filter_input(INPUT_POST, 'dateTodayInput');
 
+                /*echo "RESPOSTA:".$cmp10;
+                exit;*/
+
                 if($contractId == 1){
                     $_SESSION['flash'] = ContractsHandler::saveNewContract($this->loggedUser->id,$contractId,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
                 }else{
-                    $_SESSION['flash'] = ContractsHandler::updateNewContract($contractId, $this->loggedUser->id,$contractId,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
+                    $_SESSION['flash'] = ContractsHandler::updateNewContract($contractId, $this->loggedUser->id,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
                 }
                 $this->redirect('/salvos');
                 break;
