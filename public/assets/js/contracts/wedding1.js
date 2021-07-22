@@ -100,140 +100,239 @@ let sendCmp1 = document.getElementById('sendCmp1');
 sendCmp1.addEventListener('keyup', function(){
     let services = document.querySelectorAll('.service');
     for(let i = 0; i < services.length; i++){
-        services[i].innerText = sendCmp1.value;
+        if(sendCmp1.value == ''){
+            services[i].innerText = '(SERVIÇOS)';
+        }else{
+            services[i].innerText = sendCmp1.value;
+        }
     }
 })
 let sendInfoHired = document.getElementById('sendInfoHired');
 sendInfoHired.addEventListener('keyup', function(){
     let hiredInfos = document.querySelectorAll('.hired_info');
     for(let i = 0; i < hiredInfos.length; i++){
-        hiredInfos[i].innerText = sendInfoHired.value;
+        if(sendInfoHired.value == ''){
+            hiredInfos[i].innerText = '(Informações da pessoa ou empresa contratada)';
+        }else{
+            hiredInfos[i].innerText = sendInfoHired.value;
+        }
     }
 })
 let sendName = document.getElementById('sendName');
 sendName.addEventListener('keyup', function(){
     let names = document.querySelectorAll('.name');
     for(let i = 0; i < names.length; i++){
-        names[i].innerText = sendName.value;
+        if(sendName.value == ''){
+            names[i].innerText = '(Nome do Contratante)';
+        }else{
+            names[i].innerText = sendName.value;
+        }
     }
 })
 let sendCpf = document.getElementById('sendCpf');
 sendCpf.addEventListener('keyup', function(){
     let cpfs = document.querySelectorAll('.cpf');
     for(let i = 0; i < cpfs.length; i++){
-        cpfs[i].innerText = sendCpf.value;
+        if(sendCpf.value == ''){
+            cpfs[i].innerText = '(Cpf do contratante)';
+        }else{
+            cpfs[i].innerText = sendCpf.value;
+        }
     }
 })
 let sendRg = document.getElementById('sendRg');
 sendRg.addEventListener('keyup', function(){
     let rgs = document.querySelectorAll('.rg');
     for(let i = 0; i < rgs.length; i++){
-        rgs[i].innerText = sendRg.value;
+        if(sendRg.value == ''){
+            rgs[i].innerText = '(Rg do contratante)';
+        }else{
+            rgs[i].innerText = sendRg.value;
+        }
     }
 })
 let sendEmail = document.getElementById('sendEmail');
 sendEmail.addEventListener('keyup', function(){
     let emails = document.querySelectorAll('.email');
     for(let i = 0; i < emails.length; i++){
-        emails[i].innerText = sendEmail.value;
+        if(sendEmail.value == ''){
+            emails[i].innerText = '(Email do contratante)';
+        }else{
+            emails[i].innerText = sendEmail.value;
+        }
     }
 })
 let sendCell = document.getElementById('sendCell');
 sendCell.addEventListener('keyup', function(){
     let cells = document.querySelectorAll('.cell');
     for(let i = 0; i < cells.length; i++){
-        cells[i].innerText = sendCell.value;
+        if(sendCell.value == ''){
+            cells[i].innerText = '(Cell do contratante)';
+        }else{
+            cells[i].innerText = sendCell.value;
+        }
     }
 })
 let sendAddress = document.getElementById('sendAddress');
 sendAddress.addEventListener('keyup', function(){
     let addresss = document.querySelectorAll('.address');
     for(let i = 0; i < addresss.length; i++){
-        addresss[i].innerText = sendAddress.value;
+        if(sendAddress.value == ''){
+            addresss[i].innerText = '(Endereço do contratante)';
+        }else{
+            addresss[i].innerText = sendAddress.value;
+        }
     }
 })
 let sendCity = document.getElementById('sendCity');
 sendCity.addEventListener('keyup', function(){
     let citys = document.querySelectorAll('.city');
     for(let i = 0; i < citys.length; i++){
-        citys[i].innerText = sendCity.value;
+        if(sendCity.value == ''){
+            citys[i].innerText = '(Cidade do contratante)';
+        }else{
+            citys[i].innerText = sendCity.value;
+        }
     }
 })
 let sendBride = document.getElementById('sendBride');
 sendBride.addEventListener('keyup', function(){
     let brides = document.querySelectorAll('.bride');
     for(let i = 0; i < brides.length; i++){
-        brides[i].innerText = sendBride.value;
+        if(sendBride.value == ''){
+            brides[i].innerText = '(Nome da noiva)';
+        }else{
+            brides[i].innerText = sendBride.value;
+        }
     }
 })
 let sendEngaged = document.getElementById('sendEngaged');
 sendEngaged.addEventListener('keyup', function(){
     let engageds = document.querySelectorAll('.engaged');
     for(let i = 0; i < engageds.length; i++){
-        engageds[i].innerText = sendEngaged.value;
+        if(sendEngaged.value == ''){
+            engageds[i].innerText = '(Nome do noivo)';
+        }else{
+            engageds[i].innerText = sendEngaged.value;
+        }
     }
 })
 let sendDate = document.getElementById('sendDate');
 sendDate.addEventListener('keyup', function(){
     let dates = document.querySelectorAll('.date');
     for(let i = 0; i < dates.length; i++){
-        dates[i].innerText = sendDate.value;
+        if(sendDate.value == ''){
+            dates[i].innerText = '(Data)';
+        }else{
+            dates[i].innerText = sendDate.value;
+        }
     }
 })
 let sendTime = document.getElementById('sendTime');
 sendTime.addEventListener('keyup', function(){
     let times = document.querySelectorAll('.time');
     for(let i = 0; i < times.length; i++){
-        times[i].innerText = sendTime.value;
+        if(sendTime.value == ''){
+            times[i].innerText = '(Horario)';
+        }else{
+            times[i].innerText = sendTime.value;
+        }
     }
 })
 let sendPlace = document.getElementById('sendPlace');
 sendPlace.addEventListener('keyup', function(){
     let places = document.querySelectorAll('.place');
     for(let i = 0; i < places.length; i++){
-        places[i].innerText = sendPlace.value;
+        if(sendPlace.value == ''){
+            places[i].innerText = '(Local)';
+        }else{
+            places[i].innerText = sendPlace.value;
+        }
     }
 })
 let sendGoals = document.getElementById('sendGoals');
 sendGoals.addEventListener('keyup', function(){
     let goals = document.querySelectorAll('.goals');
     for(let i = 0; i < goals.length; i++){
-        goals[i].innerText = sendGoals.value;
+        if(sendGoals.value == ''){
+            goals[i].innerText = '(Objetivos)';
+        }else{
+            goals[i].innerText = sendGoals.value;
+        }
     }
 })
 let sendPrice = document.getElementById('sendPrice');
 sendPrice.addEventListener('keyup', function(){
     let prices = document.querySelectorAll('.price');
     for(let i = 0; i < prices.length; i++){
-        prices[i].innerText = sendPrice.value;
+        if(sendPrice.value == ''){
+            prices[i].innerText = '(Preço)';
+        }else{
+            prices[i].innerText = sendPrice.value;
+        }
     }
 })
 let sendDeadline = document.getElementById('sendDeadline');
 sendDeadline.addEventListener('keyup', function(){
     let deadlines = document.querySelectorAll('.deadline');
     for(let i = 0; i < deadlines.length; i++){
-        deadlines[i].innerText = sendDeadline.value;
+        if(sendDeadline.value == ''){
+            deadlines[i].innerText = '(Prazo)';
+        }else{
+            deadlines[i].innerText = sendDeadline.value;
+        }
     }
 })
 let sendWarranty = document.getElementById('sendWarranty');
 sendWarranty.addEventListener('keyup', function(){
     let warrantys = document.querySelectorAll('.warranty');
     for(let i = 0; i < warrantys.length; i++){
-        warrantys[i].innerText = sendWarranty.value;
+        if(sendWarranty.value == ''){
+            warrantys[i].innerText = '(Garantia)';
+        }else{
+            warrantys[i].innerText = sendWarranty.value;
+        }
     }
 })
 let sendDateToday = document.getElementById('sendDateToday');
 sendDateToday.addEventListener('keyup', function(){
     let dateTodays = document.querySelectorAll('.date_today');
     for(let i = 0; i < dateTodays.length; i++){
-        dateTodays[i].innerText = sendDateToday.value;
+        if(sendDateToday.value == ''){
+            dateTodays[i].innerText = '(Data de hoje)';
+        }else{
+            dateTodays[i].innerText = sendDateToday.value;
+        }
     }
 })
 let sendNameHired = document.getElementById('sendNameHired');
 sendNameHired.addEventListener('keyup', function(){
     let nameHireds = document.querySelectorAll('.name_hired');
     for(let i = 0; i < nameHireds.length; i++){
-        nameHireds[i].innerText = sendNameHired.value;
+        if(sendNameHired.value == ''){
+            nameHireds[i].innerText = '(Nome do Contratado)';
+        }else{
+            nameHireds[i].innerText = sendNameHired.value;
+        }
     }
 })
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/*------------------------------------------AUTO_COMPLETE_WITH_SPACE--------------------------------------*/
+if(mode > 1){
+    let goals = document.querySelectorAll('.goals');
+    for(let i = 0; i < goals.length; i++){
+        goals[i].innerText = sendGoals.value;
+    }
+    
+    let cmp16AutoComplete = document.getElementById('cmp16AutoComplete');
+    let cmp16teste = document.querySelectorAll('.cmp16');
+    for(let i = 0; i < cmp16teste.length; i++){
+        cmp16teste[i].innerText = cmp16AutoComplete.value;
+    }  
+}
 /*--------------------------------------------------------------------------------------------------------*/

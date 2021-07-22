@@ -1,3 +1,17 @@
+/*---------------------------------------BTN_ACTIVE_LOGO--------------------------------------------------*/
+let toggleLogo = document.querySelector('.toggleLogo');
+let logoIsActive = false;
+toggleLogo.addEventListener('click', function(){
+    if(logoIsActive){
+        document.querySelector('.box-logo').style.display = 'none';
+        logoIsActive = false;
+    }else{
+        document.querySelector('.box-logo').style.display = 'block';
+        logoIsActive = true;
+    }
+})
+/*--------------------------------------------------------------------------------------------------------*/
+
 /*----------------------------------------BTN_GENERATE----------------------------------------------------*/
 let generateBtn = document.querySelector('.generateBtn');
 

@@ -26,7 +26,7 @@
     <form class="fillMenu animate__animated">    
         
         <label class="checkBox">
-            <input type="checkbox" />
+            <input class="toggleLogo" type="checkbox" />
             <p>Usar logo</p>
         </label>
     
@@ -59,7 +59,7 @@
         <input id="sendTime" type="text" placeholder="Hora do casamento" value="<?= ($contract->id > 1) ? $contract->time : '' ?>"/>
 
         <input id="sendPlace" type="text" placeholder="local" value="<?= ($contract->id > 1) ? $contract->place : '' ?>"/>
-
+        
         <textarea id="sendGoals" placeholder="Objetivos"><?= ($contract->id > 1) ? $contract->goals : '' ?></textarea>
 
         <textarea id="sendPrice" class="middleTextArea" placeholder="Preço"><?= ($contract->id > 1) ? $contract->price : '' ?></textarea>
@@ -81,7 +81,7 @@
         </a>
         <div class="nameContract">
             <i class="fas fa-file-signature"></i>
-            <p>Novo Contrato</p>
+            <p><?= ($contract->id > 1) ? $contract->contract_name : 'Novo Contrato' ?></p>
         </div>
         <a class="btnContract saveContract">
             <?= ($contract->id > 1) ? 'Editar' : 'Salvar' ?> 
@@ -95,13 +95,15 @@
 
     <div class="contractSingle">
 
-        <div class="mainTitle">
+        <div class="box-logo">
+            <img src="<?=$base;?>/media/logo/<?=$user->contractLogo?>" />
+        </div>
+
+        <div class="mainTitle spaceBottom2x">
             <span contentEditable="true" class="cmp1"><?=$contract->cmp1;?></span>
             <span contentEditable="true" class="service mark"><?=$contract->service;?></span>
             <span contentEditable="true" class="cmp2"><?=$contract->cmp2;?></span>
         </div>
-
-        <br/><br/>
 
         <span contentEditable="true" class="cmp3"><?=$contract->cmp3;?></span>
         <span contentEditable="true" class="hired_info mark"><?=$contract->hired_info;?></span>
@@ -148,7 +150,7 @@
 
         <div class="spaceBottom2x">
             <span contentEditable="true" class="cmp6"><?=$contract->cmp6;?></span>
-            <span contentEditable="true" class="service mark"><?=$contract->service;?></span>
+            <span contentEditable="true" class="service mark lowercase"><?=$contract->service;?></span>
             <span contentEditable="true" class="cmp7"><?=$contract->cmp7;?></span>
             <span contentEditable="true" class="bride mark"><?=$contract->bride;?></span>
             e
@@ -162,7 +164,7 @@
 
         <p contentEditable="true" class="cmp9 spaceBottom1x"><?=$contract->cmp9;?></p>
 
-        <div contentEditable="true" class="goals mark spaceBottom3x"><?=$contract->goals;?></div>
+        <div contentEditable="true" id="goals" class="goals mark"><?=$contract->goals;?></div>
 
         <h1 contentEditable="true" class="cmp10 title2"><?=$contract->cmp10;?></h1>
 
@@ -250,9 +252,10 @@
         <input name="nameHiredInput" type="hidden"/>
         <input name="dateTodayInput" type="hidden"/>
     </form>
-
     
-    <script>var themeMode = '<?=$user->themeMode;?>';</script>
+    <textarea id="cmp16AutoComplete"><?= ($contract->id > 1) ? $contract->cmp16 : '' ?></textarea>
+    
+    <script>var themeMode = '<?=$user->themeMode;?>'; var mode = '<?=$contractInfo['id'];?>';</script>
     <script src="<?=$base;?>/assets/js/contracts/wedding1.js"></script>
     <script src="<?=$base;?>/assets/js/darkModeContrato.js"></script>
     <script src="<?=$base;?>/assets/js/contracts/contratoAberto.js"></script>

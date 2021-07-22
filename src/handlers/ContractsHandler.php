@@ -173,7 +173,7 @@ class ContractsHandler {
     public static function saveNewContract($user_id,$contractId,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday){
 
         if($contractName == ''){
-            $contractName = 'Contrato '.rand(0, 999).time();
+            $contractName = 'Sem Nome';
         }
 
         Wedding1::insert([
@@ -226,7 +226,7 @@ class ContractsHandler {
     public static function updateNewContract($contractId, $user_id,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday){
 
         if($contractName == ''){
-            $contractName = '|Sem Nome| '.date('d/m/Y');
+            $contractName = 'Sem Nome';
         }
 
         Wedding1::update()
