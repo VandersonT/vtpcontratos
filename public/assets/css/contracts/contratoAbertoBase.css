@@ -4,7 +4,7 @@
     .barMenu{display: none !important;}
     .contractSingle{padding: 0 !important;}
     .toggleMenu{display:none !important;}
-    .mark{color: black !important;font-weight: normal!important;}
+    .mark{color: black !important;}
 }
 /*---------------------------------------------------------------------------------------------------*/
 
@@ -19,7 +19,7 @@ body{background-color: rgb(128, 128, 128);color: rgb(22, 22, 22);}
 .toggleMenu{display: none;position: fixed;margin-left: 420px;top: 50%;font-size: 40px;cursor: pointer;}
 .middleTextArea{height: 130px !important;}
 .bold{font-weight: bold;}
-.mark{color: red;font-weight: bold;}
+.mark{color: red;}
 /*---------------------------------------------------------------------------------------------------*/
 
 

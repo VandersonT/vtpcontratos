@@ -32,27 +32,27 @@
     
         <input class="contractName" type="text" placeholder="Nome do contrato"/>
         
-        <input type="text" placeholder="Tipo de serviço [ex: Fotografia e filmagem]"/>
+        <input id="sendCmp1" type="text" placeholder="Tipo de serviço [ex: Fotografia e filmagem]"/>
         
-        <textarea placeholder="Informações do contratado, ex: pessoa fisica ou juridica, cnpj, telefone, cidade e estado "></textarea>
+        <textarea id="sendInfoHired" placeholder="Informações do contratado, ex: pessoa fisica ou juridica, cnpj, telefone, cidade e estado "></textarea>
 
-        <input type="text" placeholder="Nome do contratante"/>
+        <input id="sendName" type="text" placeholder="Nome do contratante"/>
 
-        <input type="text" placeholder="Cpf do contratante"/>
+        <input id="sendCpf" type="text" placeholder="Cpf do contratante"/>
 
-        <input type="text" placeholder="Rg do contratante"/>
+        <input id="sendRg" type="text" placeholder="Rg do contratante"/>
 
-        <input type="text" placeholder="Email do contratante"/>
+        <input id="sendEmail" type="text" placeholder="Email do contratante"/>
 
-        <input type="text" placeholder="Celular do contratante"/>
+        <input id="sendCell" type="text" placeholder="Celular do contratante"/>
 
-        <input type="text" placeholder="Endereço do contratante"/>
+        <input id="sendAddress" type="text" placeholder="Endereço do contratante"/>
 
-        <input type="text" placeholder="Cidade do contratante"/>
+        <input id="sendCity" type="text" placeholder="Cidade do contratante"/>
 
-        <input type="text" placeholder="Nome da noiva"/>
+        <input id="sendBride" type="text" placeholder="Nome da noiva"/>
         
-        <input type="text" placeholder="Nome do noivo"/>
+        <input id="sendEngaged" type="text" placeholder="Nome do noivo"/>
 
         <input type="text" placeholder="data do casamento"/>
 
@@ -67,8 +67,10 @@
         <textarea class="middleTextArea" placeholder="Prazo"></textarea>
 
         <input type="text" placeholder="Garantia"/>
-
+        
         <input type="text" placeholder="Data de hoje"/>
+
+        <input type="text" placeholder="nome do contratado"/>
 
         <button class="generateBtn">Gerar</button>
     </form>
@@ -190,11 +192,11 @@
 
         <div class="box-signature">
             <span class="mark">
-                <span class="name_hired"><?=$contract->name_hired;?></span>
+                <span class="name"><?=$contract->name;?></span>
             </span>
 
             <span class="mark">
-                <span class="name"><?=$contract->name;?></span>
+                <span class="name_hired"><?=$contract->name_hired;?></span>
             </span>
         </div>
 

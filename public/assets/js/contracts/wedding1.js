@@ -1,3 +1,4 @@
+/*--------------------------------------------SAVE_CONTRACT--------------------------------------------*/
 let saveContractBtn = document.querySelector('.saveContract');
 var form = document.querySelector('.formSaveContract');
 saveContractBtn.addEventListener('click', function(){
@@ -92,3 +93,84 @@ saveContractBtn.addEventListener('click', function(){
     //send info hidden
     form.submit();
 })
+/*--------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------FROM_INPUT_TO_PAPER------------------------------------------*/
+let sendCmp1 = document.getElementById('sendCmp1');
+sendCmp1.addEventListener('keyup', function(){
+    let services = document.querySelectorAll('.service');
+    for(let i = 0; i < services.length; i++){
+        services[i].innerText = sendCmp1.value;
+    }
+})
+let sendInfoHired = document.getElementById('sendInfoHired');
+sendInfoHired.addEventListener('keyup', function(){
+    let hiredInfos = document.querySelectorAll('.hired_info');
+    for(let i = 0; i < hiredInfos.length; i++){
+        hiredInfos[i].innerText = sendInfoHired.value;
+    }
+})
+let sendName = document.getElementById('sendName');
+sendName.addEventListener('keyup', function(){
+    let names = document.querySelectorAll('.name');
+    for(let i = 0; i < names.length; i++){
+        names[i].innerText = sendName.value;
+    }
+})
+let sendCpf = document.getElementById('sendCpf');
+sendCpf.addEventListener('keyup', function(){
+    let cpfs = document.querySelectorAll('.cpf');
+    for(let i = 0; i < cpfs.length; i++){
+        cpfs[i].innerText = sendCpf.value;
+    }
+})
+let sendRg = document.getElementById('sendRg');
+sendRg.addEventListener('keyup', function(){
+    let rgs = document.querySelectorAll('.rg');
+    for(let i = 0; i < rgs.length; i++){
+        rgs[i].innerText = sendRg.value;
+    }
+})
+let sendEmail = document.getElementById('sendEmail');
+sendEmail.addEventListener('keyup', function(){
+    let emails = document.querySelectorAll('.email');
+    for(let i = 0; i < emails.length; i++){
+        emails[i].innerText = sendEmail.value;
+    }
+})
+let sendCell = document.getElementById('sendCell');
+sendCell.addEventListener('keyup', function(){
+    let cells = document.querySelectorAll('.cell');
+    for(let i = 0; i < cells.length; i++){
+        cells[i].innerText = sendCell.value;
+    }
+})
+let sendAddress = document.getElementById('sendAddress');
+sendAddress.addEventListener('keyup', function(){
+    let addresss = document.querySelectorAll('.address');
+    for(let i = 0; i < addresss.length; i++){
+        addresss[i].innerText = sendAddress.value;
+    }
+})
+let sendCity = document.getElementById('sendCity');
+sendCity.addEventListener('keyup', function(){
+    let citys = document.querySelectorAll('.city');
+    for(let i = 0; i < citys.length; i++){
+        citys[i].innerText = sendCity.value;
+    }
+})
+let sendBride = document.getElementById('sendBride');
+sendBride.addEventListener('keyup', function(){
+    let brides = document.querySelectorAll('.bride');
+    for(let i = 0; i < brides.length; i++){
+        brides[i].innerText = sendBride.value;
+    }
+})
+let sendEngaged = document.getElementById('sendEngaged');
+sendEngaged.addEventListener('keyup', function(){
+    let engageds = document.querySelectorAll('.engaged');
+    for(let i = 0; i < engageds.length; i++){
+        engageds[i].innerText = sendEngaged.value;
+    }
+})
+/*--------------------------------------------------------------------------------------------------------*/
