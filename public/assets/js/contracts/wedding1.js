@@ -102,8 +102,10 @@ sendCmp1.addEventListener('keyup', function(){
     for(let i = 0; i < services.length; i++){
         if(sendCmp1.value == ''){
             services[i].innerText = '(SERVIÇOS)';
+            services[i].classList.add('mark');
         }else{
             services[i].innerText = sendCmp1.value;
+            services[i].classList.remove('mark');
         }
     }
 })
@@ -113,8 +115,10 @@ sendInfoHired.addEventListener('keyup', function(){
     for(let i = 0; i < hiredInfos.length; i++){
         if(sendInfoHired.value == ''){
             hiredInfos[i].innerText = '(Informações da pessoa ou empresa contratada)';
+            hiredInfos[i].classList.add('mark');
         }else{
             hiredInfos[i].innerText = sendInfoHired.value;
+            hiredInfos[i].classList.remove('mark');
         }
     }
 })
@@ -124,8 +128,10 @@ sendName.addEventListener('keyup', function(){
     for(let i = 0; i < names.length; i++){
         if(sendName.value == ''){
             names[i].innerText = '(Nome do Contratante)';
+            names[i].classList.add('mark');
         }else{
             names[i].innerText = sendName.value;
+            names[i].classList.remove('mark');
         }
     }
 })
@@ -135,8 +141,10 @@ sendCpf.addEventListener('keyup', function(){
     for(let i = 0; i < cpfs.length; i++){
         if(sendCpf.value == ''){
             cpfs[i].innerText = '(Cpf do contratante)';
+            cpfs[i].classList.add('mark');
         }else{
             cpfs[i].innerText = sendCpf.value;
+            cpfs[i].classList.remove('mark');
         }
     }
 })
@@ -146,8 +154,10 @@ sendRg.addEventListener('keyup', function(){
     for(let i = 0; i < rgs.length; i++){
         if(sendRg.value == ''){
             rgs[i].innerText = '(Rg do contratante)';
+            rgs[i].classList.add('mark');
         }else{
             rgs[i].innerText = sendRg.value;
+            rgs[i].classList.remove('mark');
         }
     }
 })
@@ -157,8 +167,10 @@ sendEmail.addEventListener('keyup', function(){
     for(let i = 0; i < emails.length; i++){
         if(sendEmail.value == ''){
             emails[i].innerText = '(Email do contratante)';
+            emails[i].classList.add('mark');
         }else{
             emails[i].innerText = sendEmail.value;
+            emails[i].classList.remove('mark');
         }
     }
 })
@@ -168,8 +180,10 @@ sendCell.addEventListener('keyup', function(){
     for(let i = 0; i < cells.length; i++){
         if(sendCell.value == ''){
             cells[i].innerText = '(Cell do contratante)';
+            cells[i].classList.add('mark');
         }else{
             cells[i].innerText = sendCell.value;
+            cells[i].classList.remove('mark');
         }
     }
 })
@@ -179,8 +193,10 @@ sendAddress.addEventListener('keyup', function(){
     for(let i = 0; i < addresss.length; i++){
         if(sendAddress.value == ''){
             addresss[i].innerText = '(Endereço do contratante)';
+            addresss[i].classList.add('mark');
         }else{
             addresss[i].innerText = sendAddress.value;
+            addresss[i].classList.remove('mark');
         }
     }
 })
@@ -190,8 +206,10 @@ sendCity.addEventListener('keyup', function(){
     for(let i = 0; i < citys.length; i++){
         if(sendCity.value == ''){
             citys[i].innerText = '(Cidade do contratante)';
+            citys[i].classList.add('mark');
         }else{
             citys[i].innerText = sendCity.value;
+            citys[i].classList.remove('mark');
         }
     }
 })
@@ -201,8 +219,10 @@ sendBride.addEventListener('keyup', function(){
     for(let i = 0; i < brides.length; i++){
         if(sendBride.value == ''){
             brides[i].innerText = '(Nome da noiva)';
+            brides[i].classList.add('mark');
         }else{
             brides[i].innerText = sendBride.value;
+            brides[i].classList.remove('mark');
         }
     }
 })
@@ -212,8 +232,10 @@ sendEngaged.addEventListener('keyup', function(){
     for(let i = 0; i < engageds.length; i++){
         if(sendEngaged.value == ''){
             engageds[i].innerText = '(Nome do noivo)';
+            engageds[i].classList.add('mark');
         }else{
             engageds[i].innerText = sendEngaged.value;
+            engageds[i].classList.remove('mark');
         }
     }
 })
@@ -223,8 +245,10 @@ sendDate.addEventListener('keyup', function(){
     for(let i = 0; i < dates.length; i++){
         if(sendDate.value == ''){
             dates[i].innerText = '(Data)';
+            dates[i].classList.add('mark');
         }else{
             dates[i].innerText = sendDate.value;
+            dates[i].classList.remove('mark');
         }
     }
 })
@@ -234,8 +258,10 @@ sendTime.addEventListener('keyup', function(){
     for(let i = 0; i < times.length; i++){
         if(sendTime.value == ''){
             times[i].innerText = '(Horario)';
+            times[i].classList.add('mark');
         }else{
             times[i].innerText = sendTime.value;
+            times[i].classList.remove('mark');
         }
     }
 })
@@ -245,8 +271,10 @@ sendPlace.addEventListener('keyup', function(){
     for(let i = 0; i < places.length; i++){
         if(sendPlace.value == ''){
             places[i].innerText = '(Local)';
+            places[i].classList.add('mark');
         }else{
             places[i].innerText = sendPlace.value;
+            places[i].classList.remove('mark');
         }
     }
 })
@@ -256,8 +284,10 @@ sendGoals.addEventListener('keyup', function(){
     for(let i = 0; i < goals.length; i++){
         if(sendGoals.value == ''){
             goals[i].innerText = '(Objetivos)';
+            goals[i].classList.add('mark');
         }else{
             goals[i].innerText = sendGoals.value;
+            goals[i].classList.remove('mark');
         }
     }
 })
@@ -267,8 +297,10 @@ sendPrice.addEventListener('keyup', function(){
     for(let i = 0; i < prices.length; i++){
         if(sendPrice.value == ''){
             prices[i].innerText = '(Preço)';
+            prices[i].classList.add('mark');
         }else{
             prices[i].innerText = sendPrice.value;
+            prices[i].classList.remove('mark');
         }
     }
 })
@@ -278,8 +310,10 @@ sendDeadline.addEventListener('keyup', function(){
     for(let i = 0; i < deadlines.length; i++){
         if(sendDeadline.value == ''){
             deadlines[i].innerText = '(Prazo)';
+            deadlines[i].classList.add('mark');
         }else{
             deadlines[i].innerText = sendDeadline.value;
+            deadlines[i].classList.remove('mark');
         }
     }
 })
@@ -289,8 +323,10 @@ sendWarranty.addEventListener('keyup', function(){
     for(let i = 0; i < warrantys.length; i++){
         if(sendWarranty.value == ''){
             warrantys[i].innerText = '(Garantia)';
+            warrantys[i].classList.add('mark');
         }else{
             warrantys[i].innerText = sendWarranty.value;
+            warrantys[i].classList.remove('mark');
         }
     }
 })
@@ -300,8 +336,10 @@ sendDateToday.addEventListener('keyup', function(){
     for(let i = 0; i < dateTodays.length; i++){
         if(sendDateToday.value == ''){
             dateTodays[i].innerText = '(Data de hoje)';
+            dateTodays[i].classList.add('mark');
         }else{
             dateTodays[i].innerText = sendDateToday.value;
+            dateTodays[i].classList.remove('mark');
         }
     }
 })
@@ -311,8 +349,10 @@ sendNameHired.addEventListener('keyup', function(){
     for(let i = 0; i < nameHireds.length; i++){
         if(sendNameHired.value == ''){
             nameHireds[i].innerText = '(Nome do Contratado)';
+            nameHireds[i].classList.add('mark');
         }else{
             nameHireds[i].innerText = sendNameHired.value;
+            nameHireds[i].classList.remove('mark');
         }
     }
 })

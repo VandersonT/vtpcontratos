@@ -188,18 +188,14 @@
         <h1 contentEditable="true" class="cmp20 title2"><?=$contract->cmp20;?></h1>
         <span contentEditable="true" class="cmp21"><?=$contract->cmp21;?></span>
 
-        <div class="box-date mark">
-            <span contentEditable="true" class="date_today"><?=$contract->date_today;?></span>
+        <div class="box-date">
+            <span contentEditable="true" class="date_today mark"><?=$contract->date_today;?></span>
         </div>
 
         <div class="box-signature">
-            <span class="mark">
-                <span contentEditable="true" class="name"><?=$contract->name;?></span>
-            </span>
+            <span contentEditable="true" class="name mark"><?=$contract->name;?></span>
 
-            <span class="mark">
-                <span contentEditable="true" class="name_hired"><?=$contract->name_hired;?></span>
-            </span>
+            <span contentEditable="true" class="name_hired mark"><?=$contract->name_hired;?></span>
         </div>
 
     </div><!--contractSingle-->
