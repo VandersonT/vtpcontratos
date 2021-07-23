@@ -105,6 +105,7 @@
     background-color: rgb(0, 255, 0);
     margin-bottom: 10px;
     text-transform: uppercase;
+    color: black;
 }
 
 .error{

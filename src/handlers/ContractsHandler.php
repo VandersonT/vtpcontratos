@@ -23,6 +23,7 @@ class ContractsHandler {
     }
 
     public static function saveInfo($id, $userName, $userEmail, $themeMode, $namePhoto, $nameLogo, $profilePictureChanged, $contractLogoChanged){
+        
         User::update()
             ->set('name',$userName)
             ->set('email',$userEmail)

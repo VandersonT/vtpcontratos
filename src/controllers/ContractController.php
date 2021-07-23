@@ -146,9 +146,15 @@ class ContractController extends Controller {
         $profilePictureChanged = false;
         $contractLogoChanged = false;
         $namePhoto = '';
-        $namePhoto = '';
+        $nameLogo = '';
         $allowed = ['image/jpeg', 'image/jpg', 'image/png'];
         $themeMode = filter_input(INPUT_POST, 'themeMode', FILTER_SANITIZE_SPECIAL_CHARS);
+
+        if(empty($_FILES) && empty($_POST)){
+            $_SESSION['error'] = 'Ocorreu um erro inesperado com o arquivo que você enviou.';
+            $this->redirect('/perfil');
+            exit;
+        }
 
         if(!empty($_FILES['photoProfile']['size'])){
             $profilePictureChanged = true;
@@ -174,6 +180,7 @@ class ContractController extends Controller {
             } 
 
             //if that's ok
+            echo "adicionando no sistema";
             $namePhoto = md5(time().rand(0,9999)).'.jpg';
             move_uploaded_file($_FILES['photoProfile']['tmp_name'], 'media/avatars/'.$namePhoto);
         }
@@ -193,11 +200,12 @@ class ContractController extends Controller {
             } 
 
             //if that's ok
+            echo "adicionando no sistema";
             $nameLogo = md5(time().rand(0,9999)).'.jpg';
             move_uploaded_file($_FILES['logoContract']['tmp_name'], 'media/logo/'.$nameLogo);
         }
         /*---------------------------------------------------------------------------------*/
-        
+
         ContractsHandler::saveInfo($this->loggedUser->id, $userName, $userEmail, $themeMode, $namePhoto, $nameLogo, $profilePictureChanged, $contractLogoChanged);
 
 
