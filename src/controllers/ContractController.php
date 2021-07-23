@@ -128,6 +128,18 @@ class ContractController extends Controller {
 
     }
 
+    public function deleteContract($args){
+        
+        $answer = ContractsHandler::deleteSaveContract($args['type'], $args['id']);
+
+        if($answer){
+            $_SESSION['flash'] = $answer;
+        }
+
+        $this->redirect('/salvos');
+        exit;
+    }
+
     public function saveInfoProfile(){
         $userName = filter_input(INPUT_POST, 'userName', FILTER_SANITIZE_SPECIAL_CHARS);
         $userEmail = filter_input(INPUT_POST, 'userEmail', FILTER_VALIDATE_EMAIL);

@@ -284,4 +284,15 @@ class ContractsHandler {
         exit;
     }
 
+    public static function deleteSaveContract($contractType, $contractId){
+        switch($contractType){
+            case 'wedding1':
+                Wedding1::delete()->where('id', $contractId)->execute();
+                return 'O contrato foi deletado com sucesso.';
+                break;
+        }
+        return false;
+        exit;
+    }
+
 }
