@@ -1,9 +1,14 @@
 .screen{display: flex;}
 
+.body{
+    width: calc(100% - 272px);
+}
+
 .menu{
     width: 272px;
     height: 100vh;
     background-color: rgb(20, 28, 36);
+    border-right: 1px solid rgb(15, 19, 24);;
 }
 
 .btnMenuMobile{
@@ -79,6 +84,9 @@
 @media screen and (max-width: 1100px){
     .menu{
         position: fixed;
+    }
+    .body{
+        width: 100%;
     }
     .btnMenuMobile{
         display: block;
