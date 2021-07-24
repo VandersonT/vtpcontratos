@@ -10,33 +10,37 @@
 
     <div class="main-menu">
         <p>Gestão</p>
-        <a href="#">
+        <a href="#" class="<?= $selected == 'control' ? 'selected' : '';?>" >
             <i class="fas fa-tasks"></i>
-            Gerenciamento
+            Controle
         </a>
-        <a href="#">
+        <a href="#" class="<?= $selected == 'ban' ? 'selected' : '';?>">
             <i class="fas fa-ban"></i>
             Banir Usuario
         </a>
         <p>Chat</p>
-        <a href="#">
+        <a href="#" class="<?= $selected == 'support' ? 'selected' : '';?>">
             <i class="fas fa-headset"></i>
             Suporte
         </a>
-        <a href="#">
+        <a href="#" class="<?= $selected == 'chatS' ? 'selected' : '';?>">
             <i class="fas fa-comments"></i>
             Chat da staff
         </a>
         <p>Administração do Painel</p>
-        <a href="#">
+        <a href="#" class="<?= $selected == 'members' ? 'selected' : '';?>">
             <i class="fas fa-edit"></i>
-            Editar usuarios
+            Ver membros
         </a>
-        <a href="#">
+        <a href="#" class="<?= $selected == 'editMembers' ? 'selected' : '';?>">
+            <i class="fas fa-edit"></i>
+            Editar membros
+        </a>
+        <a href="#" class="<?= $selected == 'registerMembers' ? 'selected' : '';?>">
             <i class="fas fa-user-plus"></i>
-            Cadastrar usuario
+            Cadastrar membros
         </a>
-        <a class="closePainel" href="#">
+        <a class="closePainel" href="<?=$base;?>/Painel/sair" onClick="return confirm('Você quer realmente sair?');">
             <i class="fas fa-door-open"></i>
             Sair
         </a>

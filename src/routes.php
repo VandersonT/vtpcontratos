@@ -34,9 +34,11 @@ $router->post('/salvarPerfil', 'ContractController@saveInfoProfile');
 
 /*HOME-ADMIN*/
 $router->get('/Painel', 'AdminController@index');
+$router->get('/Painel/sair', 'AdminController@logout');
 
 /*USER_ADMIN*/
 $router->get('/Painel/loginStaff', 'LoginadminController@login');
 $router->post('/Painel/loginStaff', 'LoginadminController@loginAdminAction');
+
 /*--------------------------------------------------------------------------------------------------*/
 

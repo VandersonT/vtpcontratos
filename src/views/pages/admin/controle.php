@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Gerador de Contrato</title>
+    <title>Painel - controle </title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
     <meta name="keyword" content="contratos,gerador,geradordecontrato,contratos,modelocontrato,contract,contracts" />
     <meta name="author" content="VandersonT"/>
     
-    <link rel="shortcut icon" type="image-x/png" href="<?=$base;?>/icon.ico">
+    <link rel="shortcut icon" type="image-x/png" href="<?=$base;?>/iconAdmin.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="<?=$base;?>/assets/css/style.css" />
     <link rel="stylesheet" href="<?=$base;?>/assets/css/admin/menu.css" />
@@ -20,7 +20,7 @@
 <body>
 
     <section class="screen">
-        <?= $render('admin/menu', ['user' => $user]);?>
+        <?= $render('admin/menu', ['user' => $user,'selected'=>'control']);?>
 
         <article>
             Resto do corpo

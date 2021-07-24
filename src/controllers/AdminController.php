@@ -12,12 +12,23 @@ class AdminController extends Controller {
             $this->redirect('/Painel/loginStaff');
             exit;
         }
+        if($this->loggedAdmin->access < 2){
+            $_SESSION['tokenAdmin'] = '';
+            $this->redirect("/Painel/loginStaff");
+            exit;
+        }
     }
 
     public function index() {
-        $this->render('admin/painel', [
+        $this->render('admin/controle', [
             'user' => $this->loggedAdmin
         ]);
+        exit;
+    }
+
+    public function logout(){
+        $_SESSION['tokenAdmin'] = '';
+        $this->redirect("/Painel/loginStaff");
         exit;
     }
 
