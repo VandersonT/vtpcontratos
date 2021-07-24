@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="<?=$base;?>/assets/css/style.css" />
     <link rel="stylesheet" href="<?=$base;?>/assets/css/admin/menu.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/admin/control.css" />
 
     <script src="https://kit.fontawesome.com/90bf9437da.js" crossorigin="anonymous"></script>
 </head>
@@ -21,11 +22,13 @@
 
     <section class="screen">
         <?= $render('admin/menu', ['user' => $user,'selected'=>'control']);?>
+        <div class="btnMenuMobile"><i class="fas fa-caret-square-right"></i></div>
 
-        <article>
+        <article class="body">
             Resto do corpo
         </article>
     </section>
 
+    <script src="<?=$base;?>/assets/js/admin/menu.js"></script>
 </body>
 </html>

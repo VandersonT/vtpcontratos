@@ -36,7 +36,7 @@ generateBtn.addEventListener('click', function(e){
 
 
 
-/*----------------------------------------BTN_GENERATE----------------------------------------------------*/
+/*-------------------------------------BTN_TOGGLE_MENU----------------------------------------------------*/
 var menu = document.querySelector('.fillMenu');
 var btnToggle = document.querySelector('.toggleMenu');
 let isOpen = true;
