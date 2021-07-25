@@ -51,4 +51,17 @@ class LoginadminHandler {
 
     }
 
+    public static function searchUser($idSearch){
+        $data = User::select()->where('id', $idSearch)->one();
+
+        return $data;
+    }
+
+    public static function banUser($id){
+        User::update()
+            ->set('access', 0)
+            ->where('id', $id)
+        ->execute();
+    }
+
 }

@@ -35,6 +35,9 @@ $router->post('/salvarPerfil', 'ContractController@saveInfoProfile');
 /*HOME-ADMIN*/
 $router->get('/Painel', 'AdminController@index');
 $router->get('/Painel/sair', 'AdminController@logout');
+$router->get('/Painel/ban', 'AdminController@ban');
+$router->post('/Painel/ban', 'AdminController@banSearch');
+$router->get('/Painel/banindo/{id}/{access}', 'AdminController@banAction');
 
 /*USER_ADMIN*/
 $router->get('/Painel/loginStaff', 'LoginadminController@login');

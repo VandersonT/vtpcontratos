@@ -107,7 +107,7 @@
             <div class="box-manager">
                 
                 <div class="blockSystem">
-                    <div class="blockBtn"><a href="#">Bloquear acessar</a></div>
+                    <div class="blockBtn"><a href="#">Bloquear acesso</a></div>
                     <p>Esse botão irá trancar o sistema, impedindo qualquer usuario de acessar, exeto usuarios da administração.</p>
                 </div>
 

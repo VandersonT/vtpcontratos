@@ -10,13 +10,17 @@
 
     <div class="main-menu">
         <p>Gestão</p>
-        <a href="#" class="<?= $selected == 'control' ? 'selected' : '';?>" >
+        <a href="<?=$base;?>/Painel" class="<?= $selected == 'control' ? 'selected' : '';?>" >
             <i class="fas fa-tasks"></i>
             Controle
         </a>
-        <a href="#" class="<?= $selected == 'ban' ? 'selected' : '';?>">
+        <a href="<?=$base;?>/Painel/ban" class="<?= $selected == 'ban' ? 'selected' : '';?>">
             <i class="fas fa-ban"></i>
-            Banir Usuario
+            Banir Usuário
+        </a>
+        <a href="<?=$base;?>/Painel/ban" class="<?= $selected == 'userBan' ? 'selected' : '';?>">
+            <i class="fas fa-user-slash"></i>
+            Usuários Banidos
         </a>
         <p>Chat</p>
         <a href="#" class="<?= $selected == 'support' ? 'selected' : '';?>">

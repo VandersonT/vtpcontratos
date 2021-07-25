@@ -3,6 +3,7 @@
 .body{
     width: calc(100% - 272px);
     margin-left: 272px;
+    background-color: rgb(36, 49, 61);
 }
 
 .menu{
