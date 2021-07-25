@@ -98,6 +98,26 @@
                 
             </div>
 
+            <br/><br/>
+
+            <h1>
+                <i class="fas fa-tasks"></i>
+                Gerenciamentos
+            </h1>
+            <div class="box-manager">
+                
+                <div class="blockSystem">
+                    <div class="blockBtn"><a href="#">Bloquear acessar</a></div>
+                    <p>Esse botão irá trancar o sistema, impedindo qualquer usuario de acessar, exeto usuarios da administração.</p>
+                </div>
+
+                <div class="blockSystem">
+                    <div class="blockBtn"><a href="#">Bloquear suporte</a></div>
+                    <p>Esse botão irá trancar o suporte para usuarios, impedindo os usuarios de mandar mensagens, exeto usuarios da administração.</p>
+                </div>
+
+            </div>
+
         </article>
     </section>
 

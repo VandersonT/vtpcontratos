@@ -28,10 +28,6 @@
             Chat da staff
         </a>
         <p>Administração do Painel</p>
-        <a href="#" class="<?= $selected == 'members' ? 'selected' : '';?>">
-            <i class="fas fa-edit"></i>
-            Ver membros
-        </a>
         <a href="#" class="<?= $selected == 'editMembers' ? 'selected' : '';?>">
             <i class="fas fa-edit"></i>
             Editar membros
