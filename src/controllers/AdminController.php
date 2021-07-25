@@ -21,8 +21,12 @@ class AdminController extends Controller {
     }
 
     public function index() {
+
+        $staffMembers = LoginadminHandler::getStaffsMembers();
+
         $this->render('admin/controle', [
-            'user' => $this->loggedAdmin
+            'user' => $this->loggedAdmin,
+            'staffMembers' => $staffMembers
         ]);
         exit;
     }

@@ -44,8 +44,9 @@
 
             <h1>
                 <i class="fab fa-telegram-plane"></i>
-                Administradores
+                Membros da Staff
             </h1>
+
             <div class="box-userOn">
                 <div class="users">
                     <div class="titles blue">
@@ -53,16 +54,16 @@
                         <p>NOME</p>
                         <p>CARGO</p>
                     </div>
-                    <div class="userSingle">
-                        <p>1</p>
-                        <p>Vanderson</p>
-                        <p>Administrador</p>
-                    </div>
-                    <div class="userSingle">
-                        <p>2</p>
-                        <p>Gleison</p>
-                        <p>Ajudante</p>
-                    </div>
+                    <?php foreach($staffMembers as $staffMember): ?>
+                        <div class="userSingle">
+                            <p><?=$staffMember['id']?></p>
+                            <p><?=$staffMember['name']?></p>
+                            <p>
+                                <?= $staffMember['access'] == 2 ? 'Ajudante' : '';?>
+                                <?= $staffMember['access'] == 3 ? 'Administrador' : '';?>
+                            </p>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
 

@@ -34,7 +34,7 @@
         <p>Administração do Painel</p>
         <a href="<?=$base;?>/Painel/novoStaff" class="<?= $selected == 'newStaff' ? 'selected' : '';?>">
             <i class="fas fa-user-plus"></i>
-            Gerencia Staff's
+            Gerencia Cargos
         </a>
         <a class="closePainel" href="<?=$base;?>/Painel/sair" onClick="return confirm('Você quer realmente sair?');">
             <i class="fas fa-door-open"></i>
