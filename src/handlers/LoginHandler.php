@@ -70,12 +70,12 @@ class LoginHandler {
 
     public static function updateLastAction($user_id, $user_name){
 
-        $data = Users_on::select()->where('id', $user_id)->one();
+        $data = Users_on::select()->where('user_id', $user_id)->one();
 
         if($data){
             Users_on::update()
-                ->set('last_action)', time())
-                ->where('id', $user_id)
+                ->set('last_action', time())
+                ->where('user_id', $user_id)
             ->execute();
         }else{
             Users_on::insert([
