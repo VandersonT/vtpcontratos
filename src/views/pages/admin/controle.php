@@ -32,7 +32,7 @@
             <div class="box-infoGeneral">
                 <div class="infoSingle orange">
                     <p>Usuários Online</p>
-                    <span>0</span>
+                    <span><?=count($onlineMembers)?></span>
                 </div>
                 <div class="infoSingle darkRed">
                     <p>Total de Visitas</p>
@@ -80,21 +80,19 @@
                         <p>NOME</p>
                         <p>ÚLTIMA AÇÃO</p>
                     </div>
-                    <div class="userSingle">
-                        <p>1</p>
-                        <p>Bryan</p>
-                        <p>20-07-2021 18:00</p>
-                    </div>
-                    <div class="userSingle">
-                        <p>2</p>
-                        <p>Antonia</p>
-                        <p>20-07-2021 18:00</p>
-                    </div>
-                    <div class="userSingle">
-                        <p>3</p>
-                        <p>Marcos</p>
-                        <p>20-07-2021 18:00</p>
-                    </div>
+                    <?php if(!empty($onlineMembers)): ?>
+                        <?php foreach($onlineMembers as $onlineMember): ?>
+                            <div class="userSingle">
+                                <p><?=$onlineMember['user_id'];?></p>
+                                <p><?=$onlineMember['user_name'];?></p>
+                                <p><?= date('H:i:s',$onlineMember['last_action']);?></p>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <div class="noUser">
+                            Nenhum usuário online no momento
+                        </div>
+                    <?php endif; ?>
                 </div>
                 
             </div>

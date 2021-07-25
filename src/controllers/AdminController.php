@@ -21,12 +21,17 @@ class AdminController extends Controller {
     }
 
     public function index() {
+        
 
         $staffMembers = LoginadminHandler::getStaffsMembers();
 
+        $onlineMembers = LoginadminHandler::getOnlineMembers();
+        date_default_timezone_set('America/Sao_Paulo');
+
         $this->render('admin/controle', [
             'user' => $this->loggedAdmin,
-            'staffMembers' => $staffMembers
+            'staffMembers' => $staffMembers,
+            'onlineMembers' => $onlineMembers
         ]);
         exit;
     }

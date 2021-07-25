@@ -2,6 +2,7 @@
 namespace src\handlers;
 
 use \src\models\User;
+use \src\models\Users_on;
 
 class LoginadminHandler {
 
@@ -75,6 +76,21 @@ class LoginadminHandler {
         $members = User::select()->where('access', 2)->orWhere('access', 3)->orderBy(['access' => 'desc'])->execute();
 
         return $members;
+    }
+
+    public static function getOnlineMembers(){
+        $supposedMembersOn = Users_on::select()->execute();
+
+        foreach($supposedMembersOn as $supposedMemberOn){
+            if($supposedMemberOn['last_action'] + 600 < time()){
+                Users_on::delete()->where('id', $supposedMemberOn['id'])->execute();
+                //mais de 10 minutos, ou seja, não esta mais online;
+            }
+        }
+
+        $membersOn = Users_on::select()->execute();
+
+        return $membersOn;
     }
 
 }
