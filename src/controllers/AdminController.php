@@ -98,4 +98,56 @@ class AdminController extends Controller {
         exit;
     }
 
+    public function newStaff(){
+        $userFound = [];
+        if(!empty($_SESSION['userFound'])){
+            $userFound = $_SESSION['userFound'];
+            $_SESSION['userFound'] = '';
+        }
+
+        $error = [];
+        if(!empty($_SESSION['error'])){
+            $error = $_SESSION['error'];
+            $_SESSION['error'] = '';
+        }
+
+        $success = [];
+        if(!empty($_SESSION['success'])){
+            $success = $_SESSION['success'];
+            $_SESSION['success'] = '';
+        }
+
+        $this->render('admin/newStaff',[
+            'user' => $this->loggedAdmin,
+            'userFound' => $userFound,
+            'error' => $error,
+            'success' => $success
+        ]);
+        exit;
+    }
+
+    public function searchUserToStaff(){
+        $idSearch = filter_input(INPUT_POST, 'idSearch');
+        if($idSearch){
+            $_SESSION['userFound'] = LoginadminHandler::searchUser($idSearch);
+        }
+        $this->redirect("/Painel/novoStaff");
+        exit;
+    }
+
+    public function newStaffAction($args){
+        
+        if($this->loggedAdmin->access < 3){
+            $_SESSION['error'] = 'Somente Administrador pode editar cargos.';
+            $this->redirect("/Painel/novoStaff");
+            exit;
+        }
+
+        LoginadminHandler::changePositionUser($args['id'], $args['newposition']);
+        $_SESSION['success'] = 'O cargo do usuario foi alterado com sucesso.';
+        
+        $this->redirect("/Painel/novoStaff");
+        exit;
+    }
+
 }

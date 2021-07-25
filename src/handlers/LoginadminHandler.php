@@ -64,4 +64,11 @@ class LoginadminHandler {
         ->execute();
     }
 
+    public static function changePositionUser($userId, $newPosition){
+        User::update()
+            ->set('access', $newPosition)
+            ->where('id', $userId)
+        ->execute();
+    }
+
 }

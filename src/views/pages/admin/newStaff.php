@@ -14,19 +14,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="<?=$base;?>/assets/css/style.css" />
     <link rel="stylesheet" href="<?=$base;?>/assets/css/admin/menu.css" />
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/admin/ban.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/admin/newStaff.css" />
 
     <script src="https://kit.fontawesome.com/90bf9437da.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
     <section class="screen">
-        <?= $render('admin/menu', ['user' => $user,'selected'=>'ban']);?>
+        <?= $render('admin/menu', ['user' => $user,'selected'=>'newStaff']);?>
         <div class="btnMenuMobile"><i class="fas fa-caret-square-right"></i></div>
 
         <article class="body">
             
-            <h1>Procure para banir</h1>
+            <h1>Gerenciar Staff</h1>
 
             <?php if(!empty($success)): ?>
                 <div class="success">
@@ -49,11 +49,22 @@
                     <div class="infoUser">
                         <span class="title">Nome:</span><span class="result"><?=$userFound['name'];?></span>
                         <br/>
-                        <span class="title">Email:</span><span class="result"><?=$userFound['email'];?></span>
+                        <span class="title">Email:</span>
+                        <span class="result">
+                            <?= $userFound['access'] == 0 ? 'Banido' : '';?>
+                            <?= $userFound['access'] == 1 ? 'Usuário' : '';?>
+                            <?= $userFound['access'] == 2 ? 'Ajudante' : '';?>
+                            <?= $userFound['access'] == 3 ? 'Administrador' : '';?>
+                        </span>
                         <br/>
                         <span class="title">Id:</span><span class="result"><?=$userFound['id'];?></span>
                     </div>
-                    <a class="btnBan" href="<?=$base;?>/Painel/banindo/<?=$userFound['id'];?>/<?=$userFound['access'];?>">Banir</a>
+                    <div class="box-up">
+                        <p>Cargo:</p>
+                        <a class="btnUp btnUp-brown" href="<?=$base;?>/Painel/promovendo/<?=$userFound['id'];?>/<?=$userFound['access'];?>/1">Usr</a>
+                        <a class="btnUp btnUp-yellow" href="<?=$base;?>/Painel/promovendo/<?=$userFound['id'];?>/<?=$userFound['access'];?>/2">Ajd</a>
+                        <a class="btnUp btnUp-blue" href="<?=$base;?>/Painel/promovendo/<?=$userFound['id'];?>/<?=$userFound['access'];?>/3">Adm</a>
+                    </div>
                 <?php else:?>
                     <p class="initial">
                         <i class="fas fa-search"></i>
@@ -62,7 +73,7 @@
                 <?php endif;?>
                 
             </div>
-            <form method="POST" action="<?=$base;?>/Painel/ban">
+            <form method="POST" action="<?=$base;?>/Painel/novoStaff">
                 <input name="idSearch" type="number" placeholder="ID"/>
                 <input type="submit" value="Procurar" />
             </form>

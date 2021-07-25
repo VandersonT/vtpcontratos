@@ -38,6 +38,9 @@ $router->get('/Painel/sair', 'AdminController@logout');
 $router->get('/Painel/ban', 'AdminController@ban');
 $router->post('/Painel/ban', 'AdminController@banSearch');
 $router->get('/Painel/banindo/{id}/{access}', 'AdminController@banAction');
+$router->get('/Painel/novoStaff', 'AdminController@newStaff');
+$router->post('/Painel/novoStaff', 'AdminController@searchUserToStaff');
+$router->get('/Painel/promovendo/{id}/{access}/{newposition}', 'AdminController@newStaffAction');
 
 /*USER_ADMIN*/
 $router->get('/Painel/loginStaff', 'LoginadminController@login');

@@ -32,13 +32,9 @@
             Chat da staff
         </a>
         <p>Administração do Painel</p>
-        <a href="#" class="<?= $selected == 'editMembers' ? 'selected' : '';?>">
-            <i class="fas fa-edit"></i>
-            Editar membros
-        </a>
-        <a href="#" class="<?= $selected == 'registerMembers' ? 'selected' : '';?>">
+        <a href="<?=$base;?>/Painel/novoStaff" class="<?= $selected == 'newStaff' ? 'selected' : '';?>">
             <i class="fas fa-user-plus"></i>
-            Cadastrar membros
+            Gerencia Staff's
         </a>
         <a class="closePainel" href="<?=$base;?>/Painel/sair" onClick="return confirm('Você quer realmente sair?');">
             <i class="fas fa-door-open"></i>
