@@ -35,8 +35,8 @@
                     <span><?=count($onlineMembers)?></span>
                 </div>
                 <div class="infoSingle darkRed">
-                    <p>Total de Visitas</p>
-                    <span>0</span>
+                    <p>Contas Criadas</p>
+                    <span><?=$accountsCreated;?></span>
                 </div>
             </div>
 

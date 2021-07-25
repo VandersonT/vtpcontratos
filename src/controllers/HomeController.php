@@ -21,6 +21,9 @@ class HomeController extends Controller {
             $this->render('banned');
             exit;
         }
+
+        LoginHandler::updateLastAction($this->loggedUser->id, $this->loggedUser->name);
+
     }
 
     public function index() {

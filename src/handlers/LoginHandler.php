@@ -2,6 +2,7 @@
 namespace src\handlers;
 
 use \src\models\User;
+use \src\models\Users_on;
 
 class LoginHandler {
 
@@ -65,6 +66,24 @@ class LoginHandler {
         ])->execute();
         
         return $token;
+    }
+
+    public static function updateLastAction($user_id, $user_name){
+
+        $data = Users_on::select()->where('id', $user_id)->one();
+
+        if($data){
+            Users_on::update()
+                ->set('last_action)', time())
+                ->where('id', $user_id)
+            ->execute();
+        }else{
+            Users_on::insert([
+                'user_id' => $user_id,
+                'user_name' => $user_name,
+                'last_action' => time()
+            ])->execute();
+        }
     }
 
 }

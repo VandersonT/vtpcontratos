@@ -93,4 +93,9 @@ class LoginadminHandler {
         return $membersOn;
     }
 
+    public static function getTotalAccountCreated(){
+        $account = User::select()->execute();
+        return count($account);
+    }
+
 }

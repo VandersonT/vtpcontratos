@@ -28,10 +28,13 @@ class AdminController extends Controller {
         $onlineMembers = LoginadminHandler::getOnlineMembers();
         date_default_timezone_set('America/Sao_Paulo');
 
+        $accountsCreated = LoginadminHandler::getTotalAccountCreated();
+
         $this->render('admin/controle', [
             'user' => $this->loggedAdmin,
             'staffMembers' => $staffMembers,
-            'onlineMembers' => $onlineMembers
+            'onlineMembers' => $onlineMembers,
+            'accountsCreated' => $accountsCreated
         ]);
         exit;
     }
