@@ -34,14 +34,16 @@
                         <?php if($chat['user_id'] == $user->id): ?>
                             <div class="box-chatRight">
                                 <div class="balaoRight">
+                                <span class="nameU"><?=$user->name.' ['.$user->id.']';?>: </span>
                                     <p><?=$chat['msg']?></p>
                                 </div>
-                                <img src="<?=$base;?>/media/avatars/no-picture.png" />
+                                <img src="<?=$base;?>/media/avatars/<?=$user->photo?>" />
                             </div>
                         <?php elseif($chat['user_id'] == 0): ?>
                             <div class="box-chatLeft">
                                 <img src="<?=$base;?>/media/avatars/supportImg.png" />
                                 <div class="balaoLeft">
+                                    <span class="nameU">Suporte[0]: </span>
                                     <p><?=$chat['msg']?></p>
                                 </div>
                             </div>
@@ -53,6 +55,7 @@
                             <div class="box-chatLeft">
                                 <img src="<?=$base;?>/media/avatars/<?=$chat['user_photo']?>" />
                                 <div class="balaoLeft">
+                                    <span class="nameU"><?=$chat['user_name'].' ['.$chat['user_id'].']' ;?>: </span>
                                     <p><?=$chat['msg']?></p>
                                 </div>
                             </div>
@@ -63,9 +66,9 @@
             </section>
 
             <section class="write">
-                <img src="<?=$base;?>/media/avatars/no-picture.png" />
-                <form>
-                    <textarea placeholder="Digite aqui sua mensagem"></textarea>
+                <img src="<?=$base;?>/media/avatars/<?=$user->photo?>" />
+                <form method="POST" action="<?=$base;?>/Painel/enviarMensagemS">
+                    <textarea name="msg" placeholder="Digite aqui sua mensagem"></textarea>
                     <input type="submit" value="Enviar"/>
                 </form>
             </section>

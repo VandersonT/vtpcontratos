@@ -146,5 +146,13 @@ class LoginadminHandler {
 
         return $conversation;
     }
+    public static function sendMsgToChatStaff($user_id, $user_name, $user_photo, $msg){
+        Chat_staff::insert([
+            'user_id' => $user_id,
+            'user_name' => $user_name,
+            'user_photo' => $user_photo,
+            'msg' => $msg
+        ])->execute();
+    }
 
 }

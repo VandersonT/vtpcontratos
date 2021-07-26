@@ -225,4 +225,14 @@ class AdminController extends Controller {
         exit;
     }
 
+    public function sendMsgStaff(){
+        $msg = filter_input(INPUT_POST, 'msg', FILTER_SANITIZE_SPECIAL_CHARS);
+
+        if($msg){
+            LoginadminHandler::sendMsgToChatStaff($this->loggedAdmin->id, $this->loggedAdmin->name, $this->loggedAdmin->photo, $msg);
+        }
+        $this->redirect("/Painel/chatStaffs");
+        exit;
+    }
+
 }

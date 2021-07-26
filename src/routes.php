@@ -51,6 +51,7 @@ $router->get('/Painel/promovendo/{id}/{access}/{newposition}', 'AdminController@
 $router->get('/Painel/system/{action}', 'AdminController@systemStatus');
 $router->get('/Painel/support/{action}', 'AdminController@supportStatus');
 $router->get('/Painel/Desban/{id}', 'AdminController@desBanAction');
+$router->post('/Painel/enviarMensagemS', 'AdminController@sendMsgStaff');
 
 /*--------------------------------------------------------------------------------------------------*/
 
