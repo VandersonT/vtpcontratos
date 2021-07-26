@@ -31,6 +31,41 @@
                 <a href="<?=$base;?>/Painel/suporte/pendente" class="btn-menuSupport <?=($tab == 'pendente') ? 'tabSelected': '';?>">Pendente</a>
                 <a href="<?=$base;?>/Painel/suporte/resolvido" class="btn-menuSupport <?=($tab == 'resolvido') ? 'tabSelected': '';?>">Resolvido</a>
             </section>
+
+            <section class="content">
+                <div class="box-supportSingle">
+                    <a href="#SuportSingle" class="supportSingle">
+                        <img src="<?=$base;?>/media/avatars/no-picture.png" />
+                        <div class="box-info-user">
+                            <p class="titleInfo">Nome: </p>
+                            <span class="resultInfo">Sem nome</span>
+                            <p class="titleInfo">Id:</p>
+                            <span class="resultInfo">0</span>
+                            <p class="titleInfo">Data: </p>
+                            <span class="resultInfo">20-02-9999</span>
+                        </div>
+                    </a>
+                    <div class="star" >
+                        <a class="pendingColor" href="#"><i class="fas fa-star"></i></a>
+                    </div>
+                </div>
+                <div class="box-supportSingle">
+                    <a href="#SuportSingle" class="supportSingle">
+                        <img src="<?=$base;?>/media/avatars/no-picture.png" />
+                        <div class="box-info-user">
+                            <p class="titleInfo">Nome: </p>
+                            <span class="resultInfo">Sem nome</span>
+                            <p class="titleInfo">Id:</p>
+                            <span class="resultInfo">0</span>
+                            <p class="titleInfo">Data: </p>
+                            <span class="resultInfo">20-02-9999</span>
+                        </div>
+                    </a>
+                    <div class="star" >
+                        <a class="pendingColor" href="#"><i class="fas fa-star"></i></a>
+                    </div>
+                </div>
+            </section>
             
         </article>
     </section>

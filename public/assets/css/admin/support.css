@@ -27,3 +27,102 @@
     border-bottom: 0;
     pointer-events: none;
 }
+
+.content{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.box-supportSingle{
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(rgb(165, 165, 165), rgb(83, 83, 83));
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.supportSingle{
+    width: calc(100% - 100px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    color: black
+}
+
+.supportSingle img{
+    width: 100px;
+    margin-right: 10px;
+    height: 90%;
+    border-radius: 50px;
+}
+
+.box-info-user{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items:flex-end;
+    padding-bottom: 10px;
+    border-right: 1px solid rgb(65, 65, 65);
+    border-left: 1px solid rgb(65, 65, 65);
+    justify-content: center;
+}
+
+.titleInfo{
+    font-weight: bold;
+    margin-right: 2px;
+    font-size: 20px;
+    color: rgb(31, 31, 31);
+}
+
+.resultInfo{
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.star{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+}
+
+.pendingColor{
+    color: red;
+}
+
+.resolvedColor{
+    color: rgb(9, 255, 0);
+}
+
+@media screen and (max-width: 800px){
+    .resultInfo,
+    .titleInfo{
+        font-size: 2vw;
+    }
+    .box-supportSingle{
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .star{
+        width: 50px;
+        height: 100%;
+        padding: 30px;
+        font-size: 30px;
+    }
+    .box-info-user{
+        border-right: 0;
+    }
+    .supportSingle img{
+        width: 60px;
+        height: 60px;
+    }
+    .box-supportSingle{
+        height: 60px;
+    }
+}
