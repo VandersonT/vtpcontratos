@@ -106,8 +106,13 @@
             <div class="box-manager">
                 
                 <div class="blockSystem">
-                    <div class="blockBtn"><a href="#">Bloquear acesso</a></div>
-                    <p>Esse botão irá trancar o sistema, impedindo qualquer usuario de acessar, exeto usuarios da administração.</p>
+                    <?php if($isSystemActive): ?>
+                        <div class="blockBtn"><a href="<?=$base;?>/Painel/system/off">Bloquear acesso</a></div>
+                        <p>Esse botão irá trancar o sistema, impedindo qualquer usuario de acessar.</p>
+                    <?php else: ?>
+                        <div class="blockBtn"><a href="<?=$base;?>/Painel/system/on">Desbloquear acesso</a></div>
+                        <p>Esse botão irá destrancar o sistema, permitindo qualquer usuario de acessar.</p>
+                    <?php endif; ?>
                 </div>
 
                 <div class="blockSystem">

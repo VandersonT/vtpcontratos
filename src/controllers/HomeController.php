@@ -11,14 +11,24 @@ class HomeController extends Controller {
     private $contract;
 
     public function __construct(){
+
         $this->loggedUser = LoginHandler::checkLogin();
         if($this->loggedUser === false){
             $this->redirect('/login');
             exit;
         }
+
         if($this->loggedUser->access == 0){
             $_SESSION['token'] = '';
             $this->render('banned');
+            exit;
+        }
+
+        $isSystemActive = LoginHandler::isSystemActive();
+        
+        if(!$isSystemActive){
+            $_SESSION['token'] = '';
+            $this->render('inactive');
             exit;
         }
 

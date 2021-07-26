@@ -3,6 +3,7 @@ namespace src\handlers;
 
 use \src\models\User;
 use \src\models\Users_on;
+use \src\models\System;
 
 class LoginadminHandler {
 
@@ -96,6 +97,20 @@ class LoginadminHandler {
     public static function getTotalAccountCreated(){
         $account = User::select()->execute();
         return count($account);
+    }
+
+    public static function changeSystemStatus($action){
+        if($action == 'on'){
+            System::update()
+                ->set('systemActive', 1)
+                ->where('id', 1)
+            ->execute();
+        }else{
+            System::update()
+                ->set('systemActive', 0)
+                ->where('id', 1)
+            ->execute();
+        }
     }
 
 }

@@ -2,10 +2,12 @@
 namespace src\controllers;
 
 use \core\Controller;
+use \src\handlers\LoginHandler;
 use \src\handlers\LoginadminHandler;
 
 class AdminController extends Controller {
     public $loggedAdmin;
+    public $isSystemActive;
 
     public function __construct(){
         $this->loggedAdmin = LoginadminHandler::checkLoginAdmin();
@@ -18,6 +20,8 @@ class AdminController extends Controller {
             $this->redirect("/Painel/loginStaff");
             exit;
         }
+
+        $this->isSystemActive = LoginHandler::isSystemActive();
     }
 
     public function index() {
@@ -34,7 +38,8 @@ class AdminController extends Controller {
             'user' => $this->loggedAdmin,
             'staffMembers' => $staffMembers,
             'onlineMembers' => $onlineMembers,
-            'accountsCreated' => $accountsCreated
+            'accountsCreated' => $accountsCreated,
+            'isSystemActive' => $this->isSystemActive
         ]);
         exit;
     }
@@ -159,6 +164,12 @@ class AdminController extends Controller {
         $_SESSION['success'] = 'O cargo do usuario foi alterado com sucesso.';
         
         $this->redirect("/Painel/novoStaff");
+        exit;
+    }
+
+    public function systemStatus($args){
+        LoginadminHandler::changeSystemStatus($args['action']);
+        $this->redirect("/Painel");
         exit;
     }
 

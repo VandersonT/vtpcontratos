@@ -49,7 +49,7 @@
                     <div class="infoUser">
                         <span class="title">Nome:</span><span class="result"><?=$userFound['name'];?></span>
                         <br/>
-                        <span class="title">Email:</span>
+                        <span class="title">Cargo:</span>
                         <span class="result">
                             <?= $userFound['access'] == 0 ? 'Banido' : '';?>
                             <?= $userFound['access'] == 1 ? 'Usuário' : '';?>
@@ -60,7 +60,7 @@
                         <span class="title">Id:</span><span class="result"><?=$userFound['id'];?></span>
                     </div>
                     <div class="box-up">
-                        <p>Cargo:</p>
+                        <p>Novo Cargo:</p>
                         <a class="btnUp btnUp-brown" href="<?=$base;?>/Painel/promovendo/<?=$userFound['id'];?>/<?=$userFound['access'];?>/1">Usr</a>
                         <a class="btnUp btnUp-yellow" href="<?=$base;?>/Painel/promovendo/<?=$userFound['id'];?>/<?=$userFound['access'];?>/2">Ajd</a>
                         <a class="btnUp btnUp-blue" href="<?=$base;?>/Painel/promovendo/<?=$userFound['id'];?>/<?=$userFound['access'];?>/3">Adm</a>

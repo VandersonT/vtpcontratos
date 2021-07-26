@@ -26,6 +26,7 @@ $router->get('/criação/{type}/{id}', 'ContractController@criation');
 $router->post('/salvar/{type}', 'ContractController@saveContract');
 $router->get('/deletar/{type}/{id}', 'ContractController@deleteContract');
 $router->post('/salvarPerfil', 'ContractController@saveInfoProfile');
+
 /*--------------------------------------------------------------------------------------------------*/
 
 
@@ -36,15 +37,16 @@ $router->post('/salvarPerfil', 'ContractController@saveInfoProfile');
 $router->get('/Painel', 'AdminController@index');
 $router->get('/Painel/sair', 'AdminController@logout');
 $router->get('/Painel/ban', 'AdminController@ban');
+
+/*USER_ADMIN*/
+$router->get('/Painel/loginStaff', 'LoginadminController@login');
+$router->post('/Painel/loginStaff', 'LoginadminController@loginAdminAction');
 $router->post('/Painel/ban', 'AdminController@banSearch');
 $router->get('/Painel/banindo/{id}/{access}', 'AdminController@banAction');
 $router->get('/Painel/novoStaff', 'AdminController@newStaff');
 $router->post('/Painel/novoStaff', 'AdminController@searchUserToStaff');
 $router->get('/Painel/promovendo/{id}/{access}/{newposition}', 'AdminController@newStaffAction');
-
-/*USER_ADMIN*/
-$router->get('/Painel/loginStaff', 'LoginadminController@login');
-$router->post('/Painel/loginStaff', 'LoginadminController@loginAdminAction');
+$router->get('/Painel/system/{action}', 'AdminController@systemStatus');
 
 /*--------------------------------------------------------------------------------------------------*/
 

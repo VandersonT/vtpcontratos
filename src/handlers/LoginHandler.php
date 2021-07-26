@@ -3,8 +3,17 @@ namespace src\handlers;
 
 use \src\models\User;
 use \src\models\Users_on;
+use \src\models\System;
 
 class LoginHandler {
+
+    public static function isSystemActive(){
+        $verify = System::select()->one();
+        if(!$verify['systemActive']){
+            return false;
+        }
+        return true;
+    }
 
     public static function checkLogin(){
         if(!empty($_SESSION['token'])){
