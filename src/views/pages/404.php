@@ -16,7 +16,7 @@
     <section class="screen">
         <div class="box">
             <h1><i class="fas fa-bomb"></i> Vish deu problema</h1>
-            <p>A página que você tentou acessar não foi encontrada ou esta indisponivel no momento.</p>
+            <p>A página que você tentou acessar não foi encontrada ou está indisponivel no momento.</p>
         </div>
         <a href="javascript:history.go(-1)">Voltar</a>
     </section>

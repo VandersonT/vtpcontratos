@@ -52,6 +52,7 @@ $router->get('/Painel/system/{action}', 'AdminController@systemStatus');
 $router->get('/Painel/support/{action}', 'AdminController@supportStatus');
 $router->get('/Painel/Desban/{id}', 'AdminController@desBanAction');
 $router->post('/Painel/enviarMensagemS', 'AdminController@sendMsgStaff');
+$router->get('/Painel/suporte/{tab}',  'AdminController@support');
 
 /*--------------------------------------------------------------------------------------------------*/
 

@@ -235,4 +235,20 @@ class AdminController extends Controller {
         exit;
     }
 
+    public function support($args){
+
+        if($args['tab'] != 'resolvido' && $args['tab'] != 'pendente'){
+            $this->render("/404");
+            exit;
+        }
+
+        //$content = LoginadminHandler::getContentSupport($args['tab']);
+
+        $this->render('admin/supportStaff',[
+            'user' => $this->loggedAdmin,
+            'tab' => $args['tab']
+        ]);
+        exit;
+    }
+
 }

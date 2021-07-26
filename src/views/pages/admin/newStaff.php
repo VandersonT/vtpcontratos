@@ -47,7 +47,11 @@
                 <?php if(!empty($userFound)): ?>
                     <img src="<?=$base;?>/media/avatars/<?=$userFound['photo'];?>" />
                     <div class="infoUser">
-                        <span class="title">Nome:</span><span class="result"><?=$userFound['name'];?></span>
+                        <span class="title">Nome:</span>
+                        <span class="result">
+                            <?=$userFound['name'];?>
+                            <?= $userFound['id'] == $user->id ? '(você)' : '';?>
+                        </span>
                         <br/>
                         <span class="title">Cargo:</span>
                         <span class="result">

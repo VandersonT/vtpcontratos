@@ -24,7 +24,7 @@
             Usuários Banidos
         </a>
         <p>Chat</p>
-        <a href="#" class="<?= $selected == 'support' ? 'selected' : '';?>">
+        <a href="<?=$base;?>/Painel/suporte/pendente" class="<?= $selected == 'support' ? 'selected' : '';?>">
             <i class="fas fa-headset"></i>
             Suporte
         </a>
