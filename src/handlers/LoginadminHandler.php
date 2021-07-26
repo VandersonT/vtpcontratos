@@ -127,4 +127,17 @@ class LoginadminHandler {
         }
     }
 
+    public static function getBannedMembers(){
+        $members = User::select()->where('access', 0)->orderBy(['id' => 'desc'])->execute();
+
+        return $members;
+    }
+
+    public static function desBanMember($id){
+        User::update()
+            ->set('access', 1)
+            ->where('id', $id)
+        ->execute();
+    }
+
 }

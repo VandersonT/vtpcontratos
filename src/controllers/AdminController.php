@@ -184,9 +184,29 @@ class AdminController extends Controller {
     }
 
     public function bannedListed(){
+
+        $bannedMembers = LoginadminHandler::getBannedMembers();
+
+        $flash = '';
+        if(!empty($_SESSION['flash'])){
+            $flash = $_SESSION['flash'];
+            $_SESSION['flash'] = '';
+        }
+
         $this->render('admin/bannedList',[
-            'user' => $this->loggedAdmin
+            'user' => $this->loggedAdmin,
+            'bannedMembers' => $bannedMembers,
+            'flash' => $flash
         ]);
+        exit;
+    }
+
+    public function desBanAction($args){
+        LoginadminHandler::desBanMember($args['id']);
+
+        $_SESSION['flash'] = 'O usuário id '.$args['id'].' foi desbanido com sucesso.';
+
+        $this->redirect("/Painel/banidosLista");
         exit;
     }
 

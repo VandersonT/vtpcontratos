@@ -28,76 +28,41 @@
         <article class="body">
             
             <h1>Usuários banidos</h1> 
+
+            <?php if(!empty($flash)): ?>
+                <div class="flash">
+                    <i class="fas fa-clipboard-check"></i>
+                    <?=$flash;?>
+                </div>
+            <?php endif; ?>
             
             <div class="box">
                 
-                <div class="userSingle">
-                    <img src="<?=$base;?>/media/avatars/no-picture.png" />
-                    <div class="infoEachUser">
-                        <div class="infoSingle">
-                            <p>Nome:</p>
-                            <span>Sem nome</span>
+                <?php if(!empty($bannedMembers)): ?>
+                    <?php foreach($bannedMembers as $bannedMember): ?>
+                        <div class="userSingle">
+                            <img src="<?=$base;?>/media/avatars/<?=$bannedMember['photo']?>" />
+                            <div class="infoEachUser">
+                                <div class="infoSingle">
+                                    <p>Nome:</p>
+                                    <span><?=$bannedMember['name']?></span>
+                                </div>
+                                <div class="infoSingle">
+                                    <p>Id:</p>
+                                    <span><?=$bannedMember['id']?></span>
+                                </div>
+                            </div>
+                            <div class="desBan">
+                                <a href="<?=$base;?>/Painel/Desban/<?=$bannedMember['id']?>">Desbanir</a>
+                            </div>
                         </div>
-                        <div class="infoSingle">
-                            <p>Id:</p>
-                            <span>1</span>
-                        </div>
-                    </div>
-                    <div class="desBan">
-                        <a href="#">Desbanir</a>
-                    </div>
-                </div>
-
-                <div class="userSingle">
-                    <img src="<?=$base;?>/media/avatars/no-picture.png" />
-                    <div class="infoEachUser">
-                        <div class="infoSingle">
-                            <p>Nome:</p>
-                            <span>Sem nome</span>
-                        </div>
-                        <div class="infoSingle">
-                            <p>Id:</p>
-                            <span>2</span>
-                        </div>
-                    </div>
-                    <div class="desBan">
-                        <a href="#">Desbanir</a>
-                    </div>
-                </div>
-
-                <div class="userSingle">
-                    <img src="<?=$base;?>/media/avatars/no-picture.png" />
-                    <div class="infoEachUser">
-                        <div class="infoSingle">
-                            <p>Nome:</p>
-                            <span>Sem nome</span>
-                        </div>
-                        <div class="infoSingle">
-                            <p>Id:</p>
-                            <span>5</span>
-                        </div>
-                    </div>
-                    <div class="desBan">
-                        <a href="#">Desbanir</a>
-                    </div>
-                </div>
-
-                <div class="userSingle">
-                    <img src="<?=$base;?>/media/avatars/no-picture.png" />
-                    <div class="infoEachUser">
-                        <div class="infoSingle">
-                            <p>Nome:</p>
-                            <span>Sem nome</span>
-                        </div>
-                        <div class="infoSingle">
-                            <p>Id:</p>
-                            <span>3</span>
-                        </div>
-                    </div>
-                    <div class="desBan">
-                        <a href="#">Desbanir</a>
-                    </div>
-                </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p class="warning">
+                        <i class="far fa-smile-beam"></i>
+                        Nenhum usuário banido até agora.
+                    </p>
+                <?php endif; ?>
 
             </div>
 
