@@ -49,12 +49,14 @@
                                 </div>
                             </a>
                             <div class="star" >
-                                <a class="pendingColor" href="#"><i class="fas fa-star"></i></a>
+                                <a class="<?=($tab == 'resolvido') ? 'resolvedColor': 'pendingColor';?>" href="<?=$base;?>/Painel/mudaStatusSuporte/<?= $content['help_user_id'];?>/<?=($tab == 'pendente') ? 'resolvido': 'pendingColor';?>"><i class="fas fa-star"></i></a>
                             </div>
                         </div>
                     <?php endforeach;?>
                 <?php else: ?>
-                    tem nada
+                    <p class="warning">
+                        <?=($tab == 'resolvido') ? 'Não tem nenhum suporte resolvido ainda.': 'Não tem nenhum suporte pendente.';?>
+                    </p>
                 <?php endif; ?>
 
             </section>

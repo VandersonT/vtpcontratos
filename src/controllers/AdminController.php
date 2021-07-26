@@ -244,12 +244,27 @@ class AdminController extends Controller {
 
         $contents = LoginadminHandler::getContentSupport($args['tab']);
 
+        date_default_timezone_set('America/Sao_Paulo');
+
         $this->render('admin/supportStaff',[
             'user' => $this->loggedAdmin,
             'tab' => $args['tab'],
             'contents' => $contents
         ]);
         exit;
+    }
+
+    public function changeStatusSupportSingle($args){
+        
+        LoginadminHandler::changeStatusSupport($args);
+
+        if($args['newstatus'] == 'resolvido'){
+            $this->redirect("/Painel/suporte/pendente");
+            exit;
+        }else{
+            $this->redirect("/Painel/suporte/resolvido");
+            exit;
+        }
     }
 
 }

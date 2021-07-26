@@ -1,3 +1,12 @@
+.warning{
+    text-align: center;
+    font-size: 20px;
+    color: rgb(14, 14, 14);
+    background-color: rgb(102, 102, 102);
+    border: 1px solid black;
+    padding: 10px;
+}
+
 .body{
     min-height: 100vh;
 }
@@ -94,8 +103,16 @@
     color: red;
 }
 
+.pendingColor:hover{
+    color: rgb(9, 255, 0);
+}
+
 .resolvedColor{
     color: rgb(9, 255, 0);
+}
+
+.resolvedColor:hover{
+    color: red;
 }
 
 @media screen and (max-width: 800px){

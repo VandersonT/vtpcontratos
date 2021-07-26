@@ -167,4 +167,22 @@ class LoginadminHandler {
         return $getSupports;
     }
 
+    public static function changeStatusSupport($info){
+        
+        if($info['newstatus'] == 'resolvido'){
+            Support_statu::update()
+                ->set('last_action', time())
+                ->set('status', 'resolved')
+                ->where('help_user_id', $info['id'])
+            ->execute();
+        }else{
+            Support_statu::update()
+                ->set('last_action', time())
+                ->set('status', 'pending')
+                ->where('help_user_id', $info['id'])
+            ->execute();
+        }
+
+    }
+
 }
