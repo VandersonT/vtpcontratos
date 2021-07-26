@@ -28,7 +28,7 @@ class ContractController extends Controller {
         
 
         if($msgToSuport){
-            ContractsHandler::sendMsg($msgToSuport, $this->loggedUser->id);
+            ContractsHandler::sendMsg($msgToSuport, $this->loggedUser);
             $_SESSION['flash'] = 'Mensagem enviada com sucesso, em breve responderemos!';
         }
 

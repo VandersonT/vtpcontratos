@@ -5,6 +5,7 @@ use \src\models\User;
 use \src\models\Users_on;
 use \src\models\System;
 use \src\models\Chat_staff;
+use \src\models\Support_statu;
 
 class LoginadminHandler {
 
@@ -153,6 +154,17 @@ class LoginadminHandler {
             'user_photo' => $user_photo,
             'msg' => $msg
         ])->execute();
+    }
+
+    public static function getContentSupport($tab){
+        
+        if($tab == 'pendente'){
+            $getSupports = Support_statu::select()->where('status', 'pending')->orderBy(['last_action' => 'desc'])->execute();
+        }else{
+            $getSupports = Support_statu::select()->where('status', 'resolved')->orderBy(['last_action' => 'desc'])->execute();
+        }
+
+        return $getSupports;
     }
 
 }

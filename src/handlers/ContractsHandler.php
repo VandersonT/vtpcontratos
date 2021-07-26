@@ -4,6 +4,7 @@ namespace src\handlers;
 use \src\models\Wedding1;
 use \src\models\Support;
 use \src\models\User;
+use \src\models\Support_statu;
 
 class ContractsHandler {
 
@@ -13,13 +14,35 @@ class ContractsHandler {
         return $conversation;
     }
 
-    public static function sendMsg($msgToSuport, $id){
+    public static function sendMsg($msgToSuport, $user){
+        
+        $supportExists = Support_statu::select()->where('help_user_id', $user->id)->get();
+
+        if($supportExists){
+            Support_statu::update()
+                ->set('help_user_name', $user->name)
+                ->set('help_user_photo', $user->photo)
+                ->set('last_action', time())
+                ->set('status', 'pending')
+                ->where('help_user_id', $user->id)
+            ->execute();
+        }else{
+            Support_statu::insert([
+                'help_user_id' => $user->id,
+                'help_user_name' => $user->name,
+                'help_user_photo' => $user->photo, 
+                'last_action' => time(),
+                'status' => 'pending'
+            ])->execute();
+        }
+
         Support::insert([
-            'from_user' => $id,
+            'from_user' => $user->id,
             'to_user' => 0,
             'msg' => $msgToSuport,
             'dateT' => date('d/m/Y')
         ])->execute();
+
     }
 
     public static function saveInfo($id, $userName, $userEmail, $themeMode, $namePhoto, $nameLogo, $profilePictureChanged, $contractLogoChanged){

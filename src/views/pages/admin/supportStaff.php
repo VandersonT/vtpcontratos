@@ -33,38 +33,30 @@
             </section>
 
             <section class="content">
-                <div class="box-supportSingle">
-                    <a href="#SuportSingle" class="supportSingle">
-                        <img src="<?=$base;?>/media/avatars/no-picture.png" />
-                        <div class="box-info-user">
-                            <p class="titleInfo">Nome: </p>
-                            <span class="resultInfo">Sem nome</span>
-                            <p class="titleInfo">Id:</p>
-                            <span class="resultInfo">0</span>
-                            <p class="titleInfo">Data: </p>
-                            <span class="resultInfo">20-02-9999</span>
+                
+                <?php if(count($contents) > 0): ?>
+                    <?php foreach($contents as $content): ?>
+                        <div class="box-supportSingle">
+                            <a href="#SuportSingle" class="supportSingle">
+                                <img src="<?=$base;?>/media/avatars/<?= $content['help_user_photo'];?>" />
+                                <div class="box-info-user">
+                                    <p class="titleInfo">Nome: </p>
+                                    <span class="resultInfo"><?= $content['help_user_name'];?></span>
+                                    <p class="titleInfo">Id:</p>
+                                    <span class="resultInfo"><?= $content['help_user_id'];?></span>
+                                    <p class="titleInfo">Data: </p>
+                                    <span class="resultInfo"><?= date('d/m/Y H:i:s',$content['last_action']);?></span>
+                                </div>
+                            </a>
+                            <div class="star" >
+                                <a class="pendingColor" href="#"><i class="fas fa-star"></i></a>
+                            </div>
                         </div>
-                    </a>
-                    <div class="star" >
-                        <a class="pendingColor" href="#"><i class="fas fa-star"></i></a>
-                    </div>
-                </div>
-                <div class="box-supportSingle">
-                    <a href="#SuportSingle" class="supportSingle">
-                        <img src="<?=$base;?>/media/avatars/no-picture.png" />
-                        <div class="box-info-user">
-                            <p class="titleInfo">Nome: </p>
-                            <span class="resultInfo">Sem nome</span>
-                            <p class="titleInfo">Id:</p>
-                            <span class="resultInfo">0</span>
-                            <p class="titleInfo">Data: </p>
-                            <span class="resultInfo">20-02-9999</span>
-                        </div>
-                    </a>
-                    <div class="star" >
-                        <a class="pendingColor" href="#"><i class="fas fa-star"></i></a>
-                    </div>
-                </div>
+                    <?php endforeach;?>
+                <?php else: ?>
+                    tem nada
+                <?php endif; ?>
+
             </section>
             
         </article>

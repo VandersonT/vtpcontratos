@@ -242,11 +242,12 @@ class AdminController extends Controller {
             exit;
         }
 
-        //$content = LoginadminHandler::getContentSupport($args['tab']);
+        $contents = LoginadminHandler::getContentSupport($args['tab']);
 
         $this->render('admin/supportStaff',[
             'user' => $this->loggedAdmin,
-            'tab' => $args['tab']
+            'tab' => $args['tab'],
+            'contents' => $contents
         ]);
         exit;
     }
