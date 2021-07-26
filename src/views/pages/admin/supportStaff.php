@@ -44,7 +44,7 @@
                                     <span class="resultInfo"><?= $content['help_user_name'];?></span>
                                     <p class="titleInfo">Id:</p>
                                     <span class="resultInfo"><?= $content['help_user_id'];?></span>
-                                    <p class="titleInfo">Data: </p>
+                                    <p class="titleInfo">Última Mod: </p>
                                     <span class="resultInfo"><?= date('d/m/Y H:i:s',$content['last_action']);?></span>
                                 </div>
                             </a>

@@ -1,6 +1,8 @@
 var menu = document.querySelector('.menu');
 var btnToggle = document.querySelector('.btnMenuMobile');
-let isOpen = true;
+let isOpen = false;
+
+
 
 btnToggle.addEventListener('click', function(){
     if(isOpen){
@@ -37,3 +39,9 @@ window.onresize = function(){
         btnToggle.style.marginLeft = "90vw";
     }
 };
+
+let windowWidth = window.innerWidth;
+if(windowWidth < 1100){
+    btnToggle.style.marginLeft = "0";
+    menu.style.display = "none";
+}

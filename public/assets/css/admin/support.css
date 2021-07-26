@@ -129,17 +129,15 @@
     .star{
         width: 50px;
         height: 100%;
-        padding: 30px;
-        font-size: 30px;
+        font-size: 20px;
     }
     .box-info-user{
         border-right: 0;
     }
+    .box-supportSingle{
+        height: 50px;
+    }
     .supportSingle img{
         width: 60px;
-        height: 60px;
-    }
-    .box-supportSingle{
-        height: 60px;
     }
 }
