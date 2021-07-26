@@ -47,6 +47,7 @@ $router->get('/Painel/novoStaff', 'AdminController@newStaff');
 $router->post('/Painel/novoStaff', 'AdminController@searchUserToStaff');
 $router->get('/Painel/promovendo/{id}/{access}/{newposition}', 'AdminController@newStaffAction');
 $router->get('/Painel/system/{action}', 'AdminController@systemStatus');
+$router->get('/Painel/support/{action}', 'AdminController@supportStatus');
 
 /*--------------------------------------------------------------------------------------------------*/
 

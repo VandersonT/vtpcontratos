@@ -108,7 +108,7 @@
                 <div class="blockSystem">
                     <?php if($isSystemActive): ?>
                         <div class="blockBtn"><a href="<?=$base;?>/Painel/system/off">Bloquear acesso</a></div>
-                        <p>Esse botão irá trancar o sistema, impedindo qualquer usuario de acessar.</p>
+                        <p>Esse botão irá trancar o sistema, impedindo qualquer usuario de acessar, exeto membros da staff.</p>
                     <?php else: ?>
                         <div class="blockBtn"><a href="<?=$base;?>/Painel/system/on">Desbloquear acesso</a></div>
                         <p>Esse botão irá destrancar o sistema, permitindo qualquer usuario de acessar.</p>
@@ -116,8 +116,13 @@
                 </div>
 
                 <div class="blockSystem">
-                    <div class="blockBtn"><a href="#">Bloquear suporte</a></div>
-                    <p>Esse botão irá trancar o suporte para usuarios, impedindo os usuarios de mandar mensagens, exeto usuarios da administração.</p>
+                    <?php if($isSupportActive): ?>
+                        <div class="blockBtn"><a href="<?=$base;?>/Painel/support/off">Bloquear suporte</a></div>
+                        <p>Esse botão irá trancar o suporte para usuarios, impedindo os usuarios de mandar mensagens.</p>
+                    <?php else: ?>
+                        <div class="blockBtn"><a href="<?=$base;?>/Painel/support/on">Desbloquear suporte</a></div>
+                        <p>Esse botão irá destrancar o suporte para usuarios, impedindo os usuarios de mandar mensagens, exeto usuarios da administração.</p>
+                    <?php endif; ?>
                 </div>
 
             </div>

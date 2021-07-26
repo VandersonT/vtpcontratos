@@ -75,8 +75,8 @@
             <img src="<?=$base;?>/media/avatars/<?= $user->photo;?>" />
             
             <form class="formSupport" method="POST" action="<?=$base;?>/enviarMsg">
-                <textarea placeholder="Digite aqui a sua mensagem para o nosso suporte" name="msgToSuport" class="newMsg"></textarea>
-                <input type="submit" value="Enviar"/>
+                <textarea <?=($isSupportActive) ? 'placeholder="Digite aqui a sua mensagem para o nosso suporte"' : 'disabled placeholder="O suporte esta temporariamente indisponivel no momento."';?>  name="msgToSuport" class="newMsg"></textarea>
+                <input <?=(!$isSupportActive) ? 'disabled' : '';?> type="submit" value="Enviar"/>
             </form>
 
         </section>

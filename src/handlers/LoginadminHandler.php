@@ -113,4 +113,18 @@ class LoginadminHandler {
         }
     }
 
+    public static function changeSupportStatus($action){
+        if($action == 'on'){
+            System::update()
+                ->set('supportActive', 1)
+                ->where('id', 1)
+            ->execute();
+        }else{
+            System::update()
+                ->set('supportActive', 0)
+                ->where('id', 1)
+            ->execute();
+        }
+    }
+
 }

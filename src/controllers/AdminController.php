@@ -8,6 +8,7 @@ use \src\handlers\LoginadminHandler;
 class AdminController extends Controller {
     public $loggedAdmin;
     public $isSystemActive;
+    public $isSupportActive;
 
     public function __construct(){
         $this->loggedAdmin = LoginadminHandler::checkLoginAdmin();
@@ -22,6 +23,8 @@ class AdminController extends Controller {
         }
 
         $this->isSystemActive = LoginHandler::isSystemActive();
+
+        $this->isSupportActive = LoginHandler::isSupportActive();
     }
 
     public function index() {
@@ -39,7 +42,8 @@ class AdminController extends Controller {
             'staffMembers' => $staffMembers,
             'onlineMembers' => $onlineMembers,
             'accountsCreated' => $accountsCreated,
-            'isSystemActive' => $this->isSystemActive
+            'isSystemActive' => $this->isSystemActive,
+            'isSupportActive' => $this->isSupportActive
         ]);
         exit;
     }
@@ -169,6 +173,12 @@ class AdminController extends Controller {
 
     public function systemStatus($args){
         LoginadminHandler::changeSystemStatus($args['action']);
+        $this->redirect("/Painel");
+        exit;
+    }
+
+    public function supportStatus($args){
+        LoginadminHandler::changeSupportStatus($args['action']);
         $this->redirect("/Painel");
         exit;
     }

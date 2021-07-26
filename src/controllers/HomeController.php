@@ -26,7 +26,7 @@ class HomeController extends Controller {
 
         $isSystemActive = LoginHandler::isSystemActive();
         
-        if(!$isSystemActive){
+        if(!$isSystemActive && $this->loggedUser->access < 2){
             $_SESSION['token'] = '';
             $this->render('inactive');
             exit;
@@ -77,10 +77,17 @@ class HomeController extends Controller {
 
         $chatSingle = ContractsHandler::getChatUser($this->loggedUser->id);
 
+        if($this->loggedUser->access < 2){
+            $isSupportActive = LoginHandler::isSupportActive();
+        }else{
+            $isSupportActive = true;
+        }
+
         $this->render('support', [
             'user' => $this->loggedUser,
             'chatSingle' => $chatSingle,
-            'flash' => $flash
+            'flash' => $flash,
+            'isSupportActive' => $isSupportActive
         ]);
         exit;
     }

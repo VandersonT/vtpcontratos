@@ -15,6 +15,14 @@ class LoginHandler {
         return true;
     }
 
+    public static function isSupportActive(){
+        $verify = System::select()->one();
+        if(!$verify['supportActive']){
+            return false;
+        }
+        return true;
+    }
+
     public static function checkLogin(){
         if(!empty($_SESSION['token'])){
             $token = $_SESSION['token'];
