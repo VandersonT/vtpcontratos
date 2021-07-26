@@ -183,4 +183,11 @@ class AdminController extends Controller {
         exit;
     }
 
+    public function bannedListed(){
+        $this->render('admin/bannedList',[
+            'user' => $this->loggedAdmin
+        ]);
+        exit;
+    }
+
 }

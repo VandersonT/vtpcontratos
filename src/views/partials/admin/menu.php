@@ -18,7 +18,7 @@
             <i class="fas fa-ban"></i>
             Banir Usuário
         </a>
-        <a href="<?=$base;?>/Painel/ban" class="<?= $selected == 'userBan' ? 'selected' : '';?>">
+        <a href="<?=$base;?>/Painel/banidosLista" class="<?= $selected == 'bannedList' ? 'selected' : '';?>">
             <i class="fas fa-user-slash"></i>
             Usuários Banidos
         </a>
