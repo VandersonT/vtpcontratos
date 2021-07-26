@@ -55,6 +55,7 @@
                             <?= $userFound['access'] == 1 ? 'Usuário' : '';?>
                             <?= $userFound['access'] == 2 ? 'Ajudante' : '';?>
                             <?= $userFound['access'] == 3 ? 'Administrador' : '';?>
+                            <?= $userFound['access'] == 4 ? 'Dono' : '';?>
                         </span>
                         <br/>
                         <span class="title">Id:</span><span class="result"><?=$userFound['id'];?></span>

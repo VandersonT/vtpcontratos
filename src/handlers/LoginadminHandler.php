@@ -74,7 +74,7 @@ class LoginadminHandler {
     }
 
     public static function getStaffsMembers(){
-        $members = User::select()->where('access', 2)->orWhere('access', 3)->orderBy(['access' => 'desc'])->execute();
+        $members = User::select()->where('access', 2)->orWhere('access', 3)->orWhere('access', 4)->orderBy(['access' => 'desc'])->execute();
 
         return $members;
     }

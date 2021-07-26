@@ -13,6 +13,7 @@
                     <?= $user->access == 1 ? 'Usuario' : '';?>
                     <?= $user->access == 2 ? 'Ajudante' : '';?>
                     <?= $user->access == 3 ? 'Administrador' : '';?>
+                    <?= $user->access == 4 ? 'Dono' : '';?>
                 </span>
             </div>
         </div>

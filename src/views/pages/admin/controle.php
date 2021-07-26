@@ -61,6 +61,7 @@
                             <p>
                                 <?= $staffMember['access'] == 2 ? 'Ajudante' : '';?>
                                 <?= $staffMember['access'] == 3 ? 'Administrador' : '';?>
+                                <?= $staffMember['access'] == 4 ? 'Dono' : '';?>
                             </p>
                         </div>
                     <?php endforeach; ?>

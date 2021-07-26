@@ -158,6 +158,12 @@ class AdminController extends Controller {
 
     public function newStaffAction($args){
         
+        if($args['access'] == 4){
+            $_SESSION['error'] = 'Você não pode trocar o cargo do dono.';
+            $this->redirect("/Painel/novoStaff");
+            exit;
+        }
+        
         if($this->loggedAdmin->access < 3){
             $_SESSION['error'] = 'Somente Administrador pode editar cargos.';
             $this->redirect("/Painel/novoStaff");
