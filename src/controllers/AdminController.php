@@ -216,4 +216,13 @@ class AdminController extends Controller {
         exit;
     }
 
+    public function chatStaff(){
+        $chatSingle = LoginadminHandler::getMessageChatStaff();
+        $this->render('admin/chatStaff',[
+            'user' => $this->loggedAdmin,
+            'chatSingle' => $chatSingle
+        ]);
+        exit;
+    }
+
 }

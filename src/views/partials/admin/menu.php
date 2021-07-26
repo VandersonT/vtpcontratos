@@ -28,7 +28,7 @@
             <i class="fas fa-headset"></i>
             Suporte
         </a>
-        <a href="#" class="<?= $selected == 'chatS' ? 'selected' : '';?>">
+        <a href="<?=$base;?>/Painel/chatStaffs" class="<?= $selected == 'chatS' ? 'selected' : '';?>">
             <i class="fas fa-comments"></i>
             Chat da staff
         </a>

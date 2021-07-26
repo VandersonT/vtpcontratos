@@ -38,6 +38,7 @@ $router->get('/Painel', 'AdminController@index');
 $router->get('/Painel/sair', 'AdminController@logout');
 $router->get('/Painel/ban', 'AdminController@ban');
 $router->get('/Painel/banidosLista', 'AdminController@bannedListed');
+$router->get('/Painel/chatStaffs', 'AdminController@chatStaff');
 
 /*USER_ADMIN*/
 $router->get('/Painel/loginStaff', 'LoginadminController@login');

@@ -4,6 +4,7 @@ namespace src\handlers;
 use \src\models\User;
 use \src\models\Users_on;
 use \src\models\System;
+use \src\models\Chat_staff;
 
 class LoginadminHandler {
 
@@ -138,6 +139,12 @@ class LoginadminHandler {
             ->set('access', 1)
             ->where('id', $id)
         ->execute();
+    }
+
+    public static function getMessageChatStaff(){
+        $conversation = Chat_staff::select()->get();
+
+        return $conversation;
     }
 
 }
