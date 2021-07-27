@@ -115,6 +115,9 @@ class AdminController extends Controller {
         LoginadminHandler::banUser($args['id']);
         $_SESSION['success'] = 'Usuário banido com sucesso.';
 
+        $msg = $this->loggedAdmin->name.' baniu o usuário id '.$args['id'];'.';
+        LoginadminHandler::sendMsgToChatStaff(-1, 'automatic', '', $msg);
+
         $this->redirect("/Painel/ban");
         exit;
     }
@@ -172,6 +175,9 @@ class AdminController extends Controller {
 
         LoginadminHandler::changePositionUser($args['id'], $args['newposition']);
         $_SESSION['success'] = 'O cargo do usuario foi alterado com sucesso.';
+
+        $msg = $this->loggedAdmin->name.' alterou o cargo do usuário id '.$args['id'];'.';
+        LoginadminHandler::sendMsgToChatStaff(-1, 'automatic', '', $msg);
         
         $this->redirect("/Painel/novoStaff");
         exit;
@@ -211,6 +217,9 @@ class AdminController extends Controller {
         LoginadminHandler::desBanMember($args['id']);
 
         $_SESSION['flash'] = 'O usuário id '.$args['id'].' foi desbanido com sucesso.';
+
+        $msg = $this->loggedAdmin->name.' desbaniu o usuário id '.$args['id'].'.';
+        LoginadminHandler::sendMsgToChatStaff(-1, 'automatic', '', $msg);
 
         $this->redirect("/Painel/banidosLista");
         exit;
