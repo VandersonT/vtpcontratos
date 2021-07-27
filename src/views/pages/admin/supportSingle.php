@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Painel - controle </title>
+    <title>Painel - suporte individual </title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

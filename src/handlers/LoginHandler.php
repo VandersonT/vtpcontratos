@@ -79,7 +79,8 @@ class LoginHandler {
             'password' => $hash,
             'token' => $token,
             'access' => 1,
-            'photo' => 'no-picture.png'
+            'themeMode' => 'light',
+            'photo' => 'no-picture.png',
         ])->execute();
         
         return $token;
