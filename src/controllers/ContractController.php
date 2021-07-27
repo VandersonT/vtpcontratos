@@ -117,9 +117,60 @@ class ContractController extends Controller {
  
 
                 if($contractId == 1){
-                    $_SESSION['flash'] = ContractsHandler::saveNewContract($this->loggedUser->id,$contractId,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
+                    $_SESSION['flash'] = ContractsHandler::saveNewContractWedding1($this->loggedUser->id,$contractId,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
                 }else{
-                    $_SESSION['flash'] = ContractsHandler::updateNewContract($contractId, $this->loggedUser->id,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
+                    $_SESSION['flash'] = ContractsHandler::updateNewContractWedding1($contractId, $this->loggedUser->id,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
+                }
+                $this->redirect('/salvos');
+                break;
+            case 'birthday1':
+                $contractId = filter_input(INPUT_POST, 'contractId', FILTER_SANITIZE_SPECIAL_CHARS);
+                $contractName = filter_input(INPUT_POST, 'contractNameInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp1 = filter_input(INPUT_POST, 'cmp1Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $service = filter_input(INPUT_POST, 'serviceInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp2 = filter_input(INPUT_POST, 'cmp2Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp3 = filter_input(INPUT_POST, 'cmp3Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $hiredInfo = filter_input(INPUT_POST, 'hiredInfoInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp4 = filter_input(INPUT_POST, 'cmp4Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $name = filter_input(INPUT_POST, 'nameInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cpf = filter_input(INPUT_POST, 'cpfInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $rg = filter_input(INPUT_POST, 'rgInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $email = filter_input(INPUT_POST, 'emailInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cell = filter_input(INPUT_POST, 'cellInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $address = filter_input(INPUT_POST, 'addressInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $city = filter_input(INPUT_POST, 'cityInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $birthdayPerson = filter_input(INPUT_POST, 'birthday_personInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp5 = filter_input(INPUT_POST, 'cmp5Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp6 = filter_input(INPUT_POST, 'cmp6Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp7 = filter_input(INPUT_POST, 'cmp7Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp8 = filter_input(INPUT_POST, 'cmp8Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $date = filter_input(INPUT_POST, 'dateInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $time = filter_input(INPUT_POST, 'timeInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $place = filter_input(INPUT_POST, 'placeInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp9 = filter_input(INPUT_POST, 'cmp9Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $goals = filter_input(INPUT_POST, 'goalsInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp10 = filter_input(INPUT_POST, 'cmp10Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp11 = filter_input(INPUT_POST, 'cmp11Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $price = filter_input(INPUT_POST, 'priceInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp12 = filter_input(INPUT_POST, 'cmp12Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp13 = filter_input(INPUT_POST, 'cmp13Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $deadline = filter_input(INPUT_POST, 'deadlineInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp14 = filter_input(INPUT_POST, 'cmp14Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp15 = filter_input(INPUT_POST, 'cmp15Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp16 = filter_input(INPUT_POST, 'cmp16Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp17 = filter_input(INPUT_POST, 'cmp17Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp18 = filter_input(INPUT_POST, 'cmp18Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $warranty = filter_input(INPUT_POST, 'warrantyInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp19 = filter_input(INPUT_POST, 'cmp19Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp20 = filter_input(INPUT_POST, 'cmp20Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp21 = filter_input(INPUT_POST, 'cmp21Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $nameHired = filter_input(INPUT_POST, 'nameHiredInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $dateToday = filter_input(INPUT_POST, 'dateTodayInput', FILTER_SANITIZE_SPECIAL_CHARS);
+
+                if($contractId == 1){
+                    $_SESSION['flash'] = ContractsHandler::saveNewContractBirthday1($this->loggedUser->id,$contractId,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$birthdayPerson,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
+                }else{
+                    $_SESSION['flash'] = ContractsHandler::updateNewContractBirthday1($contractId, $this->loggedUser->id,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$birthdayPerson,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
                 }
                 $this->redirect('/salvos');
                 break;

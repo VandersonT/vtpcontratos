@@ -37,7 +37,12 @@
                 <?php endif;?>
                 
                 <?php if($type == 'aniversario'):?>
-                    <!--Não existe ainda aniversario-->
+                    <form class="contractSingle" method="GET" action="<?=$base;?>/criação/birthday1/1" >
+                        <img src="<?=$base;?>/assets/images/birthdateImg1.jpg">
+                        <p>Aniversário</p>
+                        <span>Modelo 1</span>
+                        <button>Abrir</button>
+                    </form>
                 <?php endif;?>
 
                 <?php if($type == 'desenvolvimentoWeb'):?>

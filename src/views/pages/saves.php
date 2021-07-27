@@ -30,13 +30,13 @@
             </div>
         <?php endif;?>
         <article class="box-contract">
-            <h1>Salvos:</h1>
+            <h1>Casamento:</h1>
 
             <div class="contractStorage" >
                 
-                <?php if(!empty($contracts)): ?>
+                <?php if(!empty($contractsWedding1)): ?>
                     
-                    <?php foreach($contracts as $contract): ?>
+                    <?php foreach($contractsWedding1 as $contract): ?>
                         <form class="contractSingle" method="GET" action="<?=$base;?>/criação/wedding1/<?=$contract['id'];?>">
                             <img src="<?=$base;?>/assets/images/img-contract.jpg">
                             <p><?=$contract['contract_name'];?></p>
@@ -46,7 +46,30 @@
                     <?php endforeach; ?>   
                 <?php else: ?> 
                     <p style="display:none;" class="contractSingle">Modelo para contrato</p>
-                    Você não tem nenhum contrato salvo
+                    Você não tem nenhum contrato de casamento salvo
+                <?php endif; ?>
+
+            </div>
+        </article>
+
+        <article class="box-contract">
+            <h1>Aniversário:</h1>
+
+            <div class="contractStorage" >
+                
+                <?php if(!empty($contractsBirthday1)): ?>
+                    
+                    <?php foreach($contractsBirthday1 as $contract): ?>
+                        <form class="contractSingle" method="GET" action="<?=$base;?>/criação/birthday1/<?=$contract['id'];?>">
+                            <img src="<?=$base;?>/assets/images/img-contract.jpg">
+                            <p><?=$contract['contract_name'];?></p>
+                            <button>Editar</button>
+                            <a onClick="return confirm('Você quer realmente apagar este contrato?');" href="<?=$base;?>/deletar/wedding1/<?=$contract['id'];?>" class="deleteSaves"><i class="fas fa-trash"></i></a>
+                        </form>
+                    <?php endforeach; ?>   
+                <?php else: ?> 
+                    <p style="display:none;" class="contractSingle">Modelo para contrato</p>
+                    Você não tem nenhum contrato de aniversário salvo
                 <?php endif; ?>
 
             </div>

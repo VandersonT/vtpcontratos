@@ -22,23 +22,25 @@ function changeThemeToDark(){
 
     if(document.querySelector('.showcase')){
         document.querySelector('.showcase').style.background = "rgb(20, 20, 20)";
-    }
-    if(document.querySelector('.showcase')){
         document.querySelector('.showcase').style.border = "1px solid rgb(13, 13, 13)";
     }
+
     document.documentElement.style.setProperty('--backgroundContractSingle', 'rgb(77, 77, 77)');
+
     if(document.querySelector('.packageStorage')){
         document.querySelector('.packageStorage').style.background = "rgb(20, 20, 20)";
-    }   
-    if(document.querySelector('.packageStorage')){
         document.querySelector('.packageStorage').style.border = "1px solid rgb(13, 13, 13)";
     } 
+
     document.documentElement.style.setProperty('--backgroundContractSingle', 'rgb(77, 77, 77)');
-    if(document.querySelector('.contractStorage')){
-        document.querySelector('.contractStorage').style.background = "rgb(20, 20, 20)";
-    }
-    if(document.querySelector('.contractStorage')){
-        document.querySelector('.contractStorage').style.border = "1px solid rgb(13, 13, 13)";
+    
+
+    var contractStorage = document.querySelectorAll('.contractStorage');
+    if(contractStorage){
+        for(let i = 0; i < contractStorage.length; i++){
+            contractStorage[i].style.background = "rgb(20, 20, 20)";
+            contractStorage[i].style.border = "1px solid rgb(13, 13, 13)";
+        }
     }
 
 }

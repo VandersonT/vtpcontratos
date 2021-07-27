@@ -34,6 +34,13 @@
                         <span>Modelo 1</span>
                         <button>Abrir</button>
                     </form>
+
+                    <form class="favoriteSingle"  method="GET" action="<?=$base;?>/criação/birthday1/1" >
+                        <img src="<?=$base;?>/assets/images/birthdateImg1.jpg">
+                        <p>Aniversário</p>
+                        <span>Modelo 1</span>
+                        <button>Abrir</button>
+                    </form>
                 </div>
             </div>
         </article>
@@ -50,7 +57,7 @@
                 <form class="packageSingle" method="GET" action="<?=$base;?>/contratos/packages/aniversario">
                     <img src="<?=$base;?>/assets/images/birthdateImg1.jpg">
                     <p>Contratos para aniversario</p>
-                    <span>0 Disponivel</span>
+                    <span>1 Disponivel</span>
                     <button>Abrir</button>
                 </form>
                 <form class="packageSingle" method="GET" action="<?=$base;?>/contratos/packages/desenvolvimentoWeb">
