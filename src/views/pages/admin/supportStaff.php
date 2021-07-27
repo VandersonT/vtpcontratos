@@ -37,7 +37,8 @@
                 <?php if(count($contents) > 0): ?>
                     <?php foreach($contents as $content): ?>
                         <div class="box-supportSingle">
-                            <a href="#SuportSingle" class="supportSingle">
+                            <a href="<?=$base;?>/Painel/suporte/<?=($tab == 'resolvido') ? 'resolvido': 'pendente';?>/individual/<?=$content['help_user_id'];?>" class="supportSingle">
+                                <input name="teste" type="hidden" value="teste"/>
                                 <img src="<?=$base;?>/media/avatars/<?= $content['help_user_photo'];?>" />
                                 <div class="box-info-user">
                                     <p class="titleInfo">Nome: </p>

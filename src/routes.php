@@ -54,6 +54,8 @@ $router->get('/Painel/Desban/{id}', 'AdminController@desBanAction');
 $router->post('/Painel/enviarMensagemS', 'AdminController@sendMsgStaff');
 $router->get('/Painel/suporte/{tab}',  'AdminController@support');
 $router->get('/Painel/mudaStatusSuporte/{id}/{newstatus}', 'AdminController@changeStatusSupportSingle');
+$router->get('/Painel/suporte/{situation}/individual/{id}', 'AdminController@supportSingle');
+$router->post('/Painel/responderUsuario', 'AdminController@replyUser');
 
 /*--------------------------------------------------------------------------------------------------*/
 

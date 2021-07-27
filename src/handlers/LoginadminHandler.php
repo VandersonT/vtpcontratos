@@ -6,6 +6,7 @@ use \src\models\Users_on;
 use \src\models\System;
 use \src\models\Chat_staff;
 use \src\models\Support_statu;
+use \src\models\Support;
 
 class LoginadminHandler {
 
@@ -183,6 +184,26 @@ class LoginadminHandler {
             ->execute();
         }
 
+    }
+
+    public static function getMessageUserSingle($id){
+        $conversation = Support::select('supports.id, supports.from_user, supports.to_user, supports.msg, users.name, users.photo')
+                            ->where('from_user', $id)
+                            ->orWhere('to_user', $id)
+                            ->join('users', 'users.id', '=', 'from_user')
+                            ->orderBy(['supports.id' => 'asc'])
+                            ->get();
+
+        return $conversation;
+    }
+
+    public static function replyToUser($msg, $toUser){
+        Support::insert([
+            'from_user' => 0,
+            'to_user' => $toUser,
+            'msg' => $msg,
+            'dateT' => time()
+        ])->execute();
     }
 
 }

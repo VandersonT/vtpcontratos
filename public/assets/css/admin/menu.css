@@ -12,6 +12,7 @@
     height: 100vh;
     background-color: rgb(20, 28, 36);
     border-right: 1px solid rgb(15, 19, 24);;
+    z-index: 999;
 }
 
 .btnMenuMobile{

@@ -267,4 +267,26 @@ class AdminController extends Controller {
         }
     }
 
+    public function supportSingle($args){
+
+        $conversations = LoginadminHandler::getMessageUserSingle($args['id']);
+
+        $this->render('admin/supportSingle',[
+            'user' => $this->loggedAdmin,
+            'conversations'=>$conversations,
+            'userId' => $args['id']
+        ]);
+        exit;
+    }
+
+    public function replyUser(){
+
+        $msg = filter_input(INPUT_POST, 'msg', FILTER_SANITIZE_SPECIAL_CHARS);
+        $toUser = filter_input(INPUT_POST, 'toUser');
+
+        LoginadminHandler::replyToUser($msg, $toUser);
+        
+        echo "<script>window.history.back()</script>";
+    }
+
 }
