@@ -27,7 +27,7 @@
 
         <article class="body">
             
-            <section class="screenChat">
+            <section id="chat" class="screenChat">
                 
                 <?php if(count($chatSingle) > 0): ?>
                     <?php foreach($chatSingle as $chat): ?>
@@ -77,5 +77,9 @@
     </section>
 
     <script src="<?=$base;?>/assets/js/admin/menu.js"></script>
+    <script>
+        var screenChat = document.getElementById('chat');
+        screenChat.scrollTop = screenChat.scrollHeight;
+    </script>
 </body>
 </html>

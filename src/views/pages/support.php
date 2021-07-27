@@ -87,5 +87,9 @@
     <script src="<?=$base;?>/assets/js/toggleMenuMobile.js"></script>
     <script src="<?=$base;?>/assets/js/SelectedAndHover.js"></script>
     <script src="<?=$base;?>/assets/js/darkMode.js"></script>
+    <script>
+        var screenChat = document.getElementById('chat');
+        screenChat.scrollTop = screenChat.scrollHeight;
+    </script>
 </body>
 </html>

@@ -76,7 +76,7 @@
 
     <script src="<?=$base;?>/assets/js/admin/menu.js"></script>
     <script>
-        var screenChat = document.getElementById('screenChat').
+        var screenChat = document.getElementById('screenChat');
         screenChat.scrollTop = screenChat.scrollHeight;
     </script>
 </body>
