@@ -193,9 +193,14 @@
         </div>
 
         <div class="box-signature">
-            <span contentEditable="true" class="name <?= ($contract->name == '(Nome do Contratante)') ? 'mark' : '' ?>"><?=$contract->name;?></span>
-
-            <span contentEditable="true" class="name_hired <?= ($contract->name_hired == '(Nome do Contratado)') ? 'mark' : '' ?>"><?=$contract->name_hired;?></span>
+            <div class="singleSignature">
+                __________________________________
+                <span contentEditable="true" class="name <?= ($contract->name == '(Nome do Contratante)') ? 'mark' : '' ?>"><?=$contract->name;?></span>
+            </div>
+            <div class="singleSignature">
+                __________________________________
+                <span contentEditable="true" class="name_hired <?= ($contract->name_hired == '(Nome do Contratado)') ? 'mark' : '' ?>"><?=$contract->name_hired;?></span>
+            </div>
         </div>
 
     </div><!--contractSingle-->

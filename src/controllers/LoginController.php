@@ -7,10 +7,13 @@ use \src\handlers\LoginHandler;
 class LoginController extends Controller {
 
     public function __construct(){
-        if(!empty($_SESSION['token'])){
+        
+        $this->loggedUser = LoginHandler::checkLogin();
+        if($this->loggedUser != false){
             $this->redirect('/');
             exit;
-        }
+        } 
+       
     }
 
     public function signin() {

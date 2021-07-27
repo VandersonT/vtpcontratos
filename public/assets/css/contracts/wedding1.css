@@ -22,9 +22,14 @@
 }
 
 .box-signature span{
-    width: 30%;
-    border-top: 1px solid black;
+    width: 100%;
     padding-top: 10px;
+}
+
+.singleSignature{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 
