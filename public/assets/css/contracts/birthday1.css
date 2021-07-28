@@ -27,7 +27,7 @@
 }
 
 .singleSignature{
-    width: 30%;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -46,4 +46,14 @@
 .box-logo img{
     width: 40%;
     height: 100%;
+}
+
+#cmp16AutoComplete{
+    visibility:hidden;
+}
+
+@media screen and (max-width: 500px){
+    .singleSignature{
+        font-size: 2vw;
+    }
 }

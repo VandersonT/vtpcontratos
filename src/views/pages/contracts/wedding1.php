@@ -194,11 +194,11 @@
 
         <div class="box-signature">
             <div class="singleSignature">
-                __________________________________
+                _______________________________
                 <span contentEditable="true" class="name <?= ($contract->name == '(Nome do Contratante)') ? 'mark' : '' ?>"><?=$contract->name;?></span>
             </div>
             <div class="singleSignature">
-                __________________________________
+                _______________________________
                 <span contentEditable="true" class="name_hired <?= ($contract->name_hired == '(Nome do Contratado)') ? 'mark' : '' ?>"><?=$contract->name_hired;?></span>
             </div>
         </div>
