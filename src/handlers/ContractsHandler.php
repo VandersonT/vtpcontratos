@@ -3,6 +3,8 @@ namespace src\handlers;
 
 use \src\models\Wedding1;
 use \src\models\Birthday1;
+use \src\models\Devweb1;
+
 use \src\models\Support;
 use \src\models\User;
 use \src\models\Support_statu;
@@ -172,6 +174,66 @@ class ContractsHandler {
                     $getContract->cmp21 = $data['cmp21'];
                     $getContract->name_hired = $data['name_hired'];
                     $getContract->date_today = $data['date_today'];
+                    return $getContract;
+                }
+                break;
+            case 'devweb1':
+                $data = Devweb1::select()->where('id', 1)->one();
+                if(count($data) > 0){
+                    $getContract = new Devweb1();
+                    $getContract->id = $data['id'];
+                    $getContract->user_id = $data['user_id'];
+                    $getContract->contract_name = $data['contract_name'];
+                    $getContract->title = $data['title'];
+                    $getContract->cmp1 = $data['cmp1'];
+                    $getContract->cmp2 = $data['cmp2'];
+                    $getContract->title_info_hired = $data['title_info_hired'];
+                    $getContract->info_hired = $data['info_hired'];
+                    $getContract->title_info_contractor = $data['title_info_contractor'];
+                    $getContract->info_contractor = $data['info_contractor'];
+                    $getContract->cmp3 = $data['cmp3'];
+                    $getContract->cmp4 = $data['cmp4'];
+                    $getContract->cmp4aTitle = $data['cmp4aTitle'];
+                    $getContract->cmp4aContent = $data['cmp4aContent'];
+                    $getContract->cmp5 = $data['cmp5'];
+                    $getContract->cmp6 = $data['cmp6'];
+                    $getContract->name_contractor = $data['name_contractor'];
+                    $getContract->cmp7 = $data['cmp7'];
+                    $getContract->about_product = $data['about_product'];
+                    $getContract->cmp10 = $data['cmp10'];
+                    $getContract->cmp11 = $data['cmp11'];
+                    $getContract->hired_obligation = $data['hired_obligation'];
+                    $getContract->cmp12 = $data['cmp12'];
+                    $getContract->contractor_obligation = $data['contractor_obligation'];
+                    $getContract->cmp13 = $data['cmp13'];
+                    $getContract->cmp14 = $data['cmp14'];
+                    $getContract->deadline = $data['deadline'];
+                    $getContract->cmp15 = $data['cmp15'];
+                    $getContract->cmp16 = $data['cmp16'];
+                    $getContract->cmp17 = $data['cmp17'];
+                    $getContract->cmp18 = $data['cmp18'];
+                    $getContract->cmp19 = $data['cmp19'];
+                    $getContract->cmp20 = $data['cmp20'];
+                    $getContract->cmp21 = $data['cmp21'];
+                    $getContract->cmp22 = $data['cmp22'];
+                    $getContract->cmp23 = $data['cmp23'];
+                    $getContract->cmp24 = $data['cmp24'];
+                    $getContract->cmp25 = $data['cmp25'];
+                    $getContract->warranty = $data['warranty'];
+                    $getContract->cmp26 = $data['cmp26'];
+                    $getContract->cmp27 = $data['cmp27'];
+                    $getContract->cmp28 = $data['cmp28'];
+                    $getContract->price = $data['price'];
+                    $getContract->installments = $data['installments'];
+                    $getContract->divided_in = $data['divided_in'];
+                    $getContract->cmp29 = $data['cmp29'];
+                    $getContract->cmp30 = $data['cmp30'];
+                    $getContract->cmp31 = $data['cmp31'];
+                    $getContract->cmp32 = $data['cmp32'];
+                    $getContract->cmp33 = $data['cmp33'];
+                    $getContract->date_today = $data['date_today'];
+                    $getContract->contractor_name = $data['contractor_name'];
+                    $getContract->hired_name = $data['hired_name'];
                     return $getContract;
                 }
                 break;

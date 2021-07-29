@@ -46,7 +46,12 @@
                 <?php endif;?>
 
                 <?php if($type == 'desenvolvimentoWeb'):?>
-                    <!--Não existe ainda desenvolvimento-->
+                    <form class="contractSingle" method="GET" action="<?=$base;?>/criação/devweb1/1" >
+                        <img src="<?=$base;?>/assets/images/devWebImg1.jpg">
+                        <p>DevWeb</p>
+                        <span>Modelo 1</span>
+                        <button>Abrir</button>
+                    </form>
                 <?php endif;?>
 
             </div>

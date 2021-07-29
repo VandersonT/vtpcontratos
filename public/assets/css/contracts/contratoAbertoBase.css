@@ -5,6 +5,7 @@
     .contractSingle{padding: 0 !important;}
     .toggleMenu{display:none !important;}
     .mark{color: black !important;}
+    .contractSingle{min-height: auto !important;}
 }
 /*---------------------------------------------------------------------------------------------------*/
 
@@ -23,7 +24,22 @@ body{background-color: rgb(128, 128, 128);color: rgb(22, 22, 22);}
 /*---------------------------------------------------------------------------------------------------*/
 
 
+/*-------------------------------------------BOX-LOGO------------------------------------------------*/
+.box-logo{
+    display: none;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(61, 61, 61);
+}
 
+.box-logo img{
+    width: 40%;
+    height: 100%;
+}
+/*---------------------------------------------------------------------------------------------------*/
 
 
 /*--------------------------------------------MENU---------------------------------------------------*/
@@ -130,13 +146,13 @@ body{background-color: rgb(128, 128, 128);color: rgb(22, 22, 22);}
 }
 .warning{
     margin-left: 450px; 
-    color: rgb(218, 218, 0);
+    color: rgb(255, 166, 1);
     text-align: center;
     margin-bottom: 10px;
 }
 
 .warning i{
-    color: rgb(53, 13, 13);
+    color: rgb(238, 255, 1);;
 } 
 /*---------------------------------------------------------------------------------------------------*/
 
@@ -151,6 +167,7 @@ body{background-color: rgb(128, 128, 128);color: rgb(22, 22, 22);}
     margin-left: 450px;
     margin-bottom: 60px;
     padding: 30px;
+    min-height: 1000px;
 }
 /*---------------------------------------------------------------------------------------------------*/
 

@@ -52,10 +52,14 @@
 
     <p class="warning">
         <i class="fas fa-exclamation-triangle"></i>
-        As cores vermelhas são apenas referências para o modelo, quando gerar será tudo padrão (preto).
+        O contrato pode ser editado tanto pelo menu quando pela folha abaixo, altere o que quiser.
     </p>
 
     <div class="contractSingle">
+
+        <div class="box-logo">
+            <img src="<?=$base;?>/media/logo/<?=$user->contractLogo?>" />
+        </div>
 
         contrato aqui
 
@@ -71,7 +75,11 @@
     -->
 
     
-    <script>var themeMode = '<?=$user->themeMode;?>';</script>
+    <script>
+        var themeMode = '<?=$user->themeMode;?>';
+        var mode = '<?=$contractInfo['id'];?>';
+        var logo = '<?=$user->contractLogo;?>'
+    </script>
     <script src="<?=$base;?>/assets/js/darkModeContrato.js"></script>
     <script src="<?=$base;?>/assets/js/contracts/contratoAberto.js"></script>
 </body>

@@ -41,6 +41,13 @@
                         <span>Modelo 1</span>
                         <button>Abrir</button>
                     </form>
+
+                    <form class="favoriteSingle"  method="GET" action="<?=$base;?>/criação/devweb1/1" >
+                        <img src="<?=$base;?>/assets/images/devWebImg1.jpg">
+                        <p>DevWeb</p>
+                        <span>Modelo 1</span>
+                        <button>Abrir</button>
+                    </form>
                 </div>
             </div>
         </article>
@@ -63,7 +70,7 @@
                 <form class="packageSingle" method="GET" action="<?=$base;?>/contratos/packages/desenvolvimentoWeb">
                     <img src="<?=$base;?>/assets/images/developerCover.jpg">
                     <p>Contratos para desenvovilmento web</p>
-                    <span>0 Disponivel</span>
+                    <span>1 Disponivel</span>
                     <button>Abrir</button>
                 </form>
             </div>

@@ -90,7 +90,7 @@
 
     <p class="warning">
         <i class="fas fa-exclamation-triangle"></i>
-        As cores vermelhas são apenas referências para o modelo, quando gerar será tudo padrão (preto).
+        O contrato pode ser editado tanto pelo menu quando pela folha abaixo, altere o que quiser.
     </p>
 
     <div class="contractSingle">
