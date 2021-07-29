@@ -352,6 +352,66 @@ class ContractsHandler {
                     return $getContract;
                 }
                 break;
+                case 'devweb1':
+                    $data = Devweb1::select()->where('id', $contract['id'])->one();
+                    if(count($data) > 0){
+                        $getContract = new Devweb1();
+                        $getContract->id = $data['id'];
+                        $getContract->user_id = $data['user_id'];
+                        $getContract->contract_name = $data['contract_name'];
+                        $getContract->title = $data['title'];
+                        $getContract->cmp1 = $data['cmp1'];
+                        $getContract->cmp2 = $data['cmp2'];
+                        $getContract->title_info_hired = $data['title_info_hired'];
+                        $getContract->info_hired = $data['info_hired'];
+                        $getContract->title_info_contractor = $data['title_info_contractor'];
+                        $getContract->info_contractor = $data['info_contractor'];
+                        $getContract->cmp3 = $data['cmp3'];
+                        $getContract->cmp4 = $data['cmp4'];
+                        $getContract->cmp4aTitle = $data['cmp4aTitle'];
+                        $getContract->cmp4aContent = $data['cmp4aContent'];
+                        $getContract->cmp5 = $data['cmp5'];
+                        $getContract->cmp6 = $data['cmp6'];
+                        $getContract->name_contractor = $data['name_contractor'];
+                        $getContract->cmp7 = $data['cmp7'];
+                        $getContract->about_product = $data['about_product'];
+                        $getContract->cmp10 = $data['cmp10'];
+                        $getContract->cmp11 = $data['cmp11'];
+                        $getContract->hired_obligation = $data['hired_obligation'];
+                        $getContract->cmp12 = $data['cmp12'];
+                        $getContract->contractor_obligation = $data['contractor_obligation'];
+                        $getContract->cmp13 = $data['cmp13'];
+                        $getContract->cmp14 = $data['cmp14'];
+                        $getContract->deadline = $data['deadline'];
+                        $getContract->cmp15 = $data['cmp15'];
+                        $getContract->cmp16 = $data['cmp16'];
+                        $getContract->cmp17 = $data['cmp17'];
+                        $getContract->cmp18 = $data['cmp18'];
+                        $getContract->cmp19 = $data['cmp19'];
+                        $getContract->cmp20 = $data['cmp20'];
+                        $getContract->cmp21 = $data['cmp21'];
+                        $getContract->cmp22 = $data['cmp22'];
+                        $getContract->cmp23 = $data['cmp23'];
+                        $getContract->cmp24 = $data['cmp24'];
+                        $getContract->cmp25 = $data['cmp25'];
+                        $getContract->warranty = $data['warranty'];
+                        $getContract->cmp26 = $data['cmp26'];
+                        $getContract->cmp27 = $data['cmp27'];
+                        $getContract->cmp28 = $data['cmp28'];
+                        $getContract->price = $data['price'];
+                        $getContract->installments = $data['installments'];
+                        $getContract->divided_in = $data['divided_in'];
+                        $getContract->cmp29 = $data['cmp29'];
+                        $getContract->cmp30 = $data['cmp30'];
+                        $getContract->cmp31 = $data['cmp31'];
+                        $getContract->cmp32 = $data['cmp32'];
+                        $getContract->cmp33 = $data['cmp33'];
+                        $getContract->date_today = $data['date_today'];
+                        $getContract->contractor_name = $data['contractor_name'];
+                        $getContract->hired_name = $data['hired_name'];
+                        return $getContract;
+                    }
+                    break;
         }
         return false;
     }
@@ -410,7 +470,7 @@ class ContractsHandler {
         return 'Seu contrato foi salvo com sucesos!';
     }
 
-    public static function updateNewContractWedding1($contractId, $user_id,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday){
+    public static function updateContractWedding1($contractId, $user_id,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday){
 
         if($contractName == ''){
             $contractName = 'Sem Nome';
@@ -518,7 +578,7 @@ class ContractsHandler {
         return 'Seu contrato foi salvo com sucesos!';
     }
 
-    public static function updateNewContractBirthday1($contractId, $user_id,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$birthdayPerson,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday){
+    public static function updateContractBirthday1($contractId, $user_id,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$birthdayPerson,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday){
 
         if($contractName == ''){
             $contractName = 'Sem Nome';
@@ -572,6 +632,132 @@ class ContractsHandler {
         return 'Seu contrato foi editado com sucesos!';
     }
 
+    public static function saveNewContractDevweb1($user_id,$contractId,$contractName,$title,$cmp1Input,$cmp2Input,$titleInfoHiredInput,$infoHiredInput,$titleInfoContractorInput,$infoContractorInput,$cmp3Input,$cmp4Input,$cmp4aTitleInput,$cmp4aContentInput,$cmp5Input,$cmp6Input,$nameContractorInput,$cmp7Input,$aboutProductInput,$cmp10Input,$cmp11Input,$hiredObligationInput,$cmp12Input,$contractorObligationInput,$cmp13Input,$cmp14Input,$deadlineInput,$cmp15Input,$cmp16Input,$cmp17Input,$cmp18Input,$cmp19Input,$cmp20Input,$cmp21Input,$cmp22Input,$cmp23Input,$cmp24Input,$cmp25Input,$warrantyInput,$cmp26Input,$cmp27Input,$cmp28Input,$priceInput,$installmentsInput,$dividedInInput,$cmp29Input,$cmp30Input,$cmp31Input,$cmp32Input,$cmp33Input,$dateTodayInput,$hiredNameInput,$contractorNameInput){
+        if($contractName == ''){
+            $contractName = 'Sem Nome';
+        }
+
+        Devweb1::insert([
+            'user_id' => $user_id,
+            'contract_name' => $contractName,
+            'title' => $title,
+            'cmp1' => $cmp1Input,
+            'cmp2' => $cmp2Input,
+            'title_info_hired' => $titleInfoHiredInput,
+            'info_hired' => $infoHiredInput,
+            'title_info_contractor' => $titleInfoContractorInput,
+            'info_contractor' => $infoContractorInput,
+            'cmp3' => $cmp3Input,
+            'cmp4' => $cmp4Input,
+            'cmp4aTitle' => $cmp4aTitleInput,
+            'cmp4aContent' => $cmp4aContentInput,
+            'cmp5' => $cmp5Input,
+            'cmp6' => $cmp6Input,
+            'name_contractor' => $nameContractorInput,
+            'cmp7' => $cmp7Input,
+            'about_product' => $aboutProductInput,
+            'cmp10' => $cmp10Input,
+            'cmp11' => $cmp11Input,
+            'hired_obligation' => $hiredObligationInput,
+            'cmp12' => $cmp12Input,
+            'contractor_obligation' => $contractorObligationInput,
+            'cmp13' => $cmp13Input,
+            'cmp14' => $cmp14Input,
+            'deadline' => $deadlineInput,
+            'cmp15' => $cmp15Input,
+            'cmp16' => $cmp16Input,
+            'cmp17' => $cmp17Input,
+            'cmp18' => $cmp18Input,
+            'cmp19' => $cmp19Input,
+            'cmp20' => $cmp20Input,
+            'cmp21' => $cmp21Input,
+            'cmp22' => $cmp22Input,
+            'cmp23' => $cmp23Input,
+            'cmp24' => $cmp24Input,
+            'cmp25' => $cmp25Input,
+            'warranty' => $warrantyInput,
+            'cmp26' => $cmp26Input,
+            'cmp27' => $cmp27Input,
+            'cmp28' => $cmp28Input,
+            'price' => $priceInput,
+            'installments' => $installmentsInput,
+            'divided_in' => $dividedInInput,
+            'cmp29' => $cmp29Input,
+            'cmp30' => $cmp30Input,
+            'cmp31' => $cmp31Input,
+            'cmp32' => $cmp32Input,
+            'cmp33' => $cmp33Input,
+            'date_today' => $dateTodayInput,
+            'hired_name' => $hiredNameInput,
+            'contractor_name' => $contractorNameInput
+        ])->execute();
+        return 'Seu contrato foi salvo com sucesos!';
+    }
+
+    public static function updateContractDevweb1($user_id,$contractId,$contractName,$title,$cmp1Input,$cmp2Input,$titleInfoHiredInput,$infoHiredInput,$titleInfoContractorInput,$infoContractorInput,$cmp3Input,$cmp4Input,$cmp4aTitleInput,$cmp4aContentInput,$cmp5Input,$cmp6Input,$nameContractorInput,$cmp7Input,$aboutProductInput,$cmp10Input,$cmp11Input,$hiredObligationInput,$cmp12Input,$contractorObligationInput,$cmp13Input,$cmp14Input,$deadlineInput,$cmp15Input,$cmp16Input,$cmp17Input,$cmp18Input,$cmp19Input,$cmp20Input,$cmp21Input,$cmp22Input,$cmp23Input,$cmp24Input,$cmp25Input,$warrantyInput,$cmp26Input,$cmp27Input,$cmp28Input,$priceInput,$installmentsInput,$dividedInInput,$cmp29Input,$cmp30Input,$cmp31Input,$cmp32Input,$cmp33Input,$dateTodayInput,$hiredNameInput,$contractorNameInput){
+        
+        if($contractName == ''){
+            $contractName = 'Sem Nome';
+        }
+
+        Devweb1::update()
+            ->set('user_id', $user_id)
+            ->set('contract_name', $contractName)
+            ->set('title', $title)
+            ->set('cmp1', $cmp1Input)
+            ->set('cmp2', $cmp2Input)
+            ->set('title_info_hired', $titleInfoHiredInput)
+            ->set('info_hired', $infoHiredInput)
+            ->set('title_info_contractor', $titleInfoContractorInput)
+            ->set('info_contractor', $infoContractorInput)
+            ->set('cmp3', $cmp3Input)
+            ->set('cmp4', $cmp4Input)
+            ->set('cmp4aTitle', $cmp4aTitleInput)
+            ->set('cmp4aContent', $cmp4aContentInput)
+            ->set('cmp5', $cmp5Input)
+            ->set('cmp6', $cmp6Input)
+            ->set('name_contractor', $nameContractorInput)
+            ->set('cmp7', $cmp7Input)
+            ->set('about_product', $aboutProductInput)
+            ->set('cmp10', $cmp10Input)
+            ->set('cmp11', $cmp11Input)
+            ->set('hired_obligation', $hiredObligationInput)
+            ->set('cmp12', $cmp12Input)
+            ->set('contractor_obligation', $contractorObligationInput)
+            ->set('cmp13', $cmp13Input)
+            ->set('cmp14', $cmp14Input)
+            ->set('deadline', $deadlineInput)
+            ->set('cmp15', $cmp15Input)
+            ->set('cmp16', $cmp16Input)
+            ->set('cmp17', $cmp17Input)
+            ->set('cmp18', $cmp18Input)
+            ->set('cmp19', $cmp19Input)
+            ->set('cmp20', $cmp20Input)
+            ->set('cmp21', $cmp21Input)
+            ->set('cmp22', $cmp22Input)
+            ->set('cmp23', $cmp23Input)
+            ->set('cmp24', $cmp24Input)
+            ->set('cmp25', $cmp25Input)
+            ->set('warranty', $warrantyInput)
+            ->set('cmp26', $cmp26Input)
+            ->set('cmp27', $cmp27Input)
+            ->set('cmp28', $cmp28Input)
+            ->set('price', $priceInput)
+            ->set('installments', $installmentsInput)
+            ->set('divided_in', $dividedInInput)
+            ->set('cmp29', $cmp29Input)
+            ->set('cmp30', $cmp30Input)
+            ->set('cmp31', $cmp31Input)
+            ->set('cmp32', $cmp32Input)
+            ->set('cmp33', $cmp33Input)
+            ->set('date_today', $dateTodayInput)
+            ->set('hired_name', $hiredNameInput)
+            ->set('contractor_name', $contractorNameInput)
+            ->where('id', $contractId)
+        ->execute();
+        return 'Seu contrato foi editado com sucesos!';
+    }
+
     public static function getSavesContracts($user_id, $type){
 
         switch($type){
@@ -580,6 +766,9 @@ class ContractsHandler {
                 break;
             case 'birthday1':
                 $data = Birthday1::select()->where('user_id', $user_id)->execute();
+                break;
+            case 'devweb1':
+                $data = Devweb1::select()->where('user_id', $user_id)->execute();
                 break;
         }
         return $data;

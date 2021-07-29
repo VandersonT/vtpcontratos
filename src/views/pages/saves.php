@@ -75,6 +75,29 @@
             </div>
         </article>
 
+        <article class="box-contract">
+            <h1>Desenvolvimento Web:</h1>
+
+            <div class="contractStorage" >
+                
+                <?php if(!empty($contractsDevweb1)): ?>
+                    
+                    <?php foreach($contractsDevweb1 as $contract): ?>
+                        <form class="contractSingle" method="GET" action="<?=$base;?>/criação/devweb1/<?=$contract['id'];?>">
+                            <img src="<?=$base;?>/assets/images/img-contract.jpg">
+                            <p><?=$contract['contract_name'];?></p>
+                            <button>Editar</button>
+                            <a onClick="return confirm('Você quer realmente apagar este contrato?');" href="<?=$base;?>/deletar/wedding1/<?=$contract['id'];?>" class="deleteSaves"><i class="fas fa-trash"></i></a>
+                        </form>
+                    <?php endforeach; ?>   
+                <?php else: ?> 
+                    <p style="display:none;" class="contractSingle">Modelo para contrato</p>
+                    Você não tem nenhum contrato de aniversário salvo
+                <?php endif; ?>
+
+            </div>
+        </article>
+
     </section>
 
     <script>var themeMode = '<?=$user->themeMode;?>';</script>

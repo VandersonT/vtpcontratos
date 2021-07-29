@@ -119,7 +119,7 @@ class ContractController extends Controller {
                 if($contractId == 1){
                     $_SESSION['flash'] = ContractsHandler::saveNewContractWedding1($this->loggedUser->id,$contractId,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
                 }else{
-                    $_SESSION['flash'] = ContractsHandler::updateNewContractWedding1($contractId, $this->loggedUser->id,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
+                    $_SESSION['flash'] = ContractsHandler::updateContractWedding1($contractId, $this->loggedUser->id,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$bride,$engaged,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
                 }
                 $this->redirect('/salvos');
                 break;
@@ -170,7 +170,68 @@ class ContractController extends Controller {
                 if($contractId == 1){
                     $_SESSION['flash'] = ContractsHandler::saveNewContractBirthday1($this->loggedUser->id,$contractId,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$birthdayPerson,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
                 }else{
-                    $_SESSION['flash'] = ContractsHandler::updateNewContractBirthday1($contractId, $this->loggedUser->id,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$birthdayPerson,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
+                    $_SESSION['flash'] = ContractsHandler::updateContractBirthday1($contractId, $this->loggedUser->id,$contractName,$cmp1,$service,$cmp2,$cmp3,$hiredInfo,$cmp4,$name,$cpf,$rg,$email,$cell,$address,$city,$birthdayPerson,$cmp5,$cmp6,$cmp7,$cmp8,$date,$time,$place,$cmp9,$goals,$cmp10,$cmp11,$price,$cmp12,$cmp13,$deadline,$cmp14,$cmp15,$cmp16,$cmp17,$cmp18,$warranty,$cmp19,$cmp20,$cmp21,$nameHired,$dateToday);
+                }
+                $this->redirect('/salvos');
+                break;
+            case 'devweb1':
+                $contractId = filter_input(INPUT_POST, 'contractId', FILTER_SANITIZE_SPECIAL_CHARS);
+                $contractName = filter_input(INPUT_POST, 'contractNameInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $title = filter_input(INPUT_POST, 'titleInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp1Input = filter_input(INPUT_POST, 'cmp1Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp2Input = filter_input(INPUT_POST, 'cmp2Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $titleInfoHiredInput = filter_input(INPUT_POST, 'titleInfoHiredInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $infoHiredInput = filter_input(INPUT_POST, 'infoHiredInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $titleInfoContractorInput = filter_input(INPUT_POST, 'titleInfoContractorInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $infoContractorInput = filter_input(INPUT_POST, 'infoContractorInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp3Input = filter_input(INPUT_POST, 'cmp3Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp4Input = filter_input(INPUT_POST, 'cmp4Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp4aTitleInput = filter_input(INPUT_POST, 'cmp4aTitleInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp4aContentInput = filter_input(INPUT_POST, 'cmp4aContentInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp5Input = filter_input(INPUT_POST, 'cmp5Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp6Input = filter_input(INPUT_POST, 'cmp6Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $nameContractorInput = filter_input(INPUT_POST, 'nameContractorInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp7Input = filter_input(INPUT_POST, 'cmp7Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $aboutProductInput = filter_input(INPUT_POST, 'aboutProductInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp10Input = filter_input(INPUT_POST, 'cmp10Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp11Input = filter_input(INPUT_POST, 'cmp11Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $hiredObligationInput = filter_input(INPUT_POST, 'hiredObligationInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp12Input = filter_input(INPUT_POST, 'cmp12Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $contractorObligationInput = filter_input(INPUT_POST, 'contractorObligationInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp13Input = filter_input(INPUT_POST, 'cmp13Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp14Input = filter_input(INPUT_POST, 'cmp14Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $deadlineInput = filter_input(INPUT_POST, 'deadlineInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp15Input = filter_input(INPUT_POST, 'cmp15Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp16Input = filter_input(INPUT_POST, 'cmp16Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp17Input = filter_input(INPUT_POST, 'cmp17Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp18Input = filter_input(INPUT_POST, 'cmp18Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp19Input = filter_input(INPUT_POST, 'cmp19Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp20Input = filter_input(INPUT_POST, 'cmp20Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp21Input = filter_input(INPUT_POST, 'cmp21Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp22Input = filter_input(INPUT_POST, 'cmp22Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp23Input = filter_input(INPUT_POST, 'cmp23Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp24Input = filter_input(INPUT_POST, 'cmp24Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp25Input = filter_input(INPUT_POST, 'cmp25Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $warrantyInput = filter_input(INPUT_POST, 'warrantyInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp26Input = filter_input(INPUT_POST, 'cmp26Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp27Input = filter_input(INPUT_POST, 'cmp27Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp28Input = filter_input(INPUT_POST, 'cmp28Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $priceInput = filter_input(INPUT_POST, 'priceInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $installmentsInput = filter_input(INPUT_POST, 'installmentsInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $dividedInInput = filter_input(INPUT_POST, 'dividedInInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp29Input = filter_input(INPUT_POST, 'cmp29Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp30Input = filter_input(INPUT_POST, 'cmp30Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp31Input = filter_input(INPUT_POST, 'cmp31Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp32Input = filter_input(INPUT_POST, 'cmp32Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $cmp33Input = filter_input(INPUT_POST, 'cmp33Input', FILTER_SANITIZE_SPECIAL_CHARS);
+                $dateTodayInput = filter_input(INPUT_POST, 'dateTodayInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $hiredNameInput = filter_input(INPUT_POST, 'hiredNameInput', FILTER_SANITIZE_SPECIAL_CHARS);
+                $contractorNameInput = filter_input(INPUT_POST, 'contractorNameInput', FILTER_SANITIZE_SPECIAL_CHARS);
+
+                if($contractId == 1){
+                    $_SESSION['flash'] = ContractsHandler::saveNewContractDevweb1($this->loggedUser->id,$contractId,$contractName,$title,$cmp1Input,$cmp2Input,$titleInfoHiredInput,$infoHiredInput,$titleInfoContractorInput,$infoContractorInput,$cmp3Input,$cmp4Input,$cmp4aTitleInput,$cmp4aContentInput,$cmp5Input,$cmp6Input,$nameContractorInput,$cmp7Input,$aboutProductInput,$cmp10Input,$cmp11Input,$hiredObligationInput,$cmp12Input,$contractorObligationInput,$cmp13Input,$cmp14Input,$deadlineInput,$cmp15Input,$cmp16Input,$cmp17Input,$cmp18Input,$cmp19Input,$cmp20Input,$cmp21Input,$cmp22Input,$cmp23Input,$cmp24Input,$cmp25Input,$warrantyInput,$cmp26Input,$cmp27Input,$cmp28Input,$priceInput,$installmentsInput,$dividedInInput,$cmp29Input,$cmp30Input,$cmp31Input,$cmp32Input,$cmp33Input,$dateTodayInput,$hiredNameInput,$contractorNameInput);
+                }else{
+                    $_SESSION['flash'] = ContractsHandler::updateContractDevweb1($this->loggedUser->id,$contractId,$contractName,$title,$cmp1Input,$cmp2Input,$titleInfoHiredInput,$infoHiredInput,$titleInfoContractorInput,$infoContractorInput,$cmp3Input,$cmp4Input,$cmp4aTitleInput,$cmp4aContentInput,$cmp5Input,$cmp6Input,$nameContractorInput,$cmp7Input,$aboutProductInput,$cmp10Input,$cmp11Input,$hiredObligationInput,$cmp12Input,$contractorObligationInput,$cmp13Input,$cmp14Input,$deadlineInput,$cmp15Input,$cmp16Input,$cmp17Input,$cmp18Input,$cmp19Input,$cmp20Input,$cmp21Input,$cmp22Input,$cmp23Input,$cmp24Input,$cmp25Input,$warrantyInput,$cmp26Input,$cmp27Input,$cmp28Input,$priceInput,$installmentsInput,$dividedInInput,$cmp29Input,$cmp30Input,$cmp31Input,$cmp32Input,$cmp33Input,$dateTodayInput,$hiredNameInput,$contractorNameInput);
                 }
                 $this->redirect('/salvos');
                 break;

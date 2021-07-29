@@ -59,12 +59,14 @@ class HomeController extends Controller {
 
         $contractsWedding1 = ContractsHandler::getSavesContracts($this->loggedUser->id, 'wedding1');
         $contractsBirthday1 = ContractsHandler::getSavesContracts($this->loggedUser->id, 'birthday1');
+        $contractsDevweb1 = ContractsHandler::getSavesContracts($this->loggedUser->id, 'devweb1');
 
         $this->render('saves', [
             'user' => $this->loggedUser,
             'flash' => $flash,
             'contractsWedding1' => $contractsWedding1,
-            'contractsBirthday1' => $contractsBirthday1
+            'contractsBirthday1' => $contractsBirthday1,
+            'contractsDevweb1' => $contractsDevweb1
         ]);
         exit;
     }

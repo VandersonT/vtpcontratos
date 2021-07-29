@@ -1,3 +1,125 @@
+/*---------------------------------------------SAVE_CONTRACT----------------------------------------------*/
+let saveContractBtn = document.querySelector('.saveContract');
+var form = document.querySelector('.formSaveContract');
+saveContractBtn.addEventListener('click', function(){
+    let confirmAction = window.confirm('Você confirma a ação?');
+
+    if(!confirmAction){
+        return false;
+    }
+
+    //get the contractSingle class values
+    let contractName = document.querySelector('.contractName').value;
+    let title = document.querySelector('.title').innerText;
+    let cmp1 = document.querySelector('.cmp1').innerText;
+    let cmp2 = document.querySelector('.cmp2').innerText;
+    let titleInfoHired = document.querySelector('.titleInfoHired').innerText;
+    let infoHired = document.querySelector('.info_hired').innerText;
+    let titleInfoContractor = document.querySelector('.titleInfoContractor').innerText;
+    let infoContractor = document.querySelector('.info_contractor').innerText;
+    let cmp3 = document.querySelector('.cmp3').innerText;
+    let cmp4 = document.querySelector('.cmp4').innerText;
+    let cmp4aTitle = document.querySelector('.cmp4aTitle').innerText;
+    let cmp4aContent = document.querySelector('.cmp4aContent').innerText;
+    let cmp5 = document.querySelector('.cmp5').innerText;
+    let cmp6 = document.querySelector('.cmp6').innerText;
+    let nameContractor = document.querySelector('.name_contractor').innerText;
+    let cmp7 = document.querySelector('.cmp7').innerText;
+    let aboutProduct = document.querySelector('.about_product').innerText;
+    let cmp10 = document.querySelector('.cmp10').innerText;
+    let cmp11 = document.querySelector('.cmp11').innerText;
+    let hiredObligation = document.querySelector('.hired_obligation').innerText;
+    let cmp12 = document.querySelector('.cmp12').innerText;
+    let contractorObligation = document.querySelector('.contractor_obligation').innerText;
+    let cmp13 = document.querySelector('.cmp13').innerText;
+    let cmp14 = document.querySelector('.cmp14').innerText;
+    let deadline = document.querySelector('.deadline').innerText;
+    let cmp15 = document.querySelector('.cmp15').innerText;
+    let cmp16 = document.querySelector('.cmp16').innerText;
+    let cmp17 = document.querySelector('.cmp17').innerText;
+    let cmp18 = document.querySelector('.cmp18').innerText;
+    let cmp19 = document.querySelector('.cmp19').innerText;
+    let cmp20 = document.querySelector('.cmp20').innerText;
+    let cmp21 = document.querySelector('.cmp21').innerText;
+    let cmp22 = document.querySelector('.cmp22').innerText;
+    let cmp23 = document.querySelector('.cmp23').innerText;
+    let cmp24 = document.querySelector('.cmp24').innerText;
+    let cmp25 = document.querySelector('.cmp25').innerText;
+    let warranty = document.querySelector('.warranty').innerText;
+    let cmp26 = document.querySelector('.cmp26').innerText;
+    let cmp27 = document.querySelector('.cmp27').innerText;
+    let cmp28 = document.querySelector('.cmp28').innerText;
+    let price = document.querySelector('.price').innerText;
+    let installments = document.querySelector('.installments').innerText;
+    let dividedIn = document.querySelector('.divided_in').innerText;
+    let cmp29 = document.querySelector('.cmp29').innerText;
+    let cmp30 = document.querySelector('.cmp30').innerText;
+    let cmp31 = document.querySelector('.cmp31').innerText;
+    let cmp32 = document.querySelector('.cmp32').innerText;
+    let cmp33 = document.querySelector('.cmp33').innerText;
+    let dateToday = document.querySelector('.dateToday').innerText;
+    let nameContractorL = document.querySelector('.name_contractorL').innerText;
+    let nameHired = document.querySelector('.name_hired').innerText;
+
+    //get the values for the form to be sent hidden
+    document.querySelector('input[name=contractNameInput]').value = contractName;
+    document.querySelector('input[name=titleInput]').value = title;
+    document.querySelector('input[name=cmp1Input]').value = cmp1;
+    document.querySelector('input[name=cmp2Input]').value = cmp2;
+    document.querySelector('input[name=titleInfoHiredInput]').value = titleInfoHired;
+    document.querySelector('input[name=infoHiredInput]').value = infoHired;
+    document.querySelector('input[name=titleInfoContractorInput]').value = titleInfoContractor;
+    document.querySelector('input[name=infoContractorInput]').value = infoContractor;
+    document.querySelector('input[name=cmp3Input]').value = cmp3;
+    document.querySelector('input[name=cmp4Input]').value = cmp4;
+    document.querySelector('input[name=cmp4aTitleInput]').value = cmp4aTitle;
+    document.querySelector('input[name=cmp4aContentInput]').value = cmp4aContent;
+    document.querySelector('input[name=cmp5Input]').value = cmp5;
+    document.querySelector('input[name=cmp6Input]').value = cmp6;
+    document.querySelector('input[name=nameContractorInput]').value = nameContractor;
+    document.querySelector('input[name=cmp7Input]').value = cmp7;
+    document.querySelector('input[name=aboutProductInput]').value = aboutProduct;
+    document.querySelector('input[name=cmp10Input]').value = cmp10;
+    document.querySelector('input[name=cmp11Input]').value = cmp11;
+    document.querySelector('input[name=hiredObligationInput]').value = hiredObligation;
+    document.querySelector('input[name=cmp12Input]').value = cmp12;
+    document.querySelector('input[name=contractorObligationInput]').value = contractorObligation;
+    document.querySelector('input[name=cmp13Input]').value = cmp13;
+    document.querySelector('input[name=cmp14Input]').value = cmp14;
+    document.querySelector('input[name=deadlineInput]').value = deadline;
+    document.querySelector('input[name=cmp15Input]').value = cmp15;
+    document.querySelector('input[name=cmp16Input]').value = cmp16;
+    document.querySelector('input[name=cmp17Input]').value = cmp17;
+    document.querySelector('input[name=cmp18Input]').value = cmp18;
+    document.querySelector('input[name=cmp19Input]').value = cmp19;
+    document.querySelector('input[name=cmp20Input]').value = cmp20;
+    document.querySelector('input[name=cmp21Input]').value = cmp21;
+    document.querySelector('input[name=cmp22Input]').value = cmp22;
+    document.querySelector('input[name=cmp23Input]').value = cmp23;
+    document.querySelector('input[name=cmp24Input]').value = cmp24;
+    document.querySelector('input[name=cmp25Input]').value = cmp25;
+    document.querySelector('input[name=warrantyInput]').value = warranty;
+    document.querySelector('input[name=cmp26Input]').value = cmp26;
+    document.querySelector('input[name=cmp27Input]').value = cmp27;
+    document.querySelector('input[name=cmp28Input]').value = cmp28;
+    document.querySelector('input[name=priceInput]').value = price;
+    document.querySelector('input[name=installmentsInput]').value = installments;
+    document.querySelector('input[name=dividedInInput]').value = dividedIn;
+    document.querySelector('input[name=cmp29Input]').value = cmp29;
+    document.querySelector('input[name=cmp30Input]').value = cmp30;
+    document.querySelector('input[name=cmp31Input]').value = cmp31;
+    document.querySelector('input[name=cmp32Input]').value = cmp32;
+    document.querySelector('input[name=cmp33Input]').value = cmp33;
+    document.querySelector('input[name=dateTodayInput]').value = dateToday;
+    document.querySelector('input[name=hiredNameInput]').value = nameHired;
+    document.querySelector('input[name=contractorNameInput]').value = nameContractorL;
+
+    //send info hidden
+    form.submit();
+
+})
+/*--------------------------------------------------------------------------------------------------------*/
+
 /*-------------------------------------------FROM_INPUT_TO_PAPER------------------------------------------*/
 let sendInfoHired = document.getElementById('inputInfoHired');
 sendInfoHired.addEventListener('keyup', function(){
