@@ -159,10 +159,7 @@ body{
 }
 
 @media screen and (max-height: 517px){
-    .info{
-        height: 12vh;
-    }
-    .menu li{
-        height: 10vh;
+    .box-menu{
+        overflow-y: auto;
     }
 }
