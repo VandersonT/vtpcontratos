@@ -12,9 +12,9 @@
     
     <link rel="shortcut icon" type="image-x/png" href="<?=$base;?>/iconAdmin.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/style.css" />
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/admin/menu.css" />
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/admin/bannedList.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/style.min.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/admin/menu.min.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/admin/bannedList.min.css" />
 
     <script src="https://kit.fontawesome.com/90bf9437da.js" crossorigin="anonymous"></script>
 </head>
@@ -69,6 +69,6 @@
         </article>
     </section>
 
-    <script src="<?=$base;?>/assets/js/admin/menu.js"></script>
+    <script src="<?=$base;?>/assets/js/admin/menu.min.js"></script>
 </body>
 </html>

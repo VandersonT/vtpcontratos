@@ -11,8 +11,8 @@
     <meta name="author" content="VandersonT"/>
     
     <link rel="shortcut icon" type="image-x/png" href="<?=$base?>/icon.ico">
-    <link rel="stylesheet" href="<?=$base?>/assets/css/style.css" />
-    <link rel="stylesheet" href="<?=$base?>/assets/css/register.css" />
+    <link rel="stylesheet" href="<?=$base?>/assets/css/style.min.css" />
+    <link rel="stylesheet" href="<?=$base?>/assets/css/register.min.css" />
 
 </head>
 <body>

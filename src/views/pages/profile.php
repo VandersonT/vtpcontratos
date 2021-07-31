@@ -12,9 +12,9 @@
     
     <link rel="shortcut icon" type="image-x/png" href="<?=$base;?>/icon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/style.css" />
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/struct.css" />
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/profile.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/style.min.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/struct.min.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/profile.min.css" />
 
     <script src="https://kit.fontawesome.com/90bf9437da.js" crossorigin="anonymous"></script>
 </head>
@@ -76,8 +76,8 @@
     </section>
 
     <script>var themeMode = '<?=$user->themeMode;?>';</script>
-    <script src="<?=$base;?>/assets/js/toggleMenuMobile.js"></script>
-    <script src="<?=$base;?>/assets/js/SelectedAndHover.js"></script>
-    <script src="<?=$base;?>/assets/js/darkMode.js"></script>
+    <script src="<?=$base;?>/assets/js/toggleMenuMobile.min.js"></script>
+    <script src="<?=$base;?>/assets/js/SelectedAndHover.min.js"></script>
+    <script src="<?=$base;?>/assets/js/darkMode.min.js"></script>
 </body>
 </html>

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Contratos</title>
     <link rel="shortcut icon" type="image-x/png" href="<?=$base;?>/icon.ico">
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/style.css" />
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/inactive.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/style.min.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/inactive.min.css" />
 </head>
 <body>
     

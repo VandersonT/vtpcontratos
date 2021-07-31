@@ -11,9 +11,9 @@
     <meta name="author" content="VandersonT"/>
     
     <link rel="shortcut icon" type="image-x/png" href="<?=$base;?>/icon.ico">
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/style.css" />
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/contracts/contratoAbertoBase.css" />
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/contracts/wedding1.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/style.min.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/contracts/contratoAbertoBase.min.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/contracts/wedding1.min.css" />
 
     <script src="https://kit.fontawesome.com/90bf9437da.js" crossorigin="anonymous"></script>
 </head>
@@ -261,8 +261,8 @@
         var mode = '<?=$contractInfo['id'];?>';
         var logo = '<?=$user->contractLogo;?>'
     </script>
-    <script src="<?=$base;?>/assets/js/contracts/wedding1.js"></script>
-    <script src="<?=$base;?>/assets/js/darkModeContrato.js"></script>
-    <script src="<?=$base;?>/assets/js/contracts/contratoAberto.js"></script>
+    <script src="<?=$base;?>/assets/js/contracts/wedding1.min.js"></script>
+    <script src="<?=$base;?>/assets/js/darkModeContrato.min.js"></script>
+    <script src="<?=$base;?>/assets/js/contracts/contratoAberto.min.js"></script>
 </body>
 </html>

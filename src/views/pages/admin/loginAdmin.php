@@ -13,8 +13,8 @@
     
     <link rel="shortcut icon" type="image-x/png" href="<?=$base;?>/iconAdmin.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/style.css" />
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/loginAdmin.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/style.min.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/loginAdmin.min.css" />
 
     <script src="https://kit.fontawesome.com/90bf9437da.js" crossorigin="anonymous"></script>
 </head>

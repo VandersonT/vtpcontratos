@@ -49,10 +49,10 @@ function minifyCssAdmin(){
 }
 
 function minifyCssContracts(){
-    return src('src/assets/css/admin/*.css')
+    return src('src/assets/css/contracts/*.css')
     .pipe(minifyCSS({"uglyComments":false}))
     .pipe(rename({extname:'.min.css'}))
-    .pipe(dest('public/assets/css/admin/'))
+    .pipe(dest('public/assets/css/contracts/'))
 }
 /*-------------------------------------------------------------------------------------------------------*/
 
