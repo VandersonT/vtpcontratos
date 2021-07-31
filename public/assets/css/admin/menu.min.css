@@ -1,0 +1,13 @@
+.screen{display:flex}.body{width:calc(100% - 272px);margin-left:272px;background-color:#24313d}
+.menu{position:fixed;width:272px;height:100vh;background-color:#141c24;border-right:1px solid #0f1318;z-index:999}
+.btnMenuMobile{display:none;position:fixed;top:50%;margin-left:270px;font-size:35px;cursor:pointer}
+.info{width:100%;padding:10px 0 10px 0;display:flex;flex-direction:column;align-items:center;border-bottom:1px solid black}
+.info img{width:80px;height:80px;border-radius:100px;margin-bottom:10px}.info p{color:#b8b8b8;font-size:19px;margin-bottom:5px}
+.info span{color:#b8b8b8}.main-menu{width:100%;display:flex;flex-direction:column}
+.main-menu a{width:100%;padding:10px;font-size:17px;font-family:'Times New Roman',Times,serif;color:#b8b8b8;border-bottom:1px solid #0b1014;background-color:#141c24}
+.selected{background-color:#1f2d3a !important}.main-menu a:hover{background-color:#1f2d3a}
+.main-menu p{width:100%;padding:10px;font-size:18px;color:#00647a;background-color:#0b1014}
+.closePainel{background-color:#310000 !important;color:#b8b8b8 !important}@media screen and (max-width:1100px){.body{width:100%;margin-left:0}
+.btnMenuMobile{display:block}}@media screen and (max-width:400px){.menu{width:90vw;position:fixed}
+.btnMenuMobile{margin-left:90vw}}@media screen and (max-height:630px){.menu{padding:0 0 10px 0;overflow:auto}
+}

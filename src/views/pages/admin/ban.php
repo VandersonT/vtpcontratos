@@ -12,7 +12,7 @@
     
     <link rel="shortcut icon" type="image-x/png" href="<?=$base;?>/iconAdmin.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="<?=$base;?>/assets/css/style.css" />
+    <link rel="stylesheet" href="<?=$base;?>/assets/css/style.min.css" />
     <link rel="stylesheet" href="<?=$base;?>/assets/css/admin/menu.min.css" />
     <link rel="stylesheet" href="<?=$base;?>/assets/css/admin/ban.min.css" />
 

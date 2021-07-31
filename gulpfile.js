@@ -20,7 +20,7 @@ function minifyJavaScriptAdmin(){
     return src('src/assets/js/admin/*.js')
         .pipe(minifyJS())
         .pipe(rename({extname:'.min.js'}))
-        .pipe(dest('public/assets/js/admin/js/'))
+        .pipe(dest('public/assets/js/admin/'))
 }
 
 function minifyJavaScriptContracts(){
