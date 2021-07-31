@@ -30,7 +30,7 @@
             <p>Usar logo</p>
         </label>
     
-        <input class="contractName" type="text" placeholder="Nome do contrato" value="<?= ($contract->id > 1 && $contract->contract_name != 'Sem Nome') ? $contract->contract_name : '' ?>"/>
+        <input maxlength="20" class="contractName" type="text" placeholder="Nome do contrato" value="<?= ($contract->id > 1 && $contract->contract_name != 'Sem Nome') ? $contract->contract_name : '' ?>"/>
         
         <input id="sendCmp1" type="text" placeholder="Tipo de serviço [ex: Fotografia e filmagem]" value="<?= ($contract->id > 1 && $contract->service != '(SERVIÇOS)') ? $contract->service : '' ?>"/>
         

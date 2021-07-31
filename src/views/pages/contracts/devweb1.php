@@ -29,7 +29,7 @@
             <p>Usar logo</p>
         </label>
 
-        <input class="contractName" type="text" placeholder="Escreva o nome do contrato" value="<?= ($contract->id > 1 && $contract->contract_name != 'Sem Nome') ? $contract->contract_name : '' ?>"/>
+        <input maxlength="20" class="contractName" type="text" placeholder="Escreva o nome do contrato" value="<?= ($contract->id > 1 && $contract->contract_name != 'Sem Nome') ? $contract->contract_name : '' ?>"/>
         
         <textarea id="inputInfoHired" placeholder="Informações do contratado Ex: <Seu nome completo>, com inscrição no CPF nº 000.000.00-00, residente e domiciliada à <Seu endereço completo> – Cidade/estado, CEP: 00.000-000."><?= ($contract->id > 1 && $contract->info_hired != '(Informações do contratado)') ? $contract->info_hired : ''?></textarea>
 
