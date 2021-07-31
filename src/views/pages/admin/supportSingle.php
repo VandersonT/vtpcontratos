@@ -64,10 +64,11 @@
 
             <section class="write">
                 <img src="<?=$base;?>/media/avatars/supportImg.png" />
-                <form method="POST" action="<?=$base;?>/Painel/responderUsuario">
+                <form class="staffMsg" method="POST" action="<?=$base;?>/Painel/responderUsuario">
                     <input type="hidden" name="toUser" value="<?=$userId;?>" />
-                    <textarea name="msg" placeholder="Digite aqui sua mensagem"></textarea>
-                    <input type="submit" value="Enviar"/>
+                    <input class="msgTosend" type="hidden" name="msg"/>
+                    <textarea class="msgT" placeholder="Digite aqui sua mensagem"></textarea>
+                    <input class="env" type="submit" value="Enviar"/>
                 </form>
             </section>
             
@@ -75,9 +76,6 @@
     </section>
 
     <script src="<?=$base;?>/assets/js/admin/menu.min.js"></script>
-    <script>
-        var screenChat = document.getElementById('screenChat');
-        screenChat.scrollTop = screenChat.scrollHeight;
-    </script>
+    <script src="<?=$base;?>/assets/js/admin/supportSingle.min.js"></script>
 </body>
 </html>
