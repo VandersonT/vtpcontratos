@@ -19,6 +19,33 @@ toggleLogo.addEventListener('click', function(e){
 })
 /*--------------------------------------------------------------------------------------------------------*/
 
+
+
+/*---------------------------------------BTN_ACTIVE_SIGNATURE--------------------------------------------------*/
+let toggleSignature = document.querySelector('.toggleSignature');
+let signatureIsActive = false;
+
+toggleSignature.addEventListener('click', function(e){
+    
+    if(signature == ''){
+        e.preventDefault();
+        alert("Você precisa enviar sua assinatura no seu perfil para poder usa-la aqui!");
+        return false;
+    }
+
+    if(signatureIsActive){
+        document.querySelector('.whiteLine').style.display = 'block';
+        document.querySelector('.singleSignature img').style.display = 'none';
+        signatureIsActive = false;
+    }else{
+        document.querySelector('.whiteLine').style.display = 'none';
+        document.querySelector('.singleSignature img').style.display = 'block';
+        signatureIsActive = true;
+    }
+})
+/*--------------------------------------------------------------------------------------------------------*/
+
+
 /*----------------------------------------BTN_GENERATE----------------------------------------------------*/
 let generateBtn = document.querySelector('.generateBtn');
 

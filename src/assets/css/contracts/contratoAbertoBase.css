@@ -154,6 +154,31 @@ body{background-color: rgb(128, 128, 128);color: rgb(22, 22, 22);}
 .warning i{
     color: rgb(238, 255, 1);;
 } 
+
+.box-signature{
+    display: flex;
+    justify-content:space-between;
+}
+
+.box-signature span{
+    width: 100%;
+    padding-top: 10px;
+}
+
+.singleSignature{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.singleSignature img{
+    display: none;
+    width: 70%;
+    height: 50px;
+}
 /*---------------------------------------------------------------------------------------------------*/
 
 

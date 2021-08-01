@@ -55,6 +55,12 @@
 
         <input id="inputNameHired" type="text" placeholder="Nome do contratado" value="<?= ($contract->id > 1 && $contract->hired_name != '(Nome do contratado)') ? $contract->hired_name : '' ?>"/>
 
+        <br/><br/>
+        <label class="checkBox">
+            <input class="toggleSignature" type="checkbox" />
+            <p>Usar sua assinatura</p>
+        </label>
+
         <button class="generateBtn">Gerar</button>
     </form>
 
@@ -239,7 +245,8 @@
                 <span contentEditable="true" class="name_contractorL <?= ($contract->contractor_name == '(Nome do contratante)') ? 'mark' : '' ?>"><?=$contract->contractor_name;?></span>
             </div>
             <div class="singleSignature">
-                _______________________________
+                <img src="<?=$base;?>/media/signature/<?=$user->contractSignature?>" />
+                <p class="whiteLine">_______________________________</p>
                 <span contentEditable="true" class="name_hired <?= ($contract->hired_name == '(Nome do contratado)') ? 'mark' : '' ?>"><?=$contract->hired_name;?></span>
             </div>
         </div>
@@ -314,7 +321,8 @@
     <script>
         var themeMode = '<?=$user->themeMode;?>';
         var mode = '<?=$contractInfo['id'];?>';
-        var logo = '<?=$user->contractLogo;?>'
+        var logo = '<?=$user->contractLogo;?>';
+        var signature = '<?=$user->contractSignature;?>';
     </script>
     <script src="<?=$base;?>/assets/js/contracts/devweb1.min.js"></script>
     <script src="<?=$base;?>/assets/js/darkModeContrato.min.js"></script>

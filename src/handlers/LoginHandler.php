@@ -39,6 +39,7 @@ class LoginHandler {
                 $loggedUser->themeMode = $data['themeMode'];
                 $loggedUser->photo = $data['photo'];
                 $loggedUser->contractLogo = $data['contractLogo'];
+                $loggedUser->contractSignature = $data['contractSignature'];
 
                 return $loggedUser;
             }

@@ -58,6 +58,8 @@
                 <input name="photoProfile" type="file"/>
                 <h1 class="inputTitle">Logo para contrato:</h1>
                 <input name="logoContract" type="file"/>
+                <h1 class="inputTitle">Foto da Assinatura:</h1>
+                <input name="signatureContract" type="file"/>
                 <h1 class="inputTitle">Tema:</h1>
                 <label class="themeMode">
                     <div class="boxDarkTheme">

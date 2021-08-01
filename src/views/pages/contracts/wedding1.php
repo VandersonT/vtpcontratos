@@ -71,7 +71,13 @@
         <input id="sendDateToday" type="text" placeholder="Data de hoje" value="<?= ($contract->id > 1 && $contract->date_today != '(Data de hoje)') ? $contract->date_today : '' ?>"/>
 
         <input id="sendNameHired" type="text" placeholder="nome do contratado" value="<?= ($contract->id > 1 && $contract->name_hired != '(Nome do Contratado)') ? $contract->name_hired : '' ?>"/>
-
+        
+        <br/><br/>
+        <label class="checkBox">
+            <input class="toggleSignature" type="checkbox" />
+            <p>Usar sua assinatura</p>
+        </label>
+        
         <button class="generateBtn">Gerar</button>
     </form>
 
@@ -198,7 +204,8 @@
                 <span contentEditable="true" class="name <?= ($contract->name == '(Nome do Contratante)') ? 'mark' : '' ?>"><?=$contract->name;?></span>
             </div>
             <div class="singleSignature">
-                _______________________________
+                <img src="<?=$base;?>/media/signature/<?=$user->contractSignature?>" />
+                <p class="whiteLine">_______________________________</p>
                 <span contentEditable="true" class="name_hired <?= ($contract->name_hired == '(Nome do Contratado)') ? 'mark' : '' ?>"><?=$contract->name_hired;?></span>
             </div>
         </div>
@@ -259,7 +266,8 @@
     <script>
         var themeMode = '<?=$user->themeMode;?>';
         var mode = '<?=$contractInfo['id'];?>';
-        var logo = '<?=$user->contractLogo;?>'
+        var logo = '<?=$user->contractLogo;?>';
+        var signature = '<?=$user->contractSignature;?>';
     </script>
     <script src="<?=$base;?>/assets/js/contracts/wedding1.min.js"></script>
     <script src="<?=$base;?>/assets/js/darkModeContrato.min.js"></script>

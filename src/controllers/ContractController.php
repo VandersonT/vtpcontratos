@@ -260,6 +260,7 @@ class ContractController extends Controller {
         $userEmail = filter_input(INPUT_POST, 'userEmail', FILTER_VALIDATE_EMAIL);
         $profilePictureChanged = false;
         $contractLogoChanged = false;
+        $contractSignatureChanged = false;
         $namePhoto = '';
         $nameLogo = '';
         $allowed = ['image/jpeg', 'image/jpg', 'image/png'];
@@ -277,6 +278,10 @@ class ContractController extends Controller {
 
         if(!empty($_FILES['logoContract']['size'])){
             $contractLogoChanged = true;
+        }
+
+        if(!empty($_FILES['signatureContract']['size'])){
+            $contractSignatureChanged = true;
         }
         
         /*------------------------------IMAGE VERIFY---------------------------------------*/
@@ -319,6 +324,28 @@ class ContractController extends Controller {
             $nameLogo = md5(time().rand(0,9999)).'.jpg';
             move_uploaded_file($_FILES['logoContract']['tmp_name'], 'media/logo/'.$nameLogo);
         }
+
+        if($contractSignatureChanged){
+            if($_FILES['signatureContract']['size'] > 2000000){
+                $_SESSION['error'] = 'A foto da assinatura enviada é muito grande. (maximo 2MB)';
+                $this->redirect('/perfil');
+                exit;
+            }
+    
+            //if type is not allowed
+            if(!in_array($_FILES['signatureContract']['type'], $allowed)){
+                $_SESSION['error'] = 'O tipo de foto enviada não é permitido. (somente: jpeg, jpg e png)';
+                $this->redirect('/perfil');
+                exit;
+            } 
+
+            //if that's ok
+            echo "adicionando no sistema";
+            $nameSignature = md5(time().rand(0,9999)).'.png';
+            move_uploaded_file($_FILES['signatureContract']['tmp_name'], 'media/signature/'.$nameSignature);
+        }
+        echo 'supostamente foi';
+        exit;
         /*---------------------------------------------------------------------------------*/
 
         ContractsHandler::saveInfo($this->loggedUser->id, $userName, $userEmail, $themeMode, $namePhoto, $nameLogo, $profilePictureChanged, $contractLogoChanged);

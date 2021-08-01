@@ -10,22 +10,7 @@
 .hide{
     visibility: hidden;
 }
-.box-signature{
-    display: flex;
-    justify-content:space-between;
-}
 
-.box-signature span{
-    width: 100%;
-    padding-top: 10px;
-}
-
-.singleSignature{
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
 @media screen and (max-width: 500px){
     .singleSignature{
         font-size: 2vw;
