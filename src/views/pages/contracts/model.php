@@ -38,7 +38,7 @@
     </form>
 
     <div class="barMenu">
-        <a href="javascript:history.go(-1)" class="btnContract return">
+        <a onClick="return window.confirm('Se você voltar perderá toda edição.');" href="javascript:history.go(-1)" class="btnContract return">
             Voltar
         </a>
         <div class="nameContract">
