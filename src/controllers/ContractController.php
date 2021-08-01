@@ -300,7 +300,6 @@ class ContractController extends Controller {
             } 
 
             //if that's ok
-            echo "adicionando no sistema";
             $namePhoto = md5(time().rand(0,9999)).'.jpg';
             move_uploaded_file($_FILES['photoProfile']['tmp_name'], 'media/avatars/'.$namePhoto);
         }
@@ -320,7 +319,6 @@ class ContractController extends Controller {
             } 
 
             //if that's ok
-            echo "adicionando no sistema";
             $nameLogo = md5(time().rand(0,9999)).'.jpg';
             move_uploaded_file($_FILES['logoContract']['tmp_name'], 'media/logo/'.$nameLogo);
         }
@@ -340,15 +338,12 @@ class ContractController extends Controller {
             } 
 
             //if that's ok
-            echo "adicionando no sistema";
             $nameSignature = md5(time().rand(0,9999)).'.png';
             move_uploaded_file($_FILES['signatureContract']['tmp_name'], 'media/signature/'.$nameSignature);
         }
-        echo 'supostamente foi';
-        exit;
         /*---------------------------------------------------------------------------------*/
 
-        ContractsHandler::saveInfo($this->loggedUser->id, $userName, $userEmail, $themeMode, $namePhoto, $nameLogo, $profilePictureChanged, $contractLogoChanged);
+        ContractsHandler::saveInfo($this->loggedUser->id, $userName, $userEmail, $themeMode, $namePhoto, $nameLogo, $profilePictureChanged, $contractLogoChanged,$nameSignature,$contractSignatureChanged);
 
 
         $_SESSION['success'] = 'Seu perfil foi atualizado com sucesso.';

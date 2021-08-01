@@ -48,7 +48,7 @@ class ContractsHandler {
 
     }
 
-    public static function saveInfo($id, $userName, $userEmail, $themeMode, $namePhoto, $nameLogo, $profilePictureChanged, $contractLogoChanged){
+    public static function saveInfo($id, $userName, $userEmail, $themeMode, $namePhoto, $nameLogo, $profilePictureChanged, $contractLogoChanged, $nameSignature, $contractSignatureChanged){
         
         User::update()
             ->set('name',$userName)
@@ -67,6 +67,13 @@ class ContractsHandler {
         if($contractLogoChanged){
             User::update()
                 ->set('contractLogo',$nameLogo)
+                ->where('id', $id)
+            ->execute();
+        }
+
+        if($contractSignatureChanged){
+            User::update()
+                ->set('contractSignature',$nameSignature)
                 ->where('id', $id)
             ->execute();
         }
