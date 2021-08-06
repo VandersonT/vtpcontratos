@@ -143,10 +143,20 @@ function returnToNormal(){
     document.querySelector('.barMenu').style.display = 'flex';
     document.querySelector('.warning').style.display = 'block';
     
-    document.querySelector('.contractSingle').style.width = "calc(100% - 480px)";
-    document.querySelector('.contractSingle').style.marginLeft = "450px";
-    document.querySelector('.contractSingle').style.marginBottom = "60px";
-    document.querySelector('.contractSingle').style.position = "initial";
-    document.querySelector('.contractSingle').style.padding = "30px";
+    let windowWidth = window.innerWidth;
+    if(windowWidth > 1250){
+        document.querySelector('.contractSingle').style.width = "calc(100% - 480px)";
+        document.querySelector('.contractSingle').style.marginLeft = "450px";
+        document.querySelector('.contractSingle').style.marginBottom = "60px";
+        document.querySelector('.contractSingle').style.position = "initial";
+        document.querySelector('.contractSingle').style.padding = "30px";
+    }else{
+        document.querySelector('.contractSingle').style.width = "90vw";
+        document.querySelector('.contractSingle').style.marginBottom = "60px";
+        document.querySelector('.contractSingle').style.position = "initial";
+        document.querySelector('.contractSingle').style.padding = "20px";
+        document.querySelector('.contractSingle').style.margin = "0 auto";
+    }
+
 }
 /*--------------------------------------------------------------------------------------------------------*/
