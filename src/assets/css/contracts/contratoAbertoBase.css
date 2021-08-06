@@ -7,6 +7,7 @@
     .mark{color: black !important;}
     .contractSingle{min-height: auto !important;}
     .singleSignature img{width: 100% !important;}
+    .warning{display: none !important;}
 }
 /*---------------------------------------------------------------------------------------------------*/
 
