@@ -91,7 +91,7 @@
 .chat-write{
     width: 80%;
     height: 40vh;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid rgb(58, 58, 58);
     position: fixed;
     bottom: 0;
@@ -174,8 +174,17 @@
     }
 }
 
-@media screen and (max-height: 500px){
-    .chat-write{
-        height: calc(38vh - 60px);
+@media screen and (max-width: 500px){
+    .chat-screen{
+        height: 50vh;
+    }
+    .chat-write img{
+        display: none;
+    }
+    .chat-write form{
+        width: 90%;
+    }
+    .chat-write textarea{
+        font-size: 11px;
     }
 }

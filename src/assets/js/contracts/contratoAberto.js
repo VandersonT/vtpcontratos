@@ -75,7 +75,13 @@ btnToggle.addEventListener('click', function(){
         isOpen = false;
     }else{
         menu.style.display = "block";
-        btnToggle.style.marginLeft = "420px";
+
+        if(windowWidth <= 500){
+            btnToggle.style.marginLeft = "85vw";
+        }else{
+            btnToggle.style.marginLeft = "420px";
+        }
+
         isOpen = true;
     }
 })
@@ -100,7 +106,13 @@ function verifyMenu(){
 
         btnToggle.style.display = "block";
         if(isOpen){
-            btnToggle.style.marginLeft = "420px";
+
+            if(windowWidth <= 500){
+                btnToggle.style.marginLeft = "85vw";
+            }else{
+                btnToggle.style.marginLeft = "420px";
+            }
+
             menu.style.display = "block";
         }else{
             btnToggle.style.marginLeft = "0";

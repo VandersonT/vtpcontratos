@@ -59,8 +59,8 @@
     </section>
 
     <script>var themeMode = '<?=$user->themeMode;?>';</script>
-    <script src="<?=$base;?>/assets/js/toggleMenuMobile.js"></script>
-    <script src="<?=$base;?>/assets/js/SelectedAndHover.js"></script>
-    <script src="<?=$base;?>/assets/js/darkMode.js"></script>
+    <script src="<?=$base;?>/assets/js/toggleMenuMobile.min.js"></script>
+    <script src="<?=$base;?>/assets/js/SelectedAndHover.min.js"></script>
+    <script src="<?=$base;?>/assets/js/darkMode.min.js"></script>
 </body>
 </html>

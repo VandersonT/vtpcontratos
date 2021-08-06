@@ -164,3 +164,17 @@
         width: 50%;
     }
 }
+
+@media screen and (max-width: 450px){
+    .infoProfile input:not(input[type=submit]):not(input[type=radio]){
+        width: 95vw;
+        max-width: 90%;
+        font-size: 15px;
+    }
+    .inputTitle{
+        font-size: 13px;
+    }
+    .title{
+        font-size: 14px;
+    }
+}
