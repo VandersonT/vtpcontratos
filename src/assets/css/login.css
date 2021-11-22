@@ -166,6 +166,9 @@
 }
 
 @media screen and (max-width: 490px){
+    .screen{
+        background: rgb(235, 235, 235);
+    }
     .box-login{
         width: 90%;
         background-color: transparent;
@@ -174,9 +177,9 @@
         width: 100%;
         background-color: transparent;
         border-bottom: 1px solid black;
-        color: gray;
+        color: rgb(54, 54, 54);
     }
     .login a{
-        color: gray;
+        color: rgb(0, 132, 255);
     }
 }

@@ -238,7 +238,7 @@ sendEngaged.addEventListener('keyup', function(){
     let engageds = document.querySelectorAll('.engaged');
     for(let i = 0; i < engageds.length; i++){
         if(sendEngaged.value == ''){
-            engageds[i].innerText = '(Nome do noivo)';
+            engageds[i].innerText = '(Nome do Noivo)';
             engageds[i].classList.add('mark');
         }else{
             engageds[i].innerText = sendEngaged.value;

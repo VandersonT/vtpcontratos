@@ -14,6 +14,7 @@ $router->get('/suporte', 'HomeController@support');
 $router->get('/sair', 'HomeController@logout');
 
 /*USER*/
+$router->get('/inicio', 'LoginController@initial');
 $router->get('/login', 'LoginController@signin');
 $router->post('/login', 'LoginController@signinAction');
 $router->get('/cadastro', 'LoginController@signup');

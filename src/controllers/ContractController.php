@@ -10,7 +10,7 @@ class ContractController extends Controller {
     public function __construct(){
         $this->loggedUser = LoginHandler::checkLogin();
         if($this->loggedUser === false){
-            $this->redirect('/login');
+            $this->redirect('/inicio');
             exit;
         }
         if($this->loggedUser->access == 0){

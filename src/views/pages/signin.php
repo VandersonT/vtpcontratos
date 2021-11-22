@@ -39,7 +39,7 @@
                     <input type="email" name="email" placeholder="Email" />
                     <i class="fas fa-lock"></i>
                     <input type="password" name="password" placeholder="Senha" />
-                    <button>Enviar</button>
+                    <button>Entrar</button>
                 </form>
                 <a href="<?=$base;?>/cadastro">Cadastrar-se</a>
             </article>

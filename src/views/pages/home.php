@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width,height=device-height, target-densitydpi=device-dpi" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width,height=device-height" />
     <meta name="description" content="Crie seus contratos muito mais rápido e mais profissional, acesse agora." />
     <meta name="keyword" content="contratos,gerador,geradordecontrato,contratos,modelocontrato,contract,contracts" />
     <meta name="author" content="VandersonT"/>
@@ -69,7 +69,7 @@
                 </form>
                 <form class="packageSingle" method="GET" action="<?=$base;?>/contratos/packages/desenvolvimentoWeb">
                     <img src="<?=$base;?>/assets/images/developerCover.jpg">
-                    <p>Contratos para desenvovilmento web</p>
+                    <p>Contratos para web developer</p>
                     <span>1 Disponivel</span>
                     <button>Abrir</button>
                 </form>

@@ -33,7 +33,7 @@
         
         <textarea id="inputInfoHired" placeholder="Informações do contratado Ex: <Seu nome completo>, com inscrição no CPF nº 000.000.00-00, residente e domiciliada à <Seu endereço completo> – Cidade/estado, CEP: 00.000-000."><?= ($contract->id > 1 && $contract->info_hired != '(Informações do contratado)') ? $contract->info_hired : ''?></textarea>
 
-        <textarea id="inputInfoContractor" placeholder="Informações do contratante Ex: <Nome da empresa contratante>, com inscrição no CNPJ nº 00.000.000/0001-00, localizada à <Endereço completo> – Cidade/estado, CEP: 00.000-000, tendo como representante legal, seu sócio-diretor <Nome do representante>."><?= ($contract->id > 1 && $contract->info_contractor != '(<Nome da empresa contratante>, com inscrição no CNPJ nº 00.000.000/0001-00, localizada à <Endereço completo> – Cidade/SP, CEP: 13.000-000, tendo como representante legal, seu sócio-diretor <Nome do representante>.)') ? $contract->info_contractor : ''?></textarea>
+        <textarea id="inputInfoContractor" placeholder="Informações do contratante Ex: <Nome da empresa contratante>, com inscrição no CNPJ nº 00.000.000/0001-00, localizada à <Endereço completo> – Cidade/estado, CEP: 00.000-000, tendo como representante legal, seu sócio-diretor <Nome do representante>."><?= ($contract->id > 1 && $contract->info_contractor != '(Informações da pessoa ou empresa contratante)') ? $contract->info_contractor : ''?></textarea>
 
         <input id="inputNameCompany" type="text" placeholder="Nome da empresa/pessoa contratante" value="<?= ($contract->id > 1 && $contract->name_contractor != '(Nome da empresa/pessoa contratante)') ? $contract->name_contractor : '' ?>"/>
         
@@ -255,7 +255,6 @@
 
     
     <form class="formSaveContract" method="POST" action="<?=$base;?>/salvar/devweb1">
-        Dê um submit nesse contrato com o js 
         <input name="contractId" type="hidden" value="<?=$contractInfo['id']?>" />    
         <input name="contractNameInput" type="hidden"/>
         <input name="titleInput" type="hidden"/>

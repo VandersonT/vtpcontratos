@@ -52,7 +52,7 @@
 
         <input id="sendBride" type="text" placeholder="Nome da noiva" value="<?= ($contract->id > 1 && $contract->bride != '(Nome da noiva)') ? $contract->bride : '' ?>"/>
         
-        <input id="sendEngaged" type="text" placeholder="Nome do noivo" value="<?= ($contract->id > 1 && $contract->engaged != '(Nome do noivo)') ? $contract->engaged : '' ?>"/>
+        <input id="sendEngaged" type="text" placeholder="Nome do noivo" value="<?= ($contract->id > 1 && $contract->engaged != '(Nome do Noivo)') ? $contract->engaged : '' ?>"/>
 
         <input id="sendDate" type="text" placeholder="data do casamento" value="<?= ($contract->id > 1 && $contract->date != '(Data)') ? $contract->date : '' ?>"/>
 
@@ -149,7 +149,7 @@
             <span contentEditable="true" class="bride <?= ($contract->bride == '(Nome da noiva)') ? 'mark' : '' ?> marginRight1x"><?=$contract->bride;?></span>
             
             <span class="bold">Noivo:</span>
-            <span contentEditable="true" class="engaged <?= ($contract->engaged == '(Nome do noivo)') ? 'mark' : '' ?> marginRight1x"><?=$contract->engaged;?></span>
+            <span contentEditable="true" class="engaged <?= ($contract->engaged == '(Nome do Noivo)') ? 'mark' : '' ?> marginRight1x"><?=$contract->engaged;?></span>
         </div>
 
         <h1 contentEditable="true" class="cmp5 title1"><?=$contract->cmp5;?></h1>
@@ -160,7 +160,7 @@
             <span contentEditable="true" class="cmp7"><?=$contract->cmp7;?></span>
             <span contentEditable="true" class="bride <?= ($contract->bride == '(Nome da noiva)') ? 'mark' : '' ?>"><?=$contract->bride;?></span>
             e
-            <span contentEditable="true" class="engaged <?= ($contract->engaged == '(Nome do noivo)') ? 'mark' : '' ?>"><?=$contract->engaged;?></span>
+            <span contentEditable="true" class="engaged <?= ($contract->engaged == '(Nome do Noivo)') ? 'mark' : '' ?>"><?=$contract->engaged;?></span>
             <span contentEditable="true" class="cmp8"><?=$contract->cmp8;?></span>
             <span contentEditable="true" class="date <?= ($contract->date == '(Data)') ? 'mark' : '' ?>"><?=$contract->date;?></span>
             às 

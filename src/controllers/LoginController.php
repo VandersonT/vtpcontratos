@@ -16,6 +16,11 @@ class LoginController extends Controller {
        
     }
 
+    public function initial() {
+        $this->render('initial');
+        exit;
+    }
+
     public function signin() {
         $flash = '';
         if(!empty($_SESSION['flash'])){
