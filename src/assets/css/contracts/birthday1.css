@@ -20,8 +20,37 @@
     visibility:hidden;
 }
 
+@media screen and (max-width: 800px){
+    .mainTitle span{
+        font-size: 11px;
+    }
+    .box-date{
+        font-size: 16px;
+    }
+}
+
 @media screen and (max-width: 500px){
     .singleSignature{
         font-size: 2vw;
+    }
+    .title1,
+    .title2{
+        font-size: 15px;
+    }
+    .mainTitle span{
+        font-size: 11px;
+    }
+    .box-date{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .mainTitle span{
+        font-size: 6px;
+    }
+    .title1,
+    .title2{
+        font-size: 8px;
     }
 }

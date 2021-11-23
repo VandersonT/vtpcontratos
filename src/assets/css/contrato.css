@@ -129,6 +129,17 @@
     color: rgb(214, 214, 214);
 }
 
+@media screen and (max-width: 530px){
+    .box-favorites h1{
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    .box-packages h1{
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+}
+
 @media screen and (max-height: 950px){
     .packageSingle{
         height: 260px;

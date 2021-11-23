@@ -122,7 +122,7 @@
             </div>
             <div class="footerInfo3">
                 <h1>Serviços</h1>
-                <p>Facilitamos a geraração de seus contratos</p>
+                <p>Facilitamos a geração de seus contratos</p>
                 <p>Oferecemos suporte para te auxiliar</p>
             </div>
             <div class="footerImage"></div>

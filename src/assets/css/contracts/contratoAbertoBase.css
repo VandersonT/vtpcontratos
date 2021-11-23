@@ -227,6 +227,12 @@ body{background-color: rgb(128, 128, 128);color: rgb(22, 22, 22);}
     .singleSignature img{
         width: 100%;
     }
+    .barMenu a{
+        font-size: 14px;
+    }
+    .nameContract{
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-width: 650px){
@@ -249,6 +255,12 @@ body{background-color: rgb(128, 128, 128);color: rgb(22, 22, 22);}
     }
     .toggleMenu{
         margin-left: 85vw;
+    }
+    .barMenu a{
+        font-size: 12px;
+    }
+    .nameContract{
+        font-size: 11px;
     }
 }
 

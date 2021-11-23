@@ -11,9 +11,23 @@
     visibility: hidden;
 }
 
+@media screen and (max-width: 900px){
+    .title{
+        font-size: 17px;
+    }
+}
+
 @media screen and (max-width: 500px){
     .singleSignature{
         font-size: 2vw;
+    }
+    .title{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 400px){
+    .title{
+        font-size: 10px;
     }
 }
 /*-------------------------------------------------------------*/

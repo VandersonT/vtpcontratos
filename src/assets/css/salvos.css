@@ -1,6 +1,7 @@
 :root{
     --backgroundContractSingle: rgb(231, 231, 231);
 }
+
 .box-contract{
     width: 100%;
     margin: 0 auto;
@@ -8,9 +9,8 @@
 }
 
 .box-contract h1{
-    font-size: 25px;
+    font-size: 23px;
     font-weight: lighter;
-    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -90,6 +90,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@media screen and (max-width: 530px){
+    .box-contract h1{
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .empty{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .empty{
+        font-size: 11px;
+    }
 }
 
 @media screen and (max-height: 950px){

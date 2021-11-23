@@ -177,4 +177,8 @@
     .title{
         font-size: 14px;
     }
+    .success,
+    .error{
+        font-size: 12px;
+    }
 }

@@ -46,7 +46,7 @@
                     <?php endforeach; ?>   
                 <?php else: ?> 
                     <p style="display:none;" class="contractSingle">Modelo para contrato</p>
-                    Você não tem nenhum contrato de casamento salvo
+                    <p class="empty">Você não tem nenhum contrato de casamento salvo</p>
                 <?php endif; ?>
 
             </div>
@@ -69,7 +69,7 @@
                     <?php endforeach; ?>   
                 <?php else: ?> 
                     <p style="display:none;" class="contractSingle">Modelo para contrato</p>
-                    Você não tem nenhum contrato de aniversário salvo
+                    <p class="empty">Você não tem nenhum contrato de aniversário salvo</p>
                 <?php endif; ?>
 
             </div>
@@ -92,7 +92,7 @@
                     <?php endforeach; ?>   
                 <?php else: ?> 
                     <p style="display:none;" class="contractSingle">Modelo para contrato</p>
-                    Você não tem nenhum contrato de aniversário salvo
+                    <p class="empty">Você não tem nenhum contrato de desenvolvimento salvo</p>
                 <?php endif; ?>
 
             </div>

@@ -24,7 +24,7 @@
 
     <section class="box-content">
         <article class="box-favorites">
-            <h1>Adicionados Recentemente:</h1>
+            <h1>Recentes:</h1>
             <div class="showcase">
                 <div class="favoriteStorage">
 
@@ -53,7 +53,7 @@
         </article>
             
         <article class="box-packages">
-            <h1>Packages:</h1>
+            <h1>Pacotes:</h1>
             <div class="packageStorage" >
                 <form class="packageSingle" method="GET" action="<?=$base;?>/contratos/packages/casamento">
                     <img src="<?=$base;?>/assets/images/WeddingCover.jpg">
