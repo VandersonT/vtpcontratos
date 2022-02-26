@@ -12,124 +12,105 @@
     <link rel="shortcut icon" type="image-x/png" href="https://vtpcontratos.com:443/icon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/90bf9437da.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+
     <header>
-        <div class="logo"></div>
-        <ul class="desktopMenu">
-            <a href="<?=$base;?>/login"><li>
-                Login
-            </li></a>
-            <a href="<?=$base;?>/cadastro"><li>
-                Cadastre-se
-            </li></a>
-        </ul>
-
-        <div class="btnMenuMobile"><i class="fas fa-bars"></i></div>
-
-        <div class="closeMenuMobile animate__animated animate__bounceInRight"><i class="fas fa-window-close"></i></div>
-        <ul class="mobileMenu animate__animated animate__bounceInLeft">
-            <a href="<?=$base;?>/login"><li>
-                Login
-            </li></a>
-            <a href="<?=$base;?>/cadastro"><li>
-                Cadastre-se
-            </li></a>
-        </ul>
-
+        <div class="darkBannerMode"></div>
+        <div class="menu">
+            <div class="logo"></div>
+            <nav>
+                <ul>
+                    <li><a href="<?=$base;?>/login">Login</a></li>
+                    <li><a href="<?=$base;?>/cadastro">Cadastre-se</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="banner_write">
+            <h1>Preencha seus contratos rapidamente</h1>
+            <a href="<?=$base;?>/login" class="button">Comece Agora</a>
+        </div>
     </header>
 
-    <main>
-        <div id="home" class="banner">
-            <a class="indicate"><i class="fas fa-chevron-down"></i></a>
-            <div class="message">
-                Oferecemos <span class="mark">facilidade</span> e <span class="mark">auxílio</span> no preenchimento dos seus contratos, tornando a tarefa muito mais <span class="mark">ágil</span>
-            </div>
+    <section class="aboutUsSection container">
+        <div class="aboutUs">
+            <div class="riskEffect"></div>
+            <h2>Sobre Nós</h2>
+            <h4>Saiba um pouco sobre o que fazemos</h4>
+            <p>A VtpContratos é uma plataforma web que oferece modelos prontos de contratos para você editar como quiser, incluindo a posibilidade de reescrever todo o contrato e até criar seus próprios. Além disso, poupamos você da árdua tarefa de procurar campo por campo para preencher, pois, nós nos responsabilizando totalmente por essa parte, deixando você apenas com a parte que realmente importa, que seria informar o valor de cada campo e fazer a revisão final do contrato. Oferecemos também, espaço ilimitado para você salvar quantos contratos quiser, ou seja, você poderá revisar contratos já feitos e até mesmo voltar e edita-los sem ter que reescreve-los novamente.</p>
         </div>
+        <img class="aboutUsImage" src="<?=$base;?>/assets/images/aboutUsImage.png" />
+    </section>
+
+    <section class="offersSection">
+
+        <div class="offerSingle">
+            <i class="fas fa-chart-bar"></i>
+            <h4><i class="fas fa-infinity"></i></h4>
+            <p>Limite por usuário</p>
+        </div>
+        <div class="offerSingle">
+            <i class="fas fa-file-contract"></i>
+            <h4>3</h4>
+            <p>Modelos Prontos</p>
+        </div>
+        <div class="offerSingle">
+            <i class="fas fa-pencil-alt"></i>
+            <h4>98%</h4>
+            <p>Liberdade de Edição</p>
+        </div>
+
+    </section>
+
+    <section class="advantagesSection container">
+        <div class="riskEffect"></div>
+        <h2>Quais são as vantagens</h2>
+        <p>Veja abaico algumas das vantagens de usar o nosso sistema para gerar os seus contratos.</p>
         
-        <div id="go" class="WhatWeOffer">
-            <div class="offerSingle">
-                <h1>
-                    <i class="fas fa-briefcase"></i>
-                    Agilidade
-                </h1>
+        <div class="advantagesBox">
+
+            <div class="advantageSingle">
+                <i class="fas fa-briefcase"></i>
+                <h4>Agilidade</h4>
                 <p>Realize seus trabalhos de forma mais rápida e prática, preocupando somente com a parte que importa e deixando conosco a parte cansativa.</p>
             </div>
-            <div class="offerSingle">
-                <h1>
-                    <i class="fas fa-print"></i>
-                    Modelos
-                </h1>
+            <div class="advantageSingle">
+                <i class="fas fa-print"></i>
+                <h4>Modelos</h4>
                 <p>Receba modelos prontos para você se basear para criar seus próprios contratos, modificando apenas as parte que desejar e tendo total liberdade de personalização.</p>
             </div>
-            <div class="offerSingle">
-                <h1>
-                    <i class="fas fa-save"></i>
-                    Historico
-                </h1>
+            <div class="advantageSingle">
+                <i class="fas fa-save"></i>
+                <h4>Histórico</h4>
                 <p>Você pode salvar seus contratos e voltar para eles no momento que quiser ou rever algum contrato já feito anteriormente.</p>
             </div>
-        </div>
 
-        <div id="aboutUs" class="aboutUs">
-            <div class="about--text">
-                <h1>Sobre Nós</h1>
-                <p>A VtpContratos é uma plataforma web que oferece modelos prontos de contratos para você editar como quiser, incluindo a posibilidade de reescrever todo o contrato e até criar seus próprios. Além disso, poupamos você da árdua tarefa de procurar campo por campo para preencher, pois, nós nos responsabilizando totalmente por essa parte, deixando você apenas com a parte que realmente importa, que seria informar o valor de cada campo e fazer a revisão final do contrato. Oferecemos também, espaço ilimitado para você salvar quantos contratos quiser, ou seja, você poderá revisar contratos já feitos e até mesmo voltar e edita-los sem ter que reescreve-los novamente.</p>
-            </div>
-            <div class="about--image"></div>
         </div>
+    </section>
 
-        <div class="infoSystem">
-            <div class="infoSingle">
-                <h1><i class="fas fa-chart-bar"></i>Limite por usuário</h1>
-                <p><i class="fas fa-infinity"></i></p>
-            </div>
-            <div class="infoSingle">
-                <h1><i class="fas fa-file-contract"></i>Modelos Prontos</h1>
-                <p>2</p>
-            </div>
-            <div class="infoSingle">
-                <h1><i class="fas fa-pencil-alt"></i>Liberdade de Edição</h1>
-                <p>98%</p>
-            </div>
+    <section class="banner2Section">
+        <div class="darkBanner2Mode"></div>
+        <div class="banner2_write">
+            <h2>Gere seus contatos de qualquer lugar</h2>
+            <p>Realize seus trabalhos de forma mais rápida e prática, preocupando somente com a parte que importa e deixando conosco a parte cansativa.</p>
+            <a href="<?=$base;?>/login" class="button">Comece Agora</a>
         </div>
-
-        <div class="boxInfo2">
-            <div class="image2"></div>
-            <div class="info2">
-                <h1>Gere seus contatos de qualquer lugar.</h1>
-                <p>Caso você precise urgentemente gerar um contrato, mas  para seu azar você não tem acesso a um computador, não se preocupe, você tem a possibilidade de gerar seu contrato através do seu dispositivo móvel, não necessariamente  precisa estar em um computador, apesar de ser preferível. 
-                A facilidade que oferecemos a você não se restringe apenas a computadores, ela segue com você aonde você for, basta apenas ter acesso a internet e um dispositivo móvel.</p>
-            </div>
-        </div>
+    </section>
     
-    </main>
-
     <footer>
-        <div class="footerMenu">
-            <div class="footerInfo1">
-                <div class="footer--logo"></div>
-                <p>100% gratuito, aproveite já</p>
-                <a href="<?=$base;?>/login">Login</a>
-                <a href="<?=$base;?>/cadastro">Cadastre-se</a>
-            </div>
-            <div class="footerInfo2">
-                <h1>VtpContratos</h1>
-                <a href="#home">Home</a>
-                <a href="#aboutUs">Quem somos</a>
-            </div>
-            <div class="footerInfo3">
-                <h1>Serviços</h1>
-                <p>Facilitamos a geração de seus contratos</p>
-                <p>Oferecemos suporte para te auxiliar</p>
-            </div>
-            <div class="footerImage"></div>
-        </div>
-        <div class="copyright">
-            Copyright - Todos os direitos reservados
-        </div>
+        <div class="logo2"></div>
+        <p>Junte se a nós e faça o seu trabalho menos penoso e muito mais prático e rapido e de forma 100% gratuita</p>
+        <ul>
+            <li><a class="selected" href="<?=$base;?>/">Home</a></li>
+            <li><a href="<?=$base;?>/login">Login</a></li>
+            <li><a href="<?=$base;?>/cadastro">Cadastre-se</a></li>
+        </ul>
+        <p class="copyright">Copyright vtpcontratos © Todos os direitos reservados</p>
     </footer>
 
     <script src="<?=$base;?>/assets/js/menuMobileInitial.min.js"></script>

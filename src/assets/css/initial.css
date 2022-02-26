@@ -3,546 +3,424 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 html{
     min-width: 300px;
-    max-width: 1600px;
+    max-width: 2000px;
+    margin: 0 auto;
     scroll-behavior: smooth;
 }
-.mark{
-    color: #F2A309;
+.container{
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.riskEffect{
+    width: 121px;
+    border-bottom: 5px solid #CBA557;
+    margin-bottom: 30px;
 }
 /*---------------------------------------------------------------------------------------------------*/
 
-/*--------------------------------------------Header-------------------------------------------------*/
+/*---------------------------------------------Menu--------------------------------------------------*/
 header{
     width: 100vw;
     max-width: 100%;
+    height: calc(100vh + 50px);
+    max-height: 770px;
+    background-image: url('../images/banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+}
+.darkBannerMode{
+    position: absolute;
+    width: 100vw;
+    max-width: 100%;
+    height: calc(100vh + 50px);
+    max-height: 770px;
+    background-color: rgba(22, 26, 41, 0.5);
+}
+.menu{
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    max-width: 100%;
     height: 70px;
-    background-color: rgb(240, 240, 240);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
-    position: fixed;
-    z-index: 2;
-    border-bottom: 1px solid rgb(163, 163, 163);
+    padding: 0  50px;
 }
-
-.message{
-    position: relative;
-    top: 60%;
-    width: 420px;
-    background-color: rgba(9, 35, 46, 0.9);
-    color: white;
-    padding: 35px 20px;
-    font-size: 25px;
-}
-
 .logo{
-    width: 160px;
-    height: 50px;
-    background-image: url('../images/logo.png');
+    width: 80px;
+    height: 60px;
+    background-image: url('../images/logo1.png');
     background-position: center;
+    background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
-.desktopMenu{
+.menu nav ul{
     display: flex;
 }
 
-header .desktopMenu a{
+.menu nav ul li{
     list-style: none;
+    margin: 0 10px;
+}
+
+.menu nav ul a{
     text-decoration: none;
-    color: rgb(2, 127, 243);
-    border-bottom: 1px solid transparent;
-}
-
-header .desktopMenu a:hover{
-    border-bottom: 1px solid rgb(2, 127, 243);
-}
-
-header .desktopMenu a:nth-of-type(1){
-    margin-right: 20px;
-}
-
-header .desktopMenu a i{
-    font-size: 14px;
-}
-
-.btnMenuMobile{
-    display: none;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-.btnMenuMobile:active{
-    color: black;
-}
-
-.mobileMenu{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(8, 8, 8);
-}
-
-.mobileMenu a{
     color: white;
-    list-style: none;
-    text-decoration: none;
-    text-transform: uppercase;
 }
 
-.mobileMenu a:nth-of-type(1){
-    margin-bottom: 20px;
+.menu nav ul a:hover{
+    color: rgb(241, 241, 241);
 }
 
-.closeMenuMobile{
-    color: red;
-    position: fixed;
+.banner_write{
+    width: 100vw;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 200px;
+    position: relative;
     z-index: 1;
-    top: 20px;
-    right: 20px;
-    font-size: 27px;
-    display: none;
 }
-/*---------------------------------------------------------------------------------------------------*/
 
-/*--------------------------------------------Banner-------------------------------------------------*/
-.banner{
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    background-image: url('../images/banner.png');
-    background-position: center;
-    background-size: cover;
-}
-.indicate{
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
+.banner_write h1{
+    color: white;
     font-size: 40px;
-    cursor: pointer;
-    animation-name: upAndDown;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    color: black;
+    font-weight: 400;
+    margin-bottom: 30px;
 }
-@keyframes upAndDown {
-    0% {bottom: 0;}
-    50% {bottom: 30px;}
-    100% {bottom: 0;}
+.button{
+    background: #9C8328;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.button:hover{
+    background: #947c24;
+    color: rgb(236, 236, 236);
 }
 /*---------------------------------------------------------------------------------------------------*/
 
-/*--------------------------------------------WhatWeOffer-------------------------------------------------*/
-.WhatWeOffer{
+/*-----------------------------------------aboutUsSection---------------------------------------------*/
+.aboutUsSection{
+    padding: 120px 20px 150px 20px;
+    display: flex;
+    justify-content: center;
+}
+.aboutUs{
+    width: 504px;
+    margin-right: 100px;
+}
+.aboutUs h2{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.aboutUs h4{
+    font-size: 23px;
+    margin-bottom: 30px;
+    color: #535353;
+    font-weight: 300;
+}
+.aboutUs p{
+    color: #404040;
+}
+.aboutUsImage{
+    width: 337px;
+    height: 477px;
+}
+/*---------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------offerSection---------------------------------------------*/
+.offersSection{
     width: 100vw;
     max-width: 100%;
-    padding:  30px 0;
-    background-color: #1D5E7A;
+    background-color: #F4F4F4;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    padding: 60px 10px;
 }
 .offerSingle{
-    width: 300px;
-    margin: 10px;
     text-align: center;
-    color: white;
 }
-.offerSingle h1{
-    font-weight: lighter;
-    margin-bottom: 20px;
-    font-size: 25px;
-    letter-spacing: 3px;
+.offerSingle > i{
+    color: #CBA557;
+    font-size: 35px;
 }
-.offerSingle h1 i{
+.offerSingle h4{
+    margin: 15px 0;
     font-size: 20px;
-}
-.offerSingle p{
-    letter-spacing: 1px;
+    color: #1F1F1F;
 }
 /*---------------------------------------------------------------------------------------------------*/
 
-/*-------------------------------------------AboutUs-------------------------------------------------*/
-.aboutUs{
-    width: 100vw;
-    max-width: 100%;
-    height: 460px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/*--------------------------------------advantagesSection--------------------------------------------*/
+.advantagesSection{
+    padding: 100px 0 70px 0;
 }
 
-.about--text{
-    width: 500px;
-}
-
-.about--text h1{
-    font-weight: lighter;
-    margin-bottom: 20px;
-    color: #0C2C3F;
-    font-size: 28px;
-    letter-spacing: 3px;
-}
-
-.about--text p{
-    color: #727272;
-}
-
-.about--image{
-    width: 360px;
-    height: 200px;
-    background-image: url('../images/toys.png');
-    background-position: center;
-    background-size: 100% 100%;
-}
-/*---------------------------------------------------------------------------------------------------*/
-
-/*-------------------------------------------infoSystem-------------------------------------------------*/
-.infoSystem{
-    width: 100vw;
-    max-width: 100%;
-    height: 200px;
-    background-color: #1D5E7A;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.infoSingle{
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.infoSingle h1{
-    font-weight: lighter;
-    color: white;
+.advantagesSection h2{
+    font-size: 35px;
     margin-bottom: 10px;
-    font-size: 25px;
-    letter-spacing: 3px;
-}
-.infoSingle h1 i{
-    font-size: 20px;
-    margin-right: 5px;
-}
-.infoSingle p{
-    font-weight: lighter;
-    color: white;
-    font-size: 30px;
-}
-/*---------------------------------------------------------------------------------------------------*/
-
-/*---------------------------------------------Info2------------------------------------------------*/
-.boxInfo2{
-    height: 400px;
-    display: flex;   
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid rgb(196, 196, 196);
-}
-.image2{
-    width: 350px;
-    height: 250px;
-    background-image: url('../images/image2.jpg');
-    background-position: center;
-    background-size: 100% 100%;
-    margin-right: 40px;
-    border: 1px solid rgb(155, 155, 155);
-}
-.info2{
-    width: 50%;
-}
-.info2 h1{
-    margin-bottom: 20px;
-    font-weight: lighter;
-    color: #0C2C3F;
-    letter-spacing: 2px;
-    font-size: 25px;
 }
 
-.info2 p{
-    letter-spacing: 1px;
-    color: #727272;
+.advantagesSection > p{
+    margin-bottom: 40px;
 }
-/*---------------------------------------------------------------------------------------------------*/
 
-/*--------------------------------------------Footer-------------------------------------------------*/
-.footerMenu{
+.advantagesBox{
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
 }
 
-.footerInfo1{
-    text-align: center;
+.advantageSingle{
+    width: 307px;
+    margin: 20px;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 10px -4px #000000; 
+    box-shadow: 0px 0px 10px -4px #000000;
 }
 
-.footerInfo1 p{
-    color: #086C24;
-    font-size: 20px;
-    margin: 0 20px;
-    margin-top: 10px;
+.advantageSingle i{
+    color: #CBA557;
+    font-size: 35px;
     margin-bottom: 15px;
 }
 
-.footerInfo1 a{
-    color: #0077ff;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.footerInfo1 a:hover{
-    border-bottom: 1px solid #0077ff;
-}
-
-.footerInfo1 a:nth-of-type(1){
-    margin-right: 10px;
-}
-
-.footer--logo{
-    width: 250px;
-    height: 80px;
-    background-image: url('../images/logo.png');
-    background-position: center;
-    background-size: 100% 100%;
-}
-
-.footerInfo2{
-    display: flex;
-    flex-direction: column;
-    margin: 0 20px;
-}
-
-.footerInfo2 h1{
-    font-weight: lighter;
-    font-size: 17px;
-    text-transform: uppercase;
-    color: rgb(16, 23, 82);
+.advantageSingle h4{
+    color: #1F1F1F;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
-.footerInfo2 a{
-    width: max-content;
-    color: rgb(2, 127, 243);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    margin-bottom: 5px;
-}
-
-.footerInfo2 a:hover{
-    border-bottom: 1px solid rgb(2, 127, 243);
-}
-
-.footerInfo3 h1{
-    font-weight: lighter;
-    font-size: 17px;
-    text-transform: uppercase;
-    color: rgb(16, 23, 82);
-    margin: 0 20px;
-    margin-bottom: 10px;
-}
-
-.footerInfo3 p{
-    color: rgb(77, 77, 77);
-    margin-bottom: 5px;
-}
-
-.footerImage{
-    width: 350px;
-    height: 250px;
-    background-image: url('../images/toys.png');
-    background-position: center;
-    background-size: 100% 100%;
-}
-.copyright{
-    text-align: center;
-    padding: 15px;
-    border-top: 1px solid rgb(177, 177, 177);
-    color: #3b3b3b;
+.advantageSingle p{
+    color: #404040;
 }
 /*---------------------------------------------------------------------------------------------------*/
 
-/*------------------------------------------Responsive-----------------------------------------------*/
-@media screen and (max-width: 900px) {
-    .aboutUs{
-        flex-direction: column;
-        height: auto;
+/*-----------------------------------------banner2Section--------------------------------------------*/
+.banner2Section{
+    width: 100vw;
+    max-width: 100%;
+    height: 550px;
+    background-image: url('../images/banner2.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.darkBanner2Mode{
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+    height: 550px;
+    max-width: 100%;    
+    background-color: rgba(22, 26, 41, 0.5);
+
+}
+.banner2_write{
+    height: 550px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner2_write h2{
+    margin-bottom: 30px;
+    color: white;
+    font-size: 40;
+    text-align: center;
+}
+
+.banner2_write p{
+    width: 700px;
+    margin-bottom: 40px;
+    color: white;
+    font-size: 16;
+    text-align: center;
+}
+/*---------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------footer-----------------------------------------------*/
+footer{
+    width: 100vw;
+    max-width: 100%;
+    background-color: #222325;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+.logo2{
+    width: 100px;
+    height: 80px;
+    margin-bottom: 30px;
+    background-image: url('../images/logo1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+footer p{
+    width: 600px;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+footer ul{
+    display: flex;
+}
+
+footer li{
+    list-style: none;
+    margin: 0 10px;
+}
+
+footer li a{
+    color: white;
+    text-decoration: none;
+}
+
+footer li a:hover,
+.selected{
+    color: #C09D43;
+}
+.copyright{
+    margin-top: 50px;
+    color: white;
+}
+/*---------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------Responsive-----------------------------------------------*/
+@media screen and (max-width: 900px){
+    .container{
+        width: 92%;
     }
-    .aboutUs h1{
-        text-align: center;
-        margin-top: 40px;
-    }
-    .aboutUs p{
+    .riskEffect{
+        margin:  0 auto;
         margin-bottom: 30px;
     }
-    .infoSystem{
-        height: auto;
-        padding: 30px 0;
+    /*About Us*/
+    .aboutUsSection{
+        padding: 80px 0;
+        flex-direction: column-reverse;
+        align-items: center;
     }
-    .infoSingle h1{
-        font-size: 20px;
-        letter-spacing: 0;
-    }
-    .infoSingle h1 i{
-        font-size: 17px;
-        margin-right: 5px;
-    }
-    .infoSingle p{
-        font-size: 16px;
-    }
-    .infoSystem{
-        margin-bottom: 20px;
-    }
-    .boxInfo2{
-       flex-direction: column;
-       height: auto;
-       padding: 30px 0;
-    }
-    .info2{
-        width: 600px;
-        text-align: center;
-    }
-    .info2 h1{
-        letter-spacing: 0;
-        margin-top: 0;
-        margin-bottom: 10px;
-    }
-    .info2 p{
-        letter-spacing: 1px;
-        color: #727272;
-        margin-bottom: 0;
-    }
-    .image2{
-        margin-bottom: 40px;
-    }
-}
-@media screen and (max-width: 640px) {
-    .offerSingle{
-        width: 80%;
-        margin-bottom: 60px;
-    }
-    .info2{
-        width: 90%;
-        text-align: center;
-    }
-    .info2 h1{
-        font-size: 21px;
-    }
-    .info2 p{
-        font-size: 14px;
-    }
-    .footerMenu{
-        flex-direction: column;
-        padding: 20px 0;
-    }
-    .footerInfo1,
-    .footerInfo2,
-    .footerInfo3{
-        margin-bottom: 50px;
-        text-align: center;
-    }
-    .footerInfo2 a{
+    .aboutUs{
         width: 100%;
+        margin-right: 0;
+        margin-top: 50px;
+    }
+    .aboutUs h2{
         text-align: center;
     }
-    .footerImage{
-        width: 260px;
-        height: 160px;
+    .aboutUs h4{
+        text-align: center;
     }
-    .copyright{
-        font-size: 13px;
+    .aboutUs p{
+        color: #404040;
     }
-    .footer--logo{
-        width: 150px;
-        height: 60px;
-        margin: 0 auto;
+    .aboutUsImage{
+        width: 250x;
+        height: 430px;
+    }
+    /*Advantages*/
+    .advantageSingle{
+        width: 250px;
+        margin: 20px 10px;
+    }
+    .advantagesSection h2,
+    .advantagesSection > p{
+        text-align: center;
     }
 }
-@media screen and (max-width: 600px) {
-    .desktopMenu{
-        display: none;
-    }
-    .btnMenuMobile{
-        display: block;
-    }
+
+@media screen and (max-width: 800px){
+    /*Banner*/
     header{
-        padding: 0 20px;
+        height: 600px;
+        background-size: cover; 
     }
-    .message{
-        font-size: 15px;
+    .darkBannerMode{
+        height: 600px;
+    }
+    .banner_write{
+        margin-top: 150px;
+    }
+    .banner_write h1{
+        font-size: 30px;
+    }
+    /*Banner2*/
+    .banner2_write p,
+    footer p{
+        width: 90%;
     }
 }
 
-@media screen and (max-width: 550px) {
-    .about--text{
-        width: 90%;
+@media screen and (max-width: 540px){
+    .aboutUs h2,
+    .advantagesSection h2{
+        font-size: 25px;
     }
-    .about--image{
-        width: 200px;
-        height: 150px;
-    }
-}
-
-
-@media screen and (max-width: 450px) {
-    .banner{
-        height: 92vh;
-    }
-    .offerSingle p{
-        font-size: 13px;
-    }
-    .message{
-        width: 90%;
-        top: 52%;
-        font-size: 14px;
-    }
-    .offerSingle h1{
+    .aboutUs h4{
         font-size: 18px;
     }
-    .offerSingle h1 i{
+    .aboutUs p{
         font-size: 16px;
     }
-    .infoSystem{
+    .advantageSingle{
+        width: 90%;
+        margin: 40px 10px;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .offersSection{
         flex-direction: column;
     }
-    .image2{
-        width: 90%;
-        margin: 0 auto;
-        margin-bottom: 20px;
+    .offerSingle{
+        margin-bottom: 70px;
     }
-    .info2 h1{
-        font-size: 17px;
+    .offerSingle > i{
+        color: #CBA557;
+        font-size: 35px;
     }
-    .info2 p{
-        font-size: 14px;
-    }
-    .about--text p{
-        font-size: 14px;
-    }
-    .about--text h1{
-        font-size: 21px;
-        margin-bottom: 10px;
+    .offerSingle h4{
+        margin: 15px 0;
+        font-size: 20px;
+        color: #1F1F1F;
     }
 }
-@media screen and (max-width: 350px) {
-    .message{
-        font-size: 15px;
+
+@media screen and (max-width: 450px){
+    .menu{
+        padding: 0  10px;
     }
-    .image2{
-        height: 160px;
+
+    .logo{
+        width: 70px;
+        height: 50px;
+    }
+
+
+    .banner_write h1{
+        font-size: 28px;
+    }
+
+    .banner2_write h2{
+        margin: 0 10px;
+        margin-bottom: 20px;
     }
 }
 /*---------------------------------------------------------------------------------------------------*/
